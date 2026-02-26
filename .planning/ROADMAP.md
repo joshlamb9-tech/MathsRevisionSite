@@ -12,7 +12,7 @@ Five phases from empty repo to a complete CE Maths revision site. Phase 1 locks 
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Scaffold and Foundation** - GitHub Pages deployment, KaTeX rendering verified, shared nav, base CSS, URL structure locked
+- [x] **Phase 1: Scaffold and Foundation** - GitHub Pages deployment, KaTeX rendering verified, shared nav, base CSS, URL structure locked
 - [ ] **Phase 2: Foundation Content** - All 6 Foundation topics live with worked examples and non-calculator labelling
 - [ ] **Phase 3: Core Content** - All 15 Core topics live with worked examples and Desmos embeds on graph topics
 - [ ] **Phase 4: Additional Content** - All 3 Additional topics live with worked examples and Desmos on Pythagoras
@@ -34,8 +34,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 - [x] 01-01-PLAN.md — GitHub Pages repo setup, .nojekyll, base HTML/CSS with Dosis font and Mowden colours, level index pages
-- [ ] 01-02-PLAN.md — KaTeX integration: defer scripts, delimiter order, mobile overflow fix, verified on live URL
-- [ ] 01-03-PLAN.md — 24 topic stub pages with locked URL structure (kebab-case slugs), inline nav, KaTeX head block template
+- [x] 01-02-PLAN.md — KaTeX integration: defer scripts, delimiter order, mobile overflow fix, verified on live URL
+- [x] 01-03-PLAN.md — 24 topic stub pages with locked URL structure (kebab-case slugs), inline nav, KaTeX head block template
 
 ### Phase 2: Foundation Content
 **Goal**: Pupils can access a worked example for every Foundation CE topic, clearly labelled as non-calculator
@@ -106,7 +106,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Scaffold and Foundation | 2/3 | In Progress|  |
+| 1. Scaffold and Foundation | 3/3 | Complete | 2026-02-26 |
 | 2. Foundation Content | 0/2 | Not started | - |
 | 3. Core Content | 0/4 | Not started | - |
 | 4. Additional Content | 0/1 | Not started | - |

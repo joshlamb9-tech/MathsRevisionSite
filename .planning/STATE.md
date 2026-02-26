@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 1 of 5 (Scaffold and Foundation)
-Plan: 2 of 3 in current phase (01-02 complete)
-Status: In progress
-Last activity: 2026-02-26 — 01-02 KaTeX integration verified on live GitHub Pages URL
+Plan: 3 of 3 in current phase (01-03 complete — Phase 1 DONE)
+Status: Phase 1 complete — ready for Phase 2
+Last activity: 2026-02-26 — 01-03 all 24 topic stubs created and verified on live GitHub Pages URL
 
-Progress: [██░░░░░░░░] 13%
+Progress: [████░░░░░░] 20%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
-- Average duration: 16 min
-- Total execution time: 32 min
+- Total plans completed: 3
+- Average duration: 44 min
+- Total execution time: 131 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-scaffold-and-foundation | 2 | 32 min | 16 min |
+| 01-scaffold-and-foundation | 3 | 131 min | 44 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2 min), 01-02 (30 min)
-- Trend: n/a (only 2 plans)
+- Last 5 plans: 01-01 (2 min), 01-02 (30 min), 01-03 (99 min)
+- Trend: 01-03 longer due to GitHub Pages deployment waits and root-relative path bug fix
 
 *Updated after each plan completion*
 
@@ -53,6 +53,9 @@ Recent decisions affecting current work:
 - [01-02]: SRI omitted on CSS: katex-swap hash not in official docs; CSS carries styling risk only — acceptable for school site
 - [01-02]: Delimiter order $$ before $: prevents greedy inline $ from consuming $$
 - [01-02]: onload callback on auto-render (not DOMContentLoaded): guarantees katex.min.js is parsed first
+- [01-03]: 24 topic slugs LOCKED — must not be changed; Phase 5 RAG tracker uses these as localStorage keys
+- [01-03]: GitHub Pages project site path fix — all href="/" paths must use /MathsRevisionSite/ prefix; root-relative paths resolve to domain root (not project subdirectory)
+- [01-03]: If custom domain added later, find-and-replace /MathsRevisionSite/ → / across all 29 HTML files
 
 ### Pending Todos
 
@@ -69,6 +72,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-26T18:51:40Z
-Stopped at: Completed 01-02-PLAN.md — KaTeX integration verified on live GitHub Pages URL
+Last session: 2026-02-26T20:34:56Z
+Stopped at: Completed 01-03-PLAN.md — all 24 topic stubs created, URL structure locked, live GitHub Pages verified
 Resume file: None
