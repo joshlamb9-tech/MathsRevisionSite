@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- KaTeX 0.16.33 — ready for content authoring -->
+  <!-- KaTeX 0.16.33 — swap CSS (FOIT prevention), no SRI on CSS (hash unconfirmed in official docs) -->
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex-swap.min.css"
         crossorigin="anonymous">
@@ -51,21 +51,49 @@
 
   <main class="main-content">
     <p class="breadcrumb">
-      <a href="/MathsRevisionSite/">Home</a> ›
-      <a href="/MathsRevisionSite/foundation/">Foundation</a> ›
+      <a href="/MathsRevisionSite/">Home</a> &rsaquo;
+      <a href="/MathsRevisionSite/foundation/">Foundation</a> &rsaquo;
       Estimation
     </p>
 
     <span class="level-badge foundation">Foundation</span>
     <h1 class="page-title">Estimation</h1>
+    <p style="display:inline-block;background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;border-radius:4px;padding:0.25rem 0.75rem;font-size:0.85rem;font-weight:600;margin:0.5rem 0 1.5rem;">Non-calculator &mdash; Paper 1</p>
 
-    <p style="color:var(--text-muted);margin-top:1rem">
-      Content for this topic will be added in a later phase.
-    </p>
+    <h2>Key Facts</h2>
+    <ul>
+      <li><strong>Significant figures (s.f.):</strong> The first significant figure is the first non-zero digit. To round to 1 s.f., look at the second digit: if it is 5 or more, round up; if less than 5, round down.</li>
+      <li><strong>Estimation:</strong> Round each number to 1 significant figure, then perform the calculation. The result is an estimate, not an exact answer.</li>
+      <li><strong>Checking answers:</strong> Compare your calculated answer to your estimate &mdash; if they are very different, check your working for errors.</li>
+      <li>The symbol $\approx$ means &ldquo;approximately equal to&rdquo;.</li>
+    </ul>
+
+    <h2>Worked Example 1: Rounding to 1 Significant Figure</h2>
+    <p>Round each number to 1 significant figure.</p>
+    <ul>
+      <li>$4\mathbf{7}23$: first s.f. is 4, next digit is 7 (&ge; 5) &rarr; round up: $\approx 5000$</li>
+      <li>$\mathbf{3}12$: first s.f. is 3, next digit is 1 (&lt; 5) &rarr; round down: $\approx 300$</li>
+      <li>$0.0\mathbf{6}84$: first s.f. is 6, next digit is 8 (&ge; 5) &rarr; round up: $\approx 0.07$</li>
+    </ul>
+
+    <h2>Worked Example 2: Estimating a Calculation</h2>
+    <p>Estimate the value of $\dfrac{47.3 \times 8.91}{0.52}$.</p>
+    <ol>
+      <li>Round each number to 1 significant figure:
+        $$47.3 \approx 50 \qquad 8.91 \approx 9 \qquad 0.52 \approx 0.5$$
+      </li>
+      <li>Substitute the rounded values:
+        $$\frac{50 \times 9}{0.5}$$
+      </li>
+      <li>Calculate the numerator: $50 \times 9 = 450$</li>
+      <li>Divide: $450 \div 0.5 = 900$</li>
+    </ol>
+    <p><strong>Estimate: $\approx 900$</strong></p>
+    <p><em>(The exact answer is 810.9&hellip; &mdash; our estimate is reasonable and in the right ballpark.)</em></p>
   </main>
 
   <footer>
-    <p>Mowden Hall School · Year 8 CE Maths Revision</p>
+    <p>Mowden Hall School &middot; Year 8 CE Maths Revision</p>
   </footer>
 
 </body>
