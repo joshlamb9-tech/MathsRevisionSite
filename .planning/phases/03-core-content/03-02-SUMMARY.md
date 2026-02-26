@@ -112,6 +112,17 @@ None - no external service configuration required during this plan. Note that th
 - All three Desmos pages in Phase 3 can use `.desmos-wrapper`, `.desmos-scroll-overlay`, and `.desmos-toggle-btn` without modification
 - Mobile scroll-fix pattern established — copy/paste `toggleDesmosInteraction` function and wrapper div structure to 03-03 and 03-04
 
+## Self-Check: PASSED
+
+All files exist and all task commits verified:
+- FOUND: core/angles/index.html (105 lines, KaTeX, 7 key facts, 2 worked examples, no non-calc badge)
+- FOUND: core/probability/index.html (108 lines, P(A) formula, sample space, no non-calc badge)
+- FOUND: core/coordinates-graphs/index.html (139 lines, Desmos embed, midpoint formula, mobile scroll-fix)
+- FOUND: assets/css/styles.css (.desmos-wrapper, .desmos-scroll-overlay, .desmos-toggle-btn appended)
+- FOUND: f74c51c — Task 1 commit (angles + probability pages)
+- FOUND: 4a3da1e — Task 2 commit (Desmos CSS + coordinates-graphs page)
+- FOUND: 4fb1589 — Metadata commit (SUMMARY.md, STATE.md, ROADMAP.md, REQUIREMENTS.md)
+
 ---
 *Phase: 03-core-content*
 *Completed: 2026-02-26*
