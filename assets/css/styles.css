@@ -254,6 +254,22 @@ footer {
   margin-top: 2rem;
 }
 
+/* ================================
+   KaTeX Equation Rendering
+   ================================ */
+
+/* KaTeX display equation overflow fix — applies to all topic pages */
+/* Source: KaTeX GitHub issues #327 and #2942 */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5em 0; /* prevents descender clipping */
+}
+
+.katex {
+  font-size: 1.1em; /* slightly larger than body text for readability */
+}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 600px) {
   .hero h1 {
