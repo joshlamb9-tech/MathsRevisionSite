@@ -5,33 +5,34 @@
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** Year 8 pupils can find, understand, and practise any CE Maths topic in the right level (Foundation/Core/Additional) — presented clearly enough to revise from independently.
-**Current focus:** Phase 1 — Scaffold and Foundation
+**Current focus:** Phase 2 — Foundation Content
 
 ## Current Position
 
-Phase: 1 of 5 (Scaffold and Foundation)
-Plan: 3 of 3 in current phase (01-03 complete — Phase 1 DONE)
-Status: Phase 1 complete — ready for Phase 2
-Last activity: 2026-02-26 — 01-03 all 24 topic stubs created and verified on live GitHub Pages URL
+Phase: 2 of 5 (Foundation Content)
+Plan: 1 of 8 in current phase (02-01 complete — Fractions, Division, Prime Factors authored)
+Status: Phase 2 in progress — 02-01 complete, 02-02 next
+Last activity: 2026-02-26 — 02-01 all three topic pages authored with KaTeX, worked examples, non-calc badges
 
-Progress: [████░░░░░░] 20%
+Progress: [████░░░░░░] 22%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: 44 min
-- Total execution time: 131 min
+- Total plans completed: 4
+- Average duration: 33 min
+- Total execution time: 133 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-scaffold-and-foundation | 3 | 131 min | 44 min |
+| 02-foundation-content | 1 | 2 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2 min), 01-02 (30 min), 01-03 (99 min)
-- Trend: 01-03 longer due to GitHub Pages deployment waits and root-relative path bug fix
+- Last 5 plans: 01-01 (2 min), 01-02 (30 min), 01-03 (99 min), 02-01 (2 min)
+- Trend: 02-01 fast — no deployment waits, pure content authoring against pre-built stubs
 
 *Updated after each plan completion*
 
@@ -56,6 +57,8 @@ Recent decisions affecting current work:
 - [01-03]: 24 topic slugs LOCKED — must not be changed; Phase 5 RAG tracker uses these as localStorage keys
 - [01-03]: GitHub Pages project site path fix — all href="/" paths must use /MathsRevisionSite/ prefix; root-relative paths resolve to domain root (not project subdirectory)
 - [01-03]: If custom domain added later, find-and-replace /MathsRevisionSite/ → / across all 29 HTML files
+- [02-01]: Non-calculator badge uses inline style (no class in styles.css yet) — consistent with plan spec; class can be extracted to stylesheet in a future pass
+- [02-01]: Topic page content structure locked: breadcrumb > level-badge > h1 > non-calc-badge > Key Facts h2/ul > Worked Example h2/ol (×2) — use this pattern for all remaining topic stubs
 
 ### Pending Todos
 
@@ -72,6 +75,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-26T20:34:56Z
-Stopped at: Completed 01-03-PLAN.md — all 24 topic stubs created, URL structure locked, live GitHub Pages verified
+Last session: 2026-02-26T20:46:36Z
+Stopped at: Completed 02-01-PLAN.md — Fractions, Division, Prime Factors topic pages authored with KaTeX and worked examples
 Resume file: None

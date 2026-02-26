@@ -49,7 +49,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Foundation topic pages: fractions, division, prime factors (with KaTeX worked examples, non-calc badge)
+- [x] 02-01-PLAN.md — Foundation topic pages: fractions, division, prime factors (with KaTeX worked examples, non-calc badge)
 - [ ] 02-02-PLAN.md — Foundation topic pages: estimation, long multiplication, averages (non-calc badge on all 6)
 
 ### Phase 3: Core Content
@@ -107,7 +107,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Scaffold and Foundation | 3/3 | Complete    | 2026-02-26 |
-| 2. Foundation Content | 0/2 | Not started | - |
+| 2. Foundation Content | 1/2 | In progress | - |
 | 3. Core Content | 0/4 | Not started | - |
 | 4. Additional Content | 0/1 | Not started | - |
 | 5. RAG Tracker and Formula Sheets | 0/2 | Not started | - |

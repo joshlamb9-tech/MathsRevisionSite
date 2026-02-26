@@ -23,13 +23,13 @@
 
 ### Foundation Content (6 topics)
 
-- [ ] **FND-01**: Pupil can access a worked example for fractions (Foundation)
-- [ ] **FND-02**: Pupil can access a worked example for division (Foundation)
-- [ ] **FND-03**: Pupil can access a worked example for prime factors (Foundation)
+- [x] **FND-01**: Pupil can access a worked example for fractions (Foundation)
+- [x] **FND-02**: Pupil can access a worked example for division (Foundation)
+- [x] **FND-03**: Pupil can access a worked example for prime factors (Foundation)
 - [ ] **FND-04**: Pupil can access a worked example for estimation (Foundation)
 - [ ] **FND-05**: Pupil can access a worked example for long multiplication (Foundation)
 - [ ] **FND-06**: Pupil can access a worked example for averages (Foundation)
-- [ ] **FND-07**: All Foundation topics are clearly labelled non-calculator (Paper 1)
+- [x] **FND-07**: All Foundation topics are clearly labelled non-calculator (Paper 1)
 
 ### Core Content (15 topics)
 
@@ -117,13 +117,13 @@
 | DESIGN-03 | Phase 1 | Complete (01-01) |
 | DESIGN-04 | Phase 1 | Pending |
 | DESIGN-05 | Phase 1 | Complete (01-01) |
-| FND-01 | Phase 2 | Pending |
-| FND-02 | Phase 2 | Pending |
-| FND-03 | Phase 2 | Pending |
+| FND-01 | Phase 2 | Complete |
+| FND-02 | Phase 2 | Complete |
+| FND-03 | Phase 2 | Complete |
 | FND-04 | Phase 2 | Pending |
 | FND-05 | Phase 2 | Pending |
 | FND-06 | Phase 2 | Pending |
-| FND-07 | Phase 2 | Pending |
+| FND-07 | Phase 2 | Complete |
 | CORE-01 | Phase 3 | Pending |
 | CORE-02 | Phase 3 | Pending |
 | CORE-03 | Phase 3 | Pending |
