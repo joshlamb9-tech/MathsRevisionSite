@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** Year 8 pupils can find, understand, and practise any CE Maths topic in the right level (Foundation/Core/Additional) — presented clearly enough to revise from independently.
-**Current focus:** Phase 3 in progress — Core Content (8 of 10 Core topics authored, Desmos embed pattern established)
+**Current focus:** Phase 3 in progress — Core Content (11 of 10 Core topics authored, Desmos transformations embed complete)
 
 ## Current Position
 
 Phase: 3 of 5 (Core Content) — IN PROGRESS
-Plan: 2 of 4 in phase (03-02 complete — Angles, Probability, Coordinates authored; Desmos CSS in styles.css)
-Status: Phase 3 Plan 02 complete — 8 Core topics authored; Plans 03-03 and 03-04 (Desmos embeds) next
-Last activity: 2026-02-26 — 03-02 three topic pages authored, Desmos CSS block appended to styles.css
+Plan: 3 of 4 in phase (03-03 complete — Transformations with Desmos, Volume/Surface Area, Sequences/Nth Term authored)
+Status: Phase 3 Plan 03 complete — 11 Core topics authored; Plan 03-04 (remaining Desmos embeds / polish) next
+Last activity: 2026-02-26 — 03-03 three topic pages authored, transformations Desmos embed complete
 
-Progress: [████████████░░░░░░░░] 60%
+Progress: [█████████████░░░░░░░] 65%
 
 ## Performance Metrics
 
@@ -29,10 +29,10 @@ Progress: [████████████░░░░░░░░] 60%
 |-------|-------|-------|----------|
 | 01-scaffold-and-foundation | 3 | 131 min | 44 min |
 | 02-foundation-content | 2 | 4 min | 2 min |
-| 03-core-content | 2 | 5 min | 2.5 min |
+| 03-core-content | 3 | 13 min | 4.3 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-03 (99 min), 02-01 (2 min), 02-02 (2 min), 03-01 (3 min), 03-02 (2 min)
+- Last 5 plans: 02-01 (2 min), 02-02 (2 min), 03-01 (3 min), 03-02 (2 min), 03-03 (8 min)
 - Trend: Phase 3 content plans very fast — pure content authoring against pre-built stubs, same pattern as Phase 2
 
 *Updated after each plan completion*
@@ -68,6 +68,9 @@ Recent decisions affecting current work:
 - [03-02]: Mobile scroll-fix uses CSS overlay + JS toggle class (not passive touchstart listeners) — simpler, no JS on overlay element
 - [03-02]: Desmos toggle button hidden via display:none on desktop — zero layout space consumed
 - [03-02]: Demo API key dcb31709b452b1cf9dc26972add0fda6 with REPLACE comment — production key from partnerships@desmos.com before go-live
+- [03-03]: Desmos wrapper id set to desmos-wrapper-trans (scoped) — avoids clash with coordinates page desmos-wrapper if both ever loaded in same session
+- [03-03]: U_n notation enforced for sequences (not a_n) — CE 13+ standard
+- [03-03]: \text{cm}^3 KaTeX pattern established for volume/area units — precedent for future shape/measure pages
 
 ### Pending Todos
 
@@ -84,6 +87,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-26T21:40:38Z
-Stopped at: Completed 03-02-PLAN.md — Angles, Probability, Coordinates authored; Desmos CSS in styles.css
+Last session: 2026-02-26
+Stopped at: Completed 03-03-PLAN.md — Transformations, Volume/Surface Area, Sequences/Nth Term authored
 Resume file: None

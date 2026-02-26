@@ -67,7 +67,7 @@ Plans:
 Plans:
 - [x] 03-01-PLAN.md — ratio, percentages, algebra-basics, shape, averages (5 topics — wave 1)
 - [x] 03-02-PLAN.md — angles, probability, coordinates-graphs with Desmos embed + Desmos CSS added to styles.css (wave 1)
-- [ ] 03-03-PLAN.md — transformations with Desmos, volume-surface-area, sequences-nth-term (wave 2, depends on 03-02)
+- [x] 03-03-PLAN.md — transformations with Desmos, volume-surface-area, sequences-nth-term (wave 2, depends on 03-02)
 - [ ] 03-04-PLAN.md — straight-line-graphs with Desmos, speed-distance-time, powers-roots, charts-data (wave 2, depends on 03-02)
 
 ### Phase 4: Additional Content
@@ -108,6 +108,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. Scaffold and Foundation | 3/3 | Complete    | 2026-02-26 |
 | 2. Foundation Content | 2/2 | Complete    | 2026-02-26 |
-| 3. Core Content | 2/4 | In progress | - |
+| 3. Core Content | 3/4 | In progress | - |
 | 4. Additional Content | 0/1 | Not started | - |
 | 5. RAG Tracker and Formula Sheets | 0/2 | Not started | - |

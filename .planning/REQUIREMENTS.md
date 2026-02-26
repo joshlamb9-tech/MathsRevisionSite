@@ -41,9 +41,9 @@
 - [x] **CORE-06**: Pupil can access a worked example for angles including parallel lines (Core)
 - [x] **CORE-07**: Pupil can access a worked example for probability (Core)
 - [x] **CORE-08**: Pupil can access a worked example for coordinates and graphs (Core)
-- [ ] **CORE-09**: Pupil can access a worked example for transformations (Core)
-- [ ] **CORE-10**: Pupil can access a worked example for volume and surface area (Core)
-- [ ] **CORE-11**: Pupil can access a worked example for sequences and nth term (Core)
+- [x] **CORE-09**: Pupil can access a worked example for transformations (Core)
+- [x] **CORE-10**: Pupil can access a worked example for volume and surface area (Core)
+- [x] **CORE-11**: Pupil can access a worked example for sequences and nth term (Core)
 - [ ] **CORE-12**: Pupil can access a worked example for straight line graphs / y=mx+c (Core)
 - [ ] **CORE-13**: Pupil can access a worked example for speed, distance and time (Core)
 - [ ] **CORE-14**: Pupil can access a worked example for powers and roots (Core)
@@ -59,7 +59,7 @@
 
 - [x] **GRAPH-01**: Pupil can interact with a Desmos graph on coordinates/graphs topic page
 - [ ] **GRAPH-02**: Pupil can interact with a Desmos graph on straight line graphs topic page
-- [ ] **GRAPH-03**: Pupil can interact with a Desmos graph on transformations topic page
+- [x] **GRAPH-03**: Pupil can interact with a Desmos graph on transformations topic page
 - [ ] **GRAPH-04**: Pupil can interact with a Desmos graph on Pythagoras topic page
 - [x] **GRAPH-05**: Desmos embeds are scroll-friendly on mobile (do not trap page scroll)
 
@@ -132,9 +132,9 @@
 | CORE-06 | Phase 3 | Complete |
 | CORE-07 | Phase 3 | Complete |
 | CORE-08 | Phase 3 | Complete |
-| CORE-09 | Phase 3 | Pending |
-| CORE-10 | Phase 3 | Pending |
-| CORE-11 | Phase 3 | Pending |
+| CORE-09 | Phase 3 | Complete (03-03) |
+| CORE-10 | Phase 3 | Complete (03-03) |
+| CORE-11 | Phase 3 | Complete (03-03) |
 | CORE-12 | Phase 3 | Pending |
 | CORE-13 | Phase 3 | Pending |
 | CORE-14 | Phase 3 | Pending |
@@ -144,7 +144,7 @@
 | ADD-03 | Phase 4 | Pending |
 | GRAPH-01 | Phase 3 | Complete |
 | GRAPH-02 | Phase 3 | Pending |
-| GRAPH-03 | Phase 3 | Pending |
+| GRAPH-03 | Phase 3 | Complete (03-03) |
 | GRAPH-04 | Phase 4 | Pending |
 | GRAPH-05 | Phase 3 | Complete |
 | RAG-01 | Phase 5 | Pending |
@@ -164,4 +164,4 @@
 
 ---
 *Requirements defined: 2026-02-26*
-*Last updated: 2026-02-26 after 02-02 execution (FND-04, FND-05, FND-06 complete — Phase 2 fully complete)*
+*Last updated: 2026-02-26 after 03-03 execution (CORE-09, CORE-10, CORE-11, GRAPH-03 complete — 11 of 15 Core topics done)*
