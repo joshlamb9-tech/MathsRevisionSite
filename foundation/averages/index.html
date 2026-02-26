@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- KaTeX 0.16.33 — ready for content authoring -->
+  <!-- KaTeX 0.16.33 — swap CSS (FOIT prevention), no SRI on CSS (hash unconfirmed in official docs) -->
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex-swap.min.css"
         crossorigin="anonymous">
@@ -51,21 +51,72 @@
 
   <main class="main-content">
     <p class="breadcrumb">
-      <a href="/MathsRevisionSite/">Home</a> ›
-      <a href="/MathsRevisionSite/foundation/">Foundation</a> ›
+      <a href="/MathsRevisionSite/">Home</a> &rsaquo;
+      <a href="/MathsRevisionSite/foundation/">Foundation</a> &rsaquo;
       Averages
     </p>
 
     <span class="level-badge foundation">Foundation</span>
     <h1 class="page-title">Averages</h1>
+    <p style="display:inline-block;background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;border-radius:4px;padding:0.25rem 0.75rem;font-size:0.85rem;font-weight:600;margin:0.5rem 0 1.5rem;">Non-calculator &mdash; Paper 1</p>
 
-    <p style="color:var(--text-muted);margin-top:1rem">
-      Content for this topic will be added in a later phase.
-    </p>
+    <h2>Key Facts</h2>
+    <ul>
+      <li><strong>Mean:</strong> Add all the values together, then divide by how many there are.
+        $$\text{Mean} = \frac{\text{sum of all values}}{\text{number of values}}$$
+      </li>
+      <li><strong>Median:</strong> The middle value when the data is arranged in order. If there are two middle values, the median is halfway between them.</li>
+      <li><strong>Mode:</strong> The value that appears most often. There can be more than one mode, or no mode if all values appear equally.</li>
+      <li><strong>Range:</strong> The difference between the highest and lowest values.
+        $$\text{Range} = \text{highest} - \text{lowest}$$
+      </li>
+      <li><strong>Finding a missing value:</strong> If you know the mean and all values except one, use: missing value $=$ (mean $\times$ number of values) $-$ sum of known values.</li>
+    </ul>
+
+    <h2>Worked Example 1: Mean, Median, Mode and Range</h2>
+    <p>Find the mean, median, mode, and range of: <strong>3, 7, 5, 7, 2, 9, 7, 4</strong></p>
+    <ol>
+      <li><strong>Order the data:</strong> 2, 3, 4, 5, 7, 7, 7, 9</li>
+      <li><strong>Mean:</strong>
+        $$\text{Mean} = \frac{3 + 7 + 5 + 7 + 2 + 9 + 7 + 4}{8} = \frac{44}{8} = 5.5$$
+      </li>
+      <li><strong>Median:</strong> 8 values, so the median is the mean of the 4th and 5th values.
+        $$\text{Median} = \frac{5 + 7}{2} = 6$$
+      </li>
+      <li><strong>Mode:</strong> 7 appears three times (more than any other value). Mode $= 7$.</li>
+      <li><strong>Range:</strong>
+        $$\text{Range} = 9 - 2 = 7$$
+      </li>
+    </ol>
+    <p><strong>Mean = 5.5 &nbsp;|&nbsp; Median = 6 &nbsp;|&nbsp; Mode = 7 &nbsp;|&nbsp; Range = 7</strong></p>
+
+    <h2>Worked Example 2: Finding a Missing Value Given the Mean</h2>
+    <p>The mean of five numbers is 8. Four of the numbers are 6, 11, 7, and 9. Find the fifth number.</p>
+    <ol>
+      <li>The mean of 5 numbers is 8, so the total sum must be:
+        $$\text{Total} = 8 \times 5 = 40$$
+      </li>
+      <li>Find the sum of the four known values:
+        $$6 + 11 + 7 + 9 = 33$$
+      </li>
+      <li>Find the missing value:
+        $$\text{Missing value} = 40 - 33 = 7$$
+      </li>
+    </ol>
+    <p><strong>Answer: The fifth number is 7.</strong></p>
+    <p><em>Check: $(6 + 11 + 7 + 9 + 7) \div 5 = 40 \div 5 = 8$ &checkmark;</em></p>
+
+    <h2>Which Average to Use?</h2>
+    <ul>
+      <li><strong>Mean</strong> &mdash; best when data is evenly spread, no extreme outliers. Used for test scores, heights, temperatures.</li>
+      <li><strong>Median</strong> &mdash; best when there are extreme values (outliers) that would skew the mean. Used for house prices, salaries.</li>
+      <li><strong>Mode</strong> &mdash; best for non-numerical data or when you want the most popular value. Used for shoe sizes, favourite colours.</li>
+      <li><strong>Range</strong> &mdash; measures spread, not an average. A small range means data is consistent; a large range means data is spread out.</li>
+    </ul>
   </main>
 
   <footer>
-    <p>Mowden Hall School · Year 8 CE Maths Revision</p>
+    <p>Mowden Hall School &middot; Year 8 CE Maths Revision</p>
   </footer>
 
 </body>
