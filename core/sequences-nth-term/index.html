@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sequences and nth Term | Core | Mowden Hall Maths Revision</title>
+  <title>Sequences and Nth Term | Core | Mowden Hall Maths Revision</title>
 
   <!-- Dosis font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- KaTeX 0.16.33 — ready for content authoring -->
+  <!-- KaTeX 0.16.33 -->
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex-swap.min.css"
         crossorigin="anonymous">
@@ -51,21 +51,55 @@
 
   <main class="main-content">
     <p class="breadcrumb">
-      <a href="/MathsRevisionSite/">Home</a> ›
-      <a href="/MathsRevisionSite/core/">Core</a> ›
-      Sequences and nth Term
+      <a href="/MathsRevisionSite/">Home</a> &rsaquo;
+      <a href="/MathsRevisionSite/core/">Core</a> &rsaquo;
+      Sequences and Nth Term
     </p>
 
     <span class="level-badge core">Core</span>
-    <h1 class="page-title">Sequences and nth Term</h1>
+    <h1 class="page-title">Sequences and Nth Term</h1>
 
-    <p style="color:var(--text-muted);margin-top:1rem">
-      Content for this topic will be added in a later phase.
-    </p>
+    <h2>Key Facts</h2>
+    <ul>
+      <li><strong>Arithmetic sequence:</strong> A sequence where the difference between consecutive terms is constant. This constant difference is called $d$ (the common difference). Example: 3, 7, 11, 15, ... has $d = 4$.</li>
+      <li><strong>Finding the nth term:</strong> For an arithmetic sequence with first term $a$ and common difference $d$:
+        $$U_n = dn + (a - d)$$
+        A quicker way to remember: $U_n = d \cdot n + c$, where $c$ is the "zeroth term" (the value before the sequence starts, found by subtracting $d$ from the first term).
+      </li>
+      <li><strong>Using the nth term:</strong> Substitute any value of $n$ to find that term. For example, $U_{10}$ means the 10th term — substitute $n = 10$.</li>
+      <li><strong>Is a value in the sequence?</strong> Set $U_n$ equal to the value, solve for $n$. If $n$ is a positive integer, the value is in the sequence.</li>
+      <li><strong>Square and triangle numbers:</strong> These are non-arithmetic sequences worth knowing. Square numbers: 1, 4, 9, 16, 25, ... ($U_n = n^2$). Triangle numbers: 1, 3, 6, 10, 15, ... ($U_n = \frac{1}{2}n(n+1)$).</li>
+    </ul>
+
+    <h2>Worked Example 1: Finding the Nth Term</h2>
+    <p>Find the nth term formula for the sequence 5, 8, 11, 14, ...</p>
+    <ol>
+      <li>Find the common difference: $d = 8 - 5 = 3$</li>
+      <li>Find the zeroth term (subtract $d$ from the first term): $a - d = 5 - 3 = 2$</li>
+      <li>Write the formula:
+        $$U_n = 3n + 2$$
+      </li>
+      <li>Check by substituting $n = 1$: $U_1 = 3(1) + 2 = 5$ &checkmark; and $n = 2$: $U_2 = 3(2) + 2 = 8$ &checkmark;</li>
+    </ol>
+    <p><strong>Answer: $U_n = 3n + 2$</strong></p>
+
+    <h2>Worked Example 2: Is a Value in the Sequence?</h2>
+    <p>The nth term of a sequence is $U_n = 4n - 3$. Is 100 a term in this sequence?</p>
+    <ol>
+      <li>Set the formula equal to 100 and solve for $n$:
+        $$4n - 3 = 100$$
+      </li>
+      <li>Add 3 to both sides: $4n = 103$</li>
+      <li>Divide by 4:
+        $$n = \frac{103}{4} = 25.75$$
+      </li>
+      <li>Since $n = 25.75$ is not a positive integer (whole number), 100 is not a term in this sequence.</li>
+    </ol>
+    <p><strong>Answer: 100 is not a term in the sequence (it falls between the 25th and 26th terms).</strong></p>
   </main>
 
   <footer>
-    <p>Mowden Hall School · Year 8 CE Maths Revision</p>
+    <p>Mowden Hall School &middot; Year 8 CE Maths Revision</p>
   </footer>
 
 </body>

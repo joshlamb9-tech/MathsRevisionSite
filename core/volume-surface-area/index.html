@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- KaTeX 0.16.33 — ready for content authoring -->
+  <!-- KaTeX 0.16.33 -->
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex-swap.min.css"
         crossorigin="anonymous">
@@ -51,21 +51,64 @@
 
   <main class="main-content">
     <p class="breadcrumb">
-      <a href="/MathsRevisionSite/">Home</a> ›
-      <a href="/MathsRevisionSite/core/">Core</a> ›
+      <a href="/MathsRevisionSite/">Home</a> &rsaquo;
+      <a href="/MathsRevisionSite/core/">Core</a> &rsaquo;
       Volume and Surface Area
     </p>
 
     <span class="level-badge core">Core</span>
     <h1 class="page-title">Volume and Surface Area</h1>
 
-    <p style="color:var(--text-muted);margin-top:1rem">
-      Content for this topic will be added in a later phase.
-    </p>
+    <h2>Key Facts</h2>
+    <ul>
+      <li><strong>Volume of a cuboid:</strong>
+        $$V = l \times w \times h$$
+        where $l$ = length, $w$ = width, $h$ = height. Units are cubic, e.g. $\text{cm}^3$.
+      </li>
+      <li><strong>Volume of a prism:</strong>
+        $$V = A \times l$$
+        where $A$ is the area of the cross-section and $l$ is the length (depth) of the prism.
+      </li>
+      <li><strong>Surface area of a cuboid:</strong> The sum of the areas of all six faces. For a cuboid with dimensions $l$, $w$, $h$:
+        $$SA = 2(lw + lh + wh)$$
+      </li>
+      <li><strong>Units:</strong> Always include correct units. Volume in $\text{cm}^3$ or $\text{m}^3$. Surface area in $\text{cm}^2$ or $\text{m}^2$.</li>
+    </ul>
+
+    <h2>Worked Example 1: Volume and Surface Area of a Cuboid</h2>
+    <p>A cuboid has dimensions 4 cm &times; 3 cm &times; 5 cm. Find its volume and total surface area.</p>
+    <ol>
+      <li>Calculate the volume:
+        $$V = 4 \times 3 \times 5 = 60 \text{ cm}^3$$
+      </li>
+      <li>Calculate the area of each pair of faces:
+        <ul>
+          <li>Top and bottom: $4 \times 3 = 12 \text{ cm}^2$ each, so $2 \times 12 = 24 \text{ cm}^2$</li>
+          <li>Front and back: $4 \times 5 = 20 \text{ cm}^2$ each, so $2 \times 20 = 40 \text{ cm}^2$</li>
+          <li>Left and right: $3 \times 5 = 15 \text{ cm}^2$ each, so $2 \times 15 = 30 \text{ cm}^2$</li>
+        </ul>
+      </li>
+      <li>Total surface area:
+        $$SA = 24 + 40 + 30 = 94 \text{ cm}^2$$
+      </li>
+    </ol>
+    <p><strong>Answer: Volume = $60 \text{ cm}^3$, Surface area = $94 \text{ cm}^2$</strong></p>
+
+    <h2>Worked Example 2: Volume of a Triangular Prism</h2>
+    <p>A triangular prism has a triangular cross-section with base 6 cm and height 4 cm. The length of the prism is 8 cm. Find the volume.</p>
+    <ol>
+      <li>First find the area of the triangular cross-section:
+        $$A = \frac{1}{2} \times 6 \times 4 = 12 \text{ cm}^2$$
+      </li>
+      <li>Apply the prism formula with the cross-section area and length:
+        $$V = A \times l = 12 \times 8 = 96 \text{ cm}^3$$
+      </li>
+    </ol>
+    <p><strong>Answer: Volume = $96 \text{ cm}^3$</strong></p>
   </main>
 
   <footer>
-    <p>Mowden Hall School · Year 8 CE Maths Revision</p>
+    <p>Mowden Hall School &middot; Year 8 CE Maths Revision</p>
   </footer>
 
 </body>
