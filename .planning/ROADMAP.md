@@ -46,11 +46,11 @@ Plans:
   2. Pupil can open each Foundation topic page and read a worked example with correctly rendered equations
   3. Every Foundation topic page displays a non-calculator label (Paper 1)
   4. Pupil can return to the Foundation index from any topic page via breadcrumb or back-link
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: Convert Foundation slides to topic pages — fractions, division, prime factors
-- [ ] 02-02: Convert Foundation slides to topic pages — estimation, long multiplication, averages; add non-calc labels throughout
+- [ ] 02-01-PLAN.md — Foundation topic pages: fractions, division, prime factors (with KaTeX worked examples, non-calc badge)
+- [ ] 02-02-PLAN.md — Foundation topic pages: estimation, long multiplication, averages (non-calc badge on all 6)
 
 ### Phase 3: Core Content
 **Goal**: Pupils can access a worked example for all 15 Core CE topics, including the 10 topics not covered in existing slides, with interactive Desmos graphs on the four graph-heavy topics
