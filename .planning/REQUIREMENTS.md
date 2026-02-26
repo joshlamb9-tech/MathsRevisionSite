@@ -8,10 +8,10 @@
 ### Infrastructure
 
 - [x] **INFRA-01**: Site is deployed and publicly accessible on GitHub Pages
-- [ ] **INFRA-02**: KaTeX equations render correctly on the live GitHub Pages URL (inline and display)
+- [x] **INFRA-02**: KaTeX equations render correctly on the live GitHub Pages URL (inline and display)
 - [x] **INFRA-03**: Jekyll processing is disabled (`.nojekyll`) — prime notation and underscores render correctly
 - [ ] **INFRA-04**: Topic URL structure is locked (kebab-case slugs, `/level/topic-slug/` pattern) before content authoring
-- [ ] **INFRA-05**: Mobile CSS is in place including KaTeX display equation overflow fix before content authoring
+- [x] **INFRA-05**: Mobile CSS is in place including KaTeX display equation overflow fix before content authoring
 
 ### Design and Navigation
 
@@ -108,10 +108,10 @@
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | INFRA-01 | Phase 1 | Complete (01-01) |
-| INFRA-02 | Phase 1 | Pending |
+| INFRA-02 | Phase 1 | Complete |
 | INFRA-03 | Phase 1 | Complete (01-01) |
 | INFRA-04 | Phase 1 | Pending |
-| INFRA-05 | Phase 1 | Pending |
+| INFRA-05 | Phase 1 | Complete |
 | DESIGN-01 | Phase 1 | Complete (01-01) |
 | DESIGN-02 | Phase 1 | Complete (01-01) |
 | DESIGN-03 | Phase 1 | Complete (01-01) |

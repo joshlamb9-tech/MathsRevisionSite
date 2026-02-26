@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 1 of 5 (Scaffold and Foundation)
-Plan: 1 of 3 in current phase
-Status: In progress — checkpoint awaiting human verification
-Last activity: 2026-02-26 — 01-01 scaffold and foundation complete (awaiting checkpoint)
+Plan: 2 of 3 in current phase (01-02 complete)
+Status: In progress
+Last activity: 2026-02-26 — 01-02 KaTeX integration verified on live GitHub Pages URL
 
-Progress: [█░░░░░░░░░] 7%
+Progress: [██░░░░░░░░] 13%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 2 min
-- Total execution time: 2 min
+- Total plans completed: 2
+- Average duration: 16 min
+- Total execution time: 32 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-scaffold-and-foundation | 1 | 2 min | 2 min |
+| 01-scaffold-and-foundation | 2 | 32 min | 16 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2 min)
-- Trend: n/a (first plan)
+- Last 5 plans: 01-01 (2 min), 01-02 (30 min)
+- Trend: n/a (only 2 plans)
 
 *Updated after each plan completion*
 
@@ -49,6 +49,10 @@ Recent decisions affecting current work:
 - [01-01]: Inline nav in every HTML file — fetch() fragments fail silently on GitHub Pages with Safari (CORS)
 - [01-01]: Root-relative paths (/assets/css/styles.css) — relative paths break at directory depth ≥1
 - [01-01]: --mh-navy (#1a2744) and --mh-gold (#c9962c) are PLACEHOLDER values — Josh must confirm
+- [01-02]: katex-swap.min.css over katex.min.css: swap variant prevents FOIT on slow school network connections
+- [01-02]: SRI omitted on CSS: katex-swap hash not in official docs; CSS carries styling risk only — acceptable for school site
+- [01-02]: Delimiter order $$ before $: prevents greedy inline $ from consuming $$
+- [01-02]: onload callback on auto-render (not DOMContentLoaded): guarantees katex.min.js is parsed first
 
 ### Pending Todos
 
@@ -65,6 +69,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-26T17:07:45Z
-Stopped at: 01-01 checkpoint:human-verify — local site ready, awaiting Josh approval
+Last session: 2026-02-26T18:51:40Z
+Stopped at: Completed 01-02-PLAN.md — KaTeX integration verified on live GitHub Pages URL
 Resume file: None
