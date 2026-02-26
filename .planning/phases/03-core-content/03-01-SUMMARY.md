@@ -106,5 +106,16 @@ None - no external service configuration required.
 - All pages follow established pattern — authoring remaining Core topics is straightforward
 
 ---
+## Self-Check: PASSED
+
+- core/ratio/index.html: FOUND
+- core/percentages/index.html: FOUND
+- core/algebra-basics/index.html: FOUND
+- core/shape/index.html: FOUND
+- core/averages/index.html: FOUND
+- .planning/phases/03-core-content/03-01-SUMMARY.md: FOUND
+- Commit 77d298f (Task 1): FOUND
+- Commit 086ae00 (Task 2): FOUND
+
 *Phase: 03-core-content*
 *Completed: 2026-02-26*
