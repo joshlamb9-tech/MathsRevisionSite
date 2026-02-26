@@ -33,11 +33,11 @@
 
 ### Core Content (15 topics)
 
-- [ ] **CORE-01**: Pupil can access a worked example for ratio (Core)
-- [ ] **CORE-02**: Pupil can access a worked example for percentages (Core)
-- [ ] **CORE-03**: Pupil can access a worked example for algebra basics (Core)
-- [ ] **CORE-04**: Pupil can access a worked example for shape (Core)
-- [ ] **CORE-05**: Pupil can access a worked example for averages at Core level (Core)
+- [x] **CORE-01**: Pupil can access a worked example for ratio (Core)
+- [x] **CORE-02**: Pupil can access a worked example for percentages (Core)
+- [x] **CORE-03**: Pupil can access a worked example for algebra basics (Core)
+- [x] **CORE-04**: Pupil can access a worked example for shape (Core)
+- [x] **CORE-05**: Pupil can access a worked example for averages at Core level (Core)
 - [ ] **CORE-06**: Pupil can access a worked example for angles including parallel lines (Core)
 - [ ] **CORE-07**: Pupil can access a worked example for probability (Core)
 - [ ] **CORE-08**: Pupil can access a worked example for coordinates and graphs (Core)
@@ -124,11 +124,11 @@
 | FND-05 | Phase 2 | Complete (02-02) |
 | FND-06 | Phase 2 | Complete (02-02) |
 | FND-07 | Phase 2 | Complete |
-| CORE-01 | Phase 3 | Pending |
-| CORE-02 | Phase 3 | Pending |
-| CORE-03 | Phase 3 | Pending |
-| CORE-04 | Phase 3 | Pending |
-| CORE-05 | Phase 3 | Pending |
+| CORE-01 | Phase 3 | Complete |
+| CORE-02 | Phase 3 | Complete |
+| CORE-03 | Phase 3 | Complete |
+| CORE-04 | Phase 3 | Complete |
+| CORE-05 | Phase 3 | Complete |
 | CORE-06 | Phase 3 | Pending |
 | CORE-07 | Phase 3 | Pending |
 | CORE-08 | Phase 3 | Pending |

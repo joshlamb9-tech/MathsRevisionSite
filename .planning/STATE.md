@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** Year 8 pupils can find, understand, and practise any CE Maths topic in the right level (Foundation/Core/Additional) — presented clearly enough to revise from independently.
-**Current focus:** Phase 2 complete — ready for Phase 3 (Core Content)
+**Current focus:** Phase 3 in progress — Core Content (5 of 10 Core topics authored)
 
 ## Current Position
 
-Phase: 2 of 5 (Foundation Content) — COMPLETE
-Plan: 2 of 2 in phase (02-02 complete — Estimation, Long Multiplication, Averages authored)
-Status: Phase 2 complete — all 6 Foundation topics authored, ready for Phase 3
-Last activity: 2026-02-26 — 02-02 all three topic pages authored, 6/6 Foundation non-calc badge regression passed
+Phase: 3 of 5 (Core Content) — IN PROGRESS
+Plan: 1 of 2 in phase (03-01 complete — Ratio, Percentages, Algebra Basics, Shape, Averages authored)
+Status: Phase 3 Plan 01 complete — 5 Core topics authored; Plan 02 (remaining 5 Core topics) next
+Last activity: 2026-02-26 — 03-01 all five Core topic pages authored, no non-calc badge regression
 
-Progress: [████████░░] 40%
+Progress: [██████████░░░░░░░░░░] 50%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
-- Average duration: 27 min
-- Total execution time: 135 min
+- Total plans completed: 6
+- Average duration: 23 min
+- Total execution time: 138 min
 
 **By Phase:**
 
@@ -29,10 +29,11 @@ Progress: [████████░░] 40%
 |-------|-------|-------|----------|
 | 01-scaffold-and-foundation | 3 | 131 min | 44 min |
 | 02-foundation-content | 2 | 4 min | 2 min |
+| 03-core-content | 1 | 3 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (30 min), 01-03 (99 min), 02-01 (2 min), 02-02 (2 min)
-- Trend: Phase 2 plans very fast — pure content authoring against pre-built stubs, no deployment waits
+- Last 5 plans: 01-03 (99 min), 02-01 (2 min), 02-02 (2 min), 03-01 (3 min)
+- Trend: Phase 3 Plan 01 very fast — pure content authoring against pre-built stubs, same pattern as Phase 2
 
 *Updated after each plan completion*
 
@@ -61,6 +62,8 @@ Recent decisions affecting current work:
 - [02-01]: Topic page content structure locked: breadcrumb > level-badge > h1 > non-calc-badge > Key Facts h2/ul > Worked Example h2/ol (×2) — use this pattern for all remaining topic stubs
 - [02-02]: Added "Which Average to Use?" section to averages page to meet 120-line minimum and add genuine pedagogical value
 - [02-02]: Display equations in Key Facts (mean formula, range formula) — sets precedent for formulae-heavy Core topics
+- [03-01]: Core averages page includes frequency table worked example (sum fx / sum f) to distinguish Core from Foundation level
+- [03-01]: No non-calculator badge on any Core page — Core = Calculator (Paper 2)
 
 ### Pending Todos
 
@@ -77,6 +80,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-26T21:07:19Z
-Stopped at: Completed 02-02-PLAN.md — Estimation, Long Multiplication, Averages authored; Phase 2 complete
+Last session: 2026-02-26T21:40:42Z
+Stopped at: Completed 03-01-PLAN.md — Ratio, Percentages, Algebra Basics, Shape, Averages (Core) authored
 Resume file: None
