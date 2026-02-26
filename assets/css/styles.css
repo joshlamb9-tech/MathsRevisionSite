@@ -284,3 +284,73 @@ footer {
     padding: 0.5rem 0.75rem;
   }
 }
+
+/* ================================
+   Desmos Interactive Graphs
+   Used on: coordinates-graphs, straight-line-graphs, transformations
+   ================================ */
+
+.desmos-wrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+#desmos-calculator {
+  width: 100%;
+  height: 100%;
+}
+
+/* Mobile scroll-fix overlay — transparent div sits on top of Desmos.
+   On touch devices, touching the graph triggers the overlay's touchstart,
+   which delegates to a passive scroll on the parent page rather than
+   letting Desmos capture the touch for panning.
+   Users can still interact with Desmos by tapping the toggle button
+   which adds class "interactive" to .desmos-wrapper and disables overlay. */
+.desmos-scroll-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: transparent;
+  /* On desktop, pass pointer events through to Desmos */
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .desmos-scroll-overlay {
+    pointer-events: auto;
+    touch-action: pan-y;
+  }
+
+  .desmos-wrapper.interactive .desmos-scroll-overlay {
+    pointer-events: none;
+  }
+
+  .desmos-wrapper {
+    height: 350px;
+  }
+}
+
+.desmos-toggle-btn {
+  display: none;
+  background: var(--core-accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .desmos-toggle-btn {
+    display: block;
+  }
+}
