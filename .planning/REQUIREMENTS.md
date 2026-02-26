@@ -105,24 +105,63 @@
 
 ## Traceability
 
-*Populated during roadmap creation.*
-
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 to INFRA-05 | Phase 1 | Pending |
-| DESIGN-01 to DESIGN-05 | Phase 1 | Pending |
-| FND-01 to FND-07 | Phase 2 | Pending |
-| CORE-01 to CORE-15 | Phase 3 | Pending |
-| ADD-01 to ADD-03 | Phase 4 | Pending |
-| GRAPH-01 to GRAPH-05 | Phase 3–4 | Pending |
-| RAG-01 to RAG-05 | Phase 5 | Pending |
-| FORM-01 to FORM-04 | Phase 5 | Pending |
+| INFRA-01 | Phase 1 | Pending |
+| INFRA-02 | Phase 1 | Pending |
+| INFRA-03 | Phase 1 | Pending |
+| INFRA-04 | Phase 1 | Pending |
+| INFRA-05 | Phase 1 | Pending |
+| DESIGN-01 | Phase 1 | Pending |
+| DESIGN-02 | Phase 1 | Pending |
+| DESIGN-03 | Phase 1 | Pending |
+| DESIGN-04 | Phase 1 | Pending |
+| DESIGN-05 | Phase 1 | Pending |
+| FND-01 | Phase 2 | Pending |
+| FND-02 | Phase 2 | Pending |
+| FND-03 | Phase 2 | Pending |
+| FND-04 | Phase 2 | Pending |
+| FND-05 | Phase 2 | Pending |
+| FND-06 | Phase 2 | Pending |
+| FND-07 | Phase 2 | Pending |
+| CORE-01 | Phase 3 | Pending |
+| CORE-02 | Phase 3 | Pending |
+| CORE-03 | Phase 3 | Pending |
+| CORE-04 | Phase 3 | Pending |
+| CORE-05 | Phase 3 | Pending |
+| CORE-06 | Phase 3 | Pending |
+| CORE-07 | Phase 3 | Pending |
+| CORE-08 | Phase 3 | Pending |
+| CORE-09 | Phase 3 | Pending |
+| CORE-10 | Phase 3 | Pending |
+| CORE-11 | Phase 3 | Pending |
+| CORE-12 | Phase 3 | Pending |
+| CORE-13 | Phase 3 | Pending |
+| CORE-14 | Phase 3 | Pending |
+| CORE-15 | Phase 3 | Pending |
+| ADD-01 | Phase 4 | Pending |
+| ADD-02 | Phase 4 | Pending |
+| ADD-03 | Phase 4 | Pending |
+| GRAPH-01 | Phase 3 | Pending |
+| GRAPH-02 | Phase 3 | Pending |
+| GRAPH-03 | Phase 3 | Pending |
+| GRAPH-04 | Phase 4 | Pending |
+| GRAPH-05 | Phase 3 | Pending |
+| RAG-01 | Phase 5 | Pending |
+| RAG-02 | Phase 5 | Pending |
+| RAG-03 | Phase 5 | Pending |
+| RAG-04 | Phase 5 | Pending |
+| RAG-05 | Phase 5 | Pending |
+| FORM-01 | Phase 5 | Pending |
+| FORM-02 | Phase 5 | Pending |
+| FORM-03 | Phase 5 | Pending |
+| FORM-04 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 43 total
 - Mapped to phases: 43
-- Unmapped: 0 ✓
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-26*
-*Last updated: 2026-02-26 after initial definition*
+*Last updated: 2026-02-26 after roadmap creation*
