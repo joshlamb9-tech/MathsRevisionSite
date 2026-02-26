@@ -38,9 +38,9 @@
 - [x] **CORE-03**: Pupil can access a worked example for algebra basics (Core)
 - [x] **CORE-04**: Pupil can access a worked example for shape (Core)
 - [x] **CORE-05**: Pupil can access a worked example for averages at Core level (Core)
-- [ ] **CORE-06**: Pupil can access a worked example for angles including parallel lines (Core)
-- [ ] **CORE-07**: Pupil can access a worked example for probability (Core)
-- [ ] **CORE-08**: Pupil can access a worked example for coordinates and graphs (Core)
+- [x] **CORE-06**: Pupil can access a worked example for angles including parallel lines (Core)
+- [x] **CORE-07**: Pupil can access a worked example for probability (Core)
+- [x] **CORE-08**: Pupil can access a worked example for coordinates and graphs (Core)
 - [ ] **CORE-09**: Pupil can access a worked example for transformations (Core)
 - [ ] **CORE-10**: Pupil can access a worked example for volume and surface area (Core)
 - [ ] **CORE-11**: Pupil can access a worked example for sequences and nth term (Core)
@@ -57,11 +57,11 @@
 
 ### Interactive Graphs (Desmos)
 
-- [ ] **GRAPH-01**: Pupil can interact with a Desmos graph on coordinates/graphs topic page
+- [x] **GRAPH-01**: Pupil can interact with a Desmos graph on coordinates/graphs topic page
 - [ ] **GRAPH-02**: Pupil can interact with a Desmos graph on straight line graphs topic page
 - [ ] **GRAPH-03**: Pupil can interact with a Desmos graph on transformations topic page
 - [ ] **GRAPH-04**: Pupil can interact with a Desmos graph on Pythagoras topic page
-- [ ] **GRAPH-05**: Desmos embeds are scroll-friendly on mobile (do not trap page scroll)
+- [x] **GRAPH-05**: Desmos embeds are scroll-friendly on mobile (do not trap page scroll)
 
 ### RAG Confidence Tracker
 
@@ -129,9 +129,9 @@
 | CORE-03 | Phase 3 | Complete |
 | CORE-04 | Phase 3 | Complete |
 | CORE-05 | Phase 3 | Complete |
-| CORE-06 | Phase 3 | Pending |
-| CORE-07 | Phase 3 | Pending |
-| CORE-08 | Phase 3 | Pending |
+| CORE-06 | Phase 3 | Complete |
+| CORE-07 | Phase 3 | Complete |
+| CORE-08 | Phase 3 | Complete |
 | CORE-09 | Phase 3 | Pending |
 | CORE-10 | Phase 3 | Pending |
 | CORE-11 | Phase 3 | Pending |
@@ -142,11 +142,11 @@
 | ADD-01 | Phase 4 | Pending |
 | ADD-02 | Phase 4 | Pending |
 | ADD-03 | Phase 4 | Pending |
-| GRAPH-01 | Phase 3 | Pending |
+| GRAPH-01 | Phase 3 | Complete |
 | GRAPH-02 | Phase 3 | Pending |
 | GRAPH-03 | Phase 3 | Pending |
 | GRAPH-04 | Phase 4 | Pending |
-| GRAPH-05 | Phase 3 | Pending |
+| GRAPH-05 | Phase 3 | Complete |
 | RAG-01 | Phase 5 | Pending |
 | RAG-02 | Phase 5 | Pending |
 | RAG-03 | Phase 5 | Pending |
