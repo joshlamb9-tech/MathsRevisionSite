@@ -30,12 +30,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Pupil can navigate between Foundation, Core, and Additional level index pages from any page
   4. Level index pages exist and show the expected topic list with working breadcrumb links back
   5. Site displays without horizontal scrolling on a phone-width screen
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: GitHub Pages repo setup, .nojekyll, base HTML/CSS with Dosis font and Mowden colours
-- [ ] 01-02: KaTeX integration — defer scripts, delimiter order, mobile overflow fix, verified on live URL
-- [ ] 01-03: Shared nav fragment, topic folder structure (kebab-case slugs), level index pages
+- [ ] 01-01-PLAN.md — GitHub Pages repo setup, .nojekyll, base HTML/CSS with Dosis font and Mowden colours, level index pages
+- [ ] 01-02-PLAN.md — KaTeX integration: defer scripts, delimiter order, mobile overflow fix, verified on live URL
+- [ ] 01-03-PLAN.md — 24 topic stub pages with locked URL structure (kebab-case slugs), inline nav, KaTeX head block template
 
 ### Phase 2: Foundation Content
 **Goal**: Pupils can access a worked example for every Foundation CE topic, clearly labelled as non-calculator
