@@ -54,8 +54,11 @@ None yet.
 ### Blockers/Concerns
 
 - **Desmos production API key** — request from info@desmos.com early, before Phase 3. Demo key works for dev but production key needed before go-live.
-- **10 missing Core topics** — Maths teacher input required before Phase 3. Content must be scoped before 03-02 through 03-04 are planned.
 - **Offline use decision** — if site must work on school laptops with no internet, KaTeX must be self-hosted and Desmos cannot be embedded. Resolve in Phase 1.
+
+### Resolved
+
+- ~~**10 missing Core topics** — Maths teacher input required~~ — Claude will research and author all 10 missing Core topics directly from CE 13+ spec. No external content dependency.
 
 ## Session Continuity
 
