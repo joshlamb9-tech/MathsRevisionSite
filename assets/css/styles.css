@@ -1,0 +1,270 @@
+/* ============================================================
+   MATHS REVISION — Year 8 CE  |  Mowden Hall
+   Font: Dosis (Google Fonts)
+   Colours: --mh-navy and --mh-gold are PLACEHOLDER values
+            Josh must confirm before go-live.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap');
+
+/* ─── DESIGN TOKENS ─── */
+:root {
+  --mh-navy:         #1a2744;   /* PLACEHOLDER — Josh to confirm */
+  --mh-gold:         #c9962c;   /* PLACEHOLDER — Josh to confirm */
+  --mh-navy-light:   #2a3a5c;
+  --bg:              #f4f2ef;
+  --white:           #ffffff;
+  --text:            #18181b;
+  --text-mid:        #3f3f46;
+  --text-muted:      #71717a;
+  --border:          #e4e4e7;
+  --foundation-bg:   #fef3c7;
+  --foundation-accent: #d97706;
+  --core-bg:         #dbeafe;
+  --core-accent:     #2563eb;
+  --additional-bg:   #ede9fe;
+  --additional-accent: #7c3aed;
+}
+
+/* ─── RESET ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── BODY ─── */
+body {
+  font-family: 'Dosis', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.65;
+}
+
+/* ─── HEADER ─── */
+.site-header {
+  background: var(--mh-navy);
+  color: var(--white);
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.brand-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.brand-sub {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.header-nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hn-link {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.hn-link:hover {
+  background: var(--mh-navy-light);
+}
+
+.hn-link.active {
+  background: var(--mh-gold);
+  color: var(--white);
+}
+
+/* ─── MAIN CONTENT ─── */
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+/* ─── HERO ─── */
+.hero {
+  text-align: center;
+  padding: 2rem 0 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--mh-navy);
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: var(--text-mid);
+  font-size: 1.1rem;
+}
+
+/* ─── LEVEL CARDS ─── */
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.level-card {
+  display: block;
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-decoration: none;
+  transition: transform 0.15s;
+  border: 1px solid var(--border);
+}
+
+.level-card:hover {
+  transform: translateY(-2px);
+}
+
+.level-card.foundation {
+  background: var(--foundation-bg);
+  border-color: var(--foundation-accent);
+}
+
+.level-card.core {
+  background: var(--core-bg);
+  border-color: var(--core-accent);
+}
+
+.level-card.additional {
+  background: var(--additional-bg);
+  border-color: var(--additional-accent);
+}
+
+.level-card h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.level-card p {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  margin: 0;
+}
+
+/* ─── TOPIC LIST ─── */
+.topic-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.topic-list li {
+  margin: 0;
+}
+
+.topic-list a {
+  display: block;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid var(--border);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.topic-list a:hover {
+  background: var(--white);
+  border-color: var(--mh-navy);
+}
+
+/* ─── BREADCRUMB ─── */
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.breadcrumb a {
+  color: var(--text-mid);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ─── PAGE TITLE ─── */
+.page-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--mh-navy);
+  margin: 0 0 0.25rem;
+}
+
+/* ─── LEVEL BADGE ─── */
+.level-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.level-badge.foundation {
+  background: var(--foundation-bg);
+  color: var(--foundation-accent);
+}
+
+.level-badge.core {
+  background: var(--core-bg);
+  color: var(--core-accent);
+}
+
+.level-badge.additional {
+  background: var(--additional-bg);
+  color: var(--additional-accent);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .level-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-inner {
+    padding: 0.5rem 0.75rem;
+  }
+}
