@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-26)
 ## Current Position
 
 Phase: 1 of 5 (Scaffold and Foundation)
-Plan: 0 of 3 in current phase
-Status: Ready to plan
-Last activity: 2026-02-26 — Roadmap created
+Plan: 1 of 3 in current phase
+Status: In progress — checkpoint awaiting human verification
+Last activity: 2026-02-26 — 01-01 scaffold and foundation complete (awaiting checkpoint)
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [█░░░░░░░░░] 7%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: -
-- Total execution time: -
+- Total plans completed: 1
+- Average duration: 2 min
+- Total execution time: 2 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 01-scaffold-and-foundation | 1 | 2 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: -
-- Trend: -
+- Last 5 plans: 01-01 (2 min)
+- Trend: n/a (first plan)
 
 *Updated after each plan completion*
 
@@ -46,6 +46,9 @@ Recent decisions affecting current work:
 - [Pre-planning]: KaTeX over MathJax — faster render, smaller bundle, sufficient for CE-level maths
 - [Pre-planning]: localStorage for RAG tracker — no backend, works offline, GDPR-friendly
 - [Pre-planning]: .nojekyll required — prevents Jekyll from mangling prime notation
+- [01-01]: Inline nav in every HTML file — fetch() fragments fail silently on GitHub Pages with Safari (CORS)
+- [01-01]: Root-relative paths (/assets/css/styles.css) — relative paths break at directory depth ≥1
+- [01-01]: --mh-navy (#1a2744) and --mh-gold (#c9962c) are PLACEHOLDER values — Josh must confirm
 
 ### Pending Todos
 
@@ -62,6 +65,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-26
-Stopped at: Roadmap created, ready for Phase 1 planning
+Last session: 2026-02-26T17:07:45Z
+Stopped at: 01-01 checkpoint:human-verify — local site ready, awaiting Josh approval
 Resume file: None

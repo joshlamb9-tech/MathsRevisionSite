@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — GitHub Pages repo setup, .nojekyll, base HTML/CSS with Dosis font and Mowden colours, level index pages
+- [x] 01-01-PLAN.md — GitHub Pages repo setup, .nojekyll, base HTML/CSS with Dosis font and Mowden colours, level index pages
 - [ ] 01-02-PLAN.md — KaTeX integration: defer scripts, delimiter order, mobile overflow fix, verified on live URL
 - [ ] 01-03-PLAN.md — 24 topic stub pages with locked URL structure (kebab-case slugs), inline nav, KaTeX head block template
 
@@ -106,7 +106,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Scaffold and Foundation | 0/3 | Not started | - |
+| 1. Scaffold and Foundation | 1/3 | In progress | - |
 | 2. Foundation Content | 0/2 | Not started | - |
 | 3. Core Content | 0/4 | Not started | - |
 | 4. Additional Content | 0/1 | Not started | - |
