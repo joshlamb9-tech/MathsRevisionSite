@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** Year 8 pupils can find, understand, and practise any CE Maths topic in the right level (Foundation/Core/Additional) — presented clearly enough to revise from independently.
-**Current focus:** Phase 3 in progress — Core Content (11 of 10 Core topics authored, Desmos transformations embed complete)
+**Current focus:** Phase 3 COMPLETE — all 15 Core topic pages authored; Phase 4 (Additional Content) next
 
 ## Current Position
 
-Phase: 3 of 5 (Core Content) — IN PROGRESS
-Plan: 3 of 4 in phase (03-03 complete — Transformations with Desmos, Volume/Surface Area, Sequences/Nth Term authored)
-Status: Phase 3 Plan 03 complete — 11 Core topics authored; Plan 03-04 (remaining Desmos embeds / polish) next
-Last activity: 2026-02-26 — 03-03 three topic pages authored, transformations Desmos embed complete
+Phase: 3 of 5 (Core Content) — COMPLETE
+Plan: 4 of 4 in phase (03-04 complete — Straight Line Graphs with Desmos y=mx+c sliders, Speed/Distance/Time, Powers/Roots, Charts/Data authored)
+Status: Phase 3 fully complete — all 15 Core topic pages authored; Phase 4 (Additional Content) next
+Last activity: 2026-02-26 — 03-04 four topic pages authored, all Core stubs replaced
 
-Progress: [█████████████░░░░░░░] 65%
+Progress: [████████████████░░░░] 80%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
-- Average duration: 20 min
-- Total execution time: 140 min
+- Total plans completed: 8
+- Average duration: 18 min
+- Total execution time: 145 min
 
 **By Phase:**
 
@@ -29,10 +29,10 @@ Progress: [█████████████░░░░░░░] 65%
 |-------|-------|-------|----------|
 | 01-scaffold-and-foundation | 3 | 131 min | 44 min |
 | 02-foundation-content | 2 | 4 min | 2 min |
-| 03-core-content | 3 | 13 min | 4.3 min |
+| 03-core-content | 4 | 18 min | 4.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (2 min), 02-02 (2 min), 03-01 (3 min), 03-02 (2 min), 03-03 (8 min)
+- Last 5 plans: 02-02 (2 min), 03-01 (3 min), 03-02 (2 min), 03-03 (8 min), 03-04 (5 min)
 - Trend: Phase 3 content plans very fast — pure content authoring against pre-built stubs, same pattern as Phase 2
 
 *Updated after each plan completion*
@@ -71,6 +71,9 @@ Recent decisions affecting current work:
 - [03-03]: Desmos wrapper id set to desmos-wrapper-trans (scoped) — avoids clash with coordinates page desmos-wrapper if both ever loaded in same session
 - [03-03]: U_n notation enforced for sequences (not a_n) — CE 13+ standard
 - [03-03]: \text{cm}^3 KaTeX pattern established for volume/area units — precedent for future shape/measure pages
+- [03-04]: desmos-wrapper-slg id used on straight-line-graphs page — avoids ID conflicts with other Desmos pages
+- [03-04]: expressions: true in Desmos constructor (SLG page) — expression panel visible so pupils can see and drag m and c sliders
+- [03-04]: Decimal root worked examples (sqrt(0.49), cbrt(0.008)) — fraction decomposition method established for powers-roots page
 
 ### Pending Todos
 
@@ -87,6 +90,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-26
-Stopped at: Completed 03-03-PLAN.md — Transformations, Volume/Surface Area, Sequences/Nth Term authored
+Last session: 2026-02-26T21:50:00Z
+Stopped at: Completed 03-04-PLAN.md — Straight Line Graphs (Desmos sliders), Speed/Distance/Time, Powers/Roots, Charts/Data authored. Phase 3 complete.
 Resume file: None

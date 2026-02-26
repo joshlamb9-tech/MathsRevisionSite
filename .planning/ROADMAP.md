@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Scaffold and Foundation** - GitHub Pages deployment, KaTeX rendering verified, shared nav, base CSS, URL structure locked
 - [x] **Phase 2: Foundation Content** - All 6 Foundation topics live with worked examples and non-calculator labelling
-- [ ] **Phase 3: Core Content** - All 15 Core topics live with worked examples and Desmos embeds on graph topics
+- [x] **Phase 3: Core Content** - All 15 Core topics live with worked examples and Desmos embeds on graph topics
 - [ ] **Phase 4: Additional Content** - All 3 Additional topics live with worked examples and Desmos on Pythagoras
 - [ ] **Phase 5: RAG Tracker and Formula Sheets** - Confidence tracker on every topic page, formula reference sheets per level
 
@@ -68,7 +68,7 @@ Plans:
 - [x] 03-01-PLAN.md — ratio, percentages, algebra-basics, shape, averages (5 topics — wave 1)
 - [x] 03-02-PLAN.md — angles, probability, coordinates-graphs with Desmos embed + Desmos CSS added to styles.css (wave 1)
 - [x] 03-03-PLAN.md — transformations with Desmos, volume-surface-area, sequences-nth-term (wave 2, depends on 03-02)
-- [ ] 03-04-PLAN.md — straight-line-graphs with Desmos, speed-distance-time, powers-roots, charts-data (wave 2, depends on 03-02)
+- [x] 03-04-PLAN.md — straight-line-graphs with Desmos, speed-distance-time, powers-roots, charts-data (wave 2, depends on 03-02)
 
 ### Phase 4: Additional Content
 **Goal**: Pupils can access a worked example for all 3 Additional CE topics, with an interactive Desmos graph on the Pythagoras page
@@ -108,6 +108,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. Scaffold and Foundation | 3/3 | Complete    | 2026-02-26 |
 | 2. Foundation Content | 2/2 | Complete    | 2026-02-26 |
-| 3. Core Content | 3/4 | In progress | - |
+| 3. Core Content | 4/4 | Complete    | 2026-02-26 |
 | 4. Additional Content | 0/1 | Not started | - |
 | 5. RAG Tracker and Formula Sheets | 0/2 | Not started | - |

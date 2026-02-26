@@ -44,10 +44,10 @@
 - [x] **CORE-09**: Pupil can access a worked example for transformations (Core)
 - [x] **CORE-10**: Pupil can access a worked example for volume and surface area (Core)
 - [x] **CORE-11**: Pupil can access a worked example for sequences and nth term (Core)
-- [ ] **CORE-12**: Pupil can access a worked example for straight line graphs / y=mx+c (Core)
-- [ ] **CORE-13**: Pupil can access a worked example for speed, distance and time (Core)
-- [ ] **CORE-14**: Pupil can access a worked example for powers and roots (Core)
-- [ ] **CORE-15**: Pupil can access a worked example for charts and data interpretation (Core)
+- [x] **CORE-12**: Pupil can access a worked example for straight line graphs / y=mx+c (Core)
+- [x] **CORE-13**: Pupil can access a worked example for speed, distance and time (Core)
+- [x] **CORE-14**: Pupil can access a worked example for powers and roots (Core)
+- [x] **CORE-15**: Pupil can access a worked example for charts and data interpretation (Core)
 
 ### Additional Content (3 topics)
 
@@ -58,7 +58,7 @@
 ### Interactive Graphs (Desmos)
 
 - [x] **GRAPH-01**: Pupil can interact with a Desmos graph on coordinates/graphs topic page
-- [ ] **GRAPH-02**: Pupil can interact with a Desmos graph on straight line graphs topic page
+- [x] **GRAPH-02**: Pupil can interact with a Desmos graph on straight line graphs topic page
 - [x] **GRAPH-03**: Pupil can interact with a Desmos graph on transformations topic page
 - [ ] **GRAPH-04**: Pupil can interact with a Desmos graph on Pythagoras topic page
 - [x] **GRAPH-05**: Desmos embeds are scroll-friendly on mobile (do not trap page scroll)
@@ -135,15 +135,15 @@
 | CORE-09 | Phase 3 | Complete (03-03) |
 | CORE-10 | Phase 3 | Complete (03-03) |
 | CORE-11 | Phase 3 | Complete (03-03) |
-| CORE-12 | Phase 3 | Pending |
-| CORE-13 | Phase 3 | Pending |
-| CORE-14 | Phase 3 | Pending |
-| CORE-15 | Phase 3 | Pending |
+| CORE-12 | Phase 3 | Complete (03-04) |
+| CORE-13 | Phase 3 | Complete (03-04) |
+| CORE-14 | Phase 3 | Complete (03-04) |
+| CORE-15 | Phase 3 | Complete (03-04) |
 | ADD-01 | Phase 4 | Pending |
 | ADD-02 | Phase 4 | Pending |
 | ADD-03 | Phase 4 | Pending |
 | GRAPH-01 | Phase 3 | Complete |
-| GRAPH-02 | Phase 3 | Pending |
+| GRAPH-02 | Phase 3 | Complete (03-04) |
 | GRAPH-03 | Phase 3 | Complete (03-03) |
 | GRAPH-04 | Phase 4 | Pending |
 | GRAPH-05 | Phase 3 | Complete |
@@ -164,4 +164,4 @@
 
 ---
 *Requirements defined: 2026-02-26*
-*Last updated: 2026-02-26 after 03-03 execution (CORE-09, CORE-10, CORE-11, GRAPH-03 complete — 11 of 15 Core topics done)*
+*Last updated: 2026-02-26 after 03-04 execution (CORE-12, CORE-13, CORE-14, CORE-15, GRAPH-02 complete — all 15 Core topics done, Phase 3 complete)*
