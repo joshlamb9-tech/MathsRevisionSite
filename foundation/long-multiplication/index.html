@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- KaTeX 0.16.33 — ready for content authoring -->
+  <!-- KaTeX 0.16.33 — swap CSS (FOIT prevention), no SRI on CSS (hash unconfirmed in official docs) -->
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex-swap.min.css"
         crossorigin="anonymous">
@@ -51,21 +51,77 @@
 
   <main class="main-content">
     <p class="breadcrumb">
-      <a href="/MathsRevisionSite/">Home</a> ›
-      <a href="/MathsRevisionSite/foundation/">Foundation</a> ›
+      <a href="/MathsRevisionSite/">Home</a> &rsaquo;
+      <a href="/MathsRevisionSite/foundation/">Foundation</a> &rsaquo;
       Long Multiplication
     </p>
 
     <span class="level-badge foundation">Foundation</span>
     <h1 class="page-title">Long Multiplication</h1>
+    <p style="display:inline-block;background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7;border-radius:4px;padding:0.25rem 0.75rem;font-size:0.85rem;font-weight:600;margin:0.5rem 0 1.5rem;">Non-calculator &mdash; Paper 1</p>
 
-    <p style="color:var(--text-muted);margin-top:1rem">
-      Content for this topic will be added in a later phase.
-    </p>
+    <h2>Key Facts</h2>
+    <ul>
+      <li><strong>Column method:</strong> Write the larger number on top. Multiply by the units digit first, then by the tens digit (adding a zero placeholder on the second row), then add the two rows.</li>
+      <li><strong>Zero placeholder:</strong> When multiplying by the tens digit, put a 0 in the units column of the second row before multiplying.</li>
+      <li><strong>Grid method (alternative):</strong> Partition each number into hundreds, tens, and units. Multiply each combination and add all the partial products.</li>
+      <li>Always estimate first to check your answer is reasonable. $47 \times 36 \approx 50 \times 40 = 2000$</li>
+    </ul>
+
+    <h2>Worked Example 1: 2-Digit &times; 2-Digit (Column Method)</h2>
+    <p>Calculate $\mathbf{47 \times 36}$ using the column method.</p>
+    <ol>
+      <li><strong>Estimate first:</strong> $50 \times 36 \approx 1800$ (so the answer should be near this)</li>
+      <li><strong>Multiply by the units digit (6):</strong>
+        <ul>
+          <li>$6 \times 7 = 42$ &mdash; write 2, carry 4</li>
+          <li>$6 \times 4 = 24$, plus carried 4 $= 28$ &mdash; write 28</li>
+          <li>First row: $\mathbf{282}$</li>
+        </ul>
+      </li>
+      <li><strong>Multiply by the tens digit (3), add a 0 placeholder:</strong>
+        <ul>
+          <li>$3 \times 7 = 21$ &mdash; write 1, carry 2</li>
+          <li>$3 \times 4 = 12$, plus carried 2 $= 14$ &mdash; write 14</li>
+          <li>Second row: $\mathbf{1410}$ (the 0 is the placeholder)</li>
+        </ul>
+      </li>
+      <li><strong>Add the two rows:</strong>
+        $$282 + 1410 = 1692$$
+      </li>
+    </ol>
+    <p><strong>Answer: $47 \times 36 = 1692$</strong></p>
+
+    <h2>Worked Example 2: 3-Digit &times; 2-Digit (Column Method)</h2>
+    <p>Calculate $\mathbf{324 \times 53}$.</p>
+    <ol>
+      <li><strong>Estimate:</strong> $300 \times 50 = 15\,000$</li>
+      <li><strong>Multiply by 3 (units):</strong>
+        <ul>
+          <li>$3 \times 4 = 12$ &mdash; write 2, carry 1</li>
+          <li>$3 \times 2 = 6$, plus 1 $= 7$</li>
+          <li>$3 \times 3 = 9$</li>
+          <li>First row: $\mathbf{972}$</li>
+        </ul>
+      </li>
+      <li><strong>Multiply by 5 (tens), add a 0 placeholder:</strong>
+        <ul>
+          <li>$5 \times 4 = 20$ &mdash; write 0, carry 2</li>
+          <li>$5 \times 2 = 10$, plus 2 $= 12$ &mdash; write 2, carry 1</li>
+          <li>$5 \times 3 = 15$, plus 1 $= 16$</li>
+          <li>Second row: $\mathbf{16200}$</li>
+        </ul>
+      </li>
+      <li><strong>Add:</strong>
+        $$972 + 16200 = 17172$$
+      </li>
+    </ol>
+    <p><strong>Answer: $324 \times 53 = 17\,172$</strong></p>
+    <p>Check: estimate was 15,000 &mdash; answer is 17,172, which is close. &checkmark;</p>
   </main>
 
   <footer>
-    <p>Mowden Hall School · Year 8 CE Maths Revision</p>
+    <p>Mowden Hall School &middot; Year 8 CE Maths Revision</p>
   </footer>
 
 </body>
