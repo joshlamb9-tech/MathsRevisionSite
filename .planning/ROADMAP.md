@@ -13,7 +13,7 @@ Five phases from empty repo to a complete CE Maths revision site. Phase 1 locks 
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Scaffold and Foundation** - GitHub Pages deployment, KaTeX rendering verified, shared nav, base CSS, URL structure locked
-- [ ] **Phase 2: Foundation Content** - All 6 Foundation topics live with worked examples and non-calculator labelling
+- [x] **Phase 2: Foundation Content** - All 6 Foundation topics live with worked examples and non-calculator labelling
 - [ ] **Phase 3: Core Content** - All 15 Core topics live with worked examples and Desmos embeds on graph topics
 - [ ] **Phase 4: Additional Content** - All 3 Additional topics live with worked examples and Desmos on Pythagoras
 - [ ] **Phase 5: RAG Tracker and Formula Sheets** - Confidence tracker on every topic page, formula reference sheets per level
@@ -50,7 +50,7 @@ Plans:
 
 Plans:
 - [x] 02-01-PLAN.md — Foundation topic pages: fractions, division, prime factors (with KaTeX worked examples, non-calc badge)
-- [ ] 02-02-PLAN.md — Foundation topic pages: estimation, long multiplication, averages (non-calc badge on all 6)
+- [x] 02-02-PLAN.md — Foundation topic pages: estimation, long multiplication, averages (non-calc badge on all 6)
 
 ### Phase 3: Core Content
 **Goal**: Pupils can access a worked example for all 15 Core CE topics, including the 10 topics not covered in existing slides, with interactive Desmos graphs on the four graph-heavy topics
@@ -107,7 +107,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Scaffold and Foundation | 3/3 | Complete    | 2026-02-26 |
-| 2. Foundation Content | 1/2 | In progress | - |
+| 2. Foundation Content | 2/2 | Complete    | 2026-02-26 |
 | 3. Core Content | 0/4 | Not started | - |
 | 4. Additional Content | 0/1 | Not started | - |
 | 5. RAG Tracker and Formula Sheets | 0/2 | Not started | - |

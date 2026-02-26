@@ -5,34 +5,34 @@
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** Year 8 pupils can find, understand, and practise any CE Maths topic in the right level (Foundation/Core/Additional) — presented clearly enough to revise from independently.
-**Current focus:** Phase 2 — Foundation Content
+**Current focus:** Phase 2 complete — ready for Phase 3 (Core Content)
 
 ## Current Position
 
-Phase: 2 of 5 (Foundation Content)
-Plan: 1 of 8 in current phase (02-01 complete — Fractions, Division, Prime Factors authored)
-Status: Phase 2 in progress — 02-01 complete, 02-02 next
-Last activity: 2026-02-26 — 02-01 all three topic pages authored with KaTeX, worked examples, non-calc badges
+Phase: 2 of 5 (Foundation Content) — COMPLETE
+Plan: 2 of 2 in phase (02-02 complete — Estimation, Long Multiplication, Averages authored)
+Status: Phase 2 complete — all 6 Foundation topics authored, ready for Phase 3
+Last activity: 2026-02-26 — 02-02 all three topic pages authored, 6/6 Foundation non-calc badge regression passed
 
-Progress: [████░░░░░░] 22%
+Progress: [████████░░] 40%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 33 min
-- Total execution time: 133 min
+- Total plans completed: 5
+- Average duration: 27 min
+- Total execution time: 135 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-scaffold-and-foundation | 3 | 131 min | 44 min |
-| 02-foundation-content | 1 | 2 min | 2 min |
+| 02-foundation-content | 2 | 4 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2 min), 01-02 (30 min), 01-03 (99 min), 02-01 (2 min)
-- Trend: 02-01 fast — no deployment waits, pure content authoring against pre-built stubs
+- Last 5 plans: 01-02 (30 min), 01-03 (99 min), 02-01 (2 min), 02-02 (2 min)
+- Trend: Phase 2 plans very fast — pure content authoring against pre-built stubs, no deployment waits
 
 *Updated after each plan completion*
 
@@ -59,6 +59,8 @@ Recent decisions affecting current work:
 - [01-03]: If custom domain added later, find-and-replace /MathsRevisionSite/ → / across all 29 HTML files
 - [02-01]: Non-calculator badge uses inline style (no class in styles.css yet) — consistent with plan spec; class can be extracted to stylesheet in a future pass
 - [02-01]: Topic page content structure locked: breadcrumb > level-badge > h1 > non-calc-badge > Key Facts h2/ul > Worked Example h2/ol (×2) — use this pattern for all remaining topic stubs
+- [02-02]: Added "Which Average to Use?" section to averages page to meet 120-line minimum and add genuine pedagogical value
+- [02-02]: Display equations in Key Facts (mean formula, range formula) — sets precedent for formulae-heavy Core topics
 
 ### Pending Todos
 
@@ -67,7 +69,7 @@ None yet.
 ### Blockers/Concerns
 
 - **Desmos production API key** — request from info@desmos.com early, before Phase 3. Demo key works for dev but production key needed before go-live.
-- **Offline use decision** — if site must work on school laptops with no internet, KaTeX must be self-hosted and Desmos cannot be embedded. Resolve in Phase 1.
+- **Offline use decision** — if site must work on school laptops with no internet, KaTeX must be self-hosted and Desmos cannot be embedded. Resolve before Phase 3.
 
 ### Resolved
 
@@ -75,6 +77,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-26T20:46:36Z
-Stopped at: Completed 02-01-PLAN.md — Fractions, Division, Prime Factors topic pages authored with KaTeX and worked examples
+Last session: 2026-02-26T21:07:19Z
+Stopped at: Completed 02-02-PLAN.md — Estimation, Long Multiplication, Averages authored; Phase 2 complete
 Resume file: None
