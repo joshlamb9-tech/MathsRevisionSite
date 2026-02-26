@@ -62,13 +62,13 @@ Plans:
   3. Pupil can open each of the 10 new Core topics and read a worked example with rendered equations
   4. Pupil can interact with a Desmos graph on the coordinates/graphs, straight line graphs, and transformations pages
   5. Desmos embeds on mobile do not trap the page scroll — pupil can scroll past the graph
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 03-01: Convert existing Core slides — ratio, percentages, algebra basics, shape, averages
-- [ ] 03-02: Author new Core content — angles (incl. parallel lines), probability, coordinates and graphs (with Desmos)
-- [ ] 03-03: Author new Core content — transformations (with Desmos), volume and surface area, sequences and nth term
-- [ ] 03-04: Author new Core content — straight line graphs y=mx+c (with Desmos), speed/distance/time, powers and roots, charts and data interpretation
+- [ ] 03-01-PLAN.md — ratio, percentages, algebra-basics, shape, averages (5 topics — wave 1)
+- [ ] 03-02-PLAN.md — angles, probability, coordinates-graphs with Desmos embed + Desmos CSS added to styles.css (wave 1)
+- [ ] 03-03-PLAN.md — transformations with Desmos, volume-surface-area, sequences-nth-term (wave 2, depends on 03-02)
+- [ ] 03-04-PLAN.md — straight-line-graphs with Desmos, speed-distance-time, powers-roots, charts-data (wave 2, depends on 03-02)
 
 ### Phase 4: Additional Content
 **Goal**: Pupils can access a worked example for all 3 Additional CE topics, with an interactive Desmos graph on the Pythagoras page
