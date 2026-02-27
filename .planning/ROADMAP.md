@@ -144,6 +144,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 4.1 → 4.2 → 5
 | 2. Foundation Content | 2/2 | Complete    | 2026-02-26 |
 | 3. Core Content | 4/4 | Complete    | 2026-02-27 |
 | 4. Additional Content | 2/2 | Complete    | 2026-02-27 |
-| 4.1. Site Polish | 0/2 | Not started | - |
+| 4.1. Site Polish | 1/2 | In Progress|  |
 | 4.2. Go-Live Prep | 0/1 | Not started | - |
 | 5. RAG Tracker and Formula Sheets | 0/2 | Not started | - |

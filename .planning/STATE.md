@@ -37,6 +37,7 @@ Progress: [█████████████████░░░] 85%
 - Trend: Additional content authoring extremely fast — same stub-replace pattern, pure content authoring
 
 *Updated after each plan completion*
+| Phase 04.1-site-polish P02 | 3 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -54,7 +55,7 @@ Recent decisions affecting current work:
 - [01-01]: --mh-navy (#1a2744) and --mh-gold (#c9962c) are PLACEHOLDER values — Josh must confirm
 - [01-02]: katex-swap.min.css over katex.min.css: swap variant prevents FOIT on slow school network connections
 - [01-02]: SRI omitted on CSS: katex-swap hash not in official docs; CSS carries styling risk only — acceptable for school site
-- [01-02]: Delimiter order $$ before $: prevents greedy inline $ from consuming $$
+- [01-02]: Delimiter order $ before $: prevents greedy inline $ from consuming $
 - [01-02]: onload callback on auto-render (not DOMContentLoaded): guarantees katex.min.js is parsed first
 - [01-03]: 24 topic slugs LOCKED — must not be changed; Phase 5 RAG tracker uses these as localStorage keys
 - [01-03]: GitHub Pages project site path fix — all href="/" paths must use /MathsRevisionSite/ prefix; root-relative paths resolve to domain root (not project subdirectory)
@@ -83,6 +84,7 @@ Recent decisions affecting current work:
 - [04-02]: desmos-wrapper-pyth ID used — scoped, consistent with desmos-wrapper-slg and desmos-wrapper-trans pattern from Phase 3
 - [04-02]: Default a=3, b=4 — 3-4-5 triple loads immediately so pupils see c=5 without needing to adjust sliders
 - [04-02]: Purple (#7c3aed) for Desmos hypotenuse and triangle — matches Additional level brand colour
+- [Phase 04.1-site-polish]: Non-calc badge accepted in both class and inline-style forms as satisfying FND-07 in Phase 2 verification
 
 ### Pending Todos
 
@@ -99,6 +101,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-27T08:22:52Z
-Stopped at: Completed 04-01-PLAN.md — Index Laws page (ADD-01) and Expanding/Factorising page (ADD-02) authored with KaTeX Key Facts and worked examples.
+Last session: 2026-02-27T08:57:56Z
+Stopped at: Completed 04.1-02-PLAN.md — Phase 2 formal verification report written (02-VERIFICATION.md, status: passed, 7/7 FND requirements satisfied).
 Resume file: None
