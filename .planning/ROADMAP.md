@@ -78,10 +78,11 @@ Plans:
   1. Pupil can navigate to the Additional index and see all 3 topics listed
   2. Pupil can open each Additional topic page and read a worked example with correctly rendered equations
   3. Pupil can interact with a Desmos graph on the Pythagoras page
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 04-01: Convert Additional slides — index laws, algebra (expanding/factorising), Pythagoras with Desmos embed
+- [ ] 04-01-PLAN.md — Index Laws and Expanding/Factorising topic pages (ADD-01, ADD-02)
+- [ ] 04-02-PLAN.md — Pythagoras topic page with Desmos embed (ADD-03, GRAPH-04)
 
 ### Phase 5: RAG Tracker and Formula Sheets
 **Goal**: Pupils can self-assess confidence on every topic using a Red/Amber/Green tracker that persists across sessions, and can access formula reference sheets for each level
@@ -109,5 +110,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Scaffold and Foundation | 3/3 | Complete    | 2026-02-26 |
 | 2. Foundation Content | 2/2 | Complete    | 2026-02-26 |
 | 3. Core Content | 4/4 | Complete    | 2026-02-27 |
-| 4. Additional Content | 0/1 | Not started | - |
+| 4. Additional Content | 0/2 | Not started | - |
 | 5. RAG Tracker and Formula Sheets | 0/2 | Not started | - |
