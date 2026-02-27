@@ -2,7 +2,7 @@
 
 ## Overview
 
-Five phases from empty repo to a complete CE Maths revision site. Phase 1 locks the technical foundation — solving all known KaTeX and GitHub Pages pitfalls before any content is authored. Phases 2, 3, and 4 deliver content level by level (Foundation first because it uses existing slides, Core next as the largest effort, Additional last). Phase 5 completes the site with the RAG confidence tracker and formula reference sheets, both of which depend on stable topic URLs from the content phases.
+Seven phases from empty repo to a complete CE Maths revision site. Phase 1 locks the technical foundation — solving all known KaTeX and GitHub Pages pitfalls before any content is authored. Phases 2, 3, and 4 deliver content level by level. Phases 4.1 and 4.2 are gap closure phases from the v1.0 milestone audit — polishing CSS, fixing documentation, and completing pre-launch prep. Phase 5 completes the site with the RAG confidence tracker and formula reference sheets.
 
 ## Phases
 
@@ -16,6 +16,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Foundation Content** - All 6 Foundation topics live with worked examples and non-calculator labelling
 - [x] **Phase 3: Core Content** - All 15 Core topics live with worked examples and Desmos embeds on graph topics
 - [x] **Phase 4: Additional Content** - All 3 Additional topics live with worked examples and Desmos on Pythagoras (completed 2026-02-27)
+- [ ] **Phase 4.1: Site Polish** (INSERTED) - CSS cleanup, doc fixes, Phase 2 verification
+- [ ] **Phase 4.2: Go-Live Prep** (INSERTED) - Brand colour confirmation and Desmos production API key
 - [ ] **Phase 5: RAG Tracker and Formula Sheets** - Confidence tracker on every topic page, formula reference sheets per level
 
 ## Phase Details
@@ -81,8 +83,39 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Index Laws and Expanding/Factorising topic pages (ADD-01, ADD-02)
-- [ ] 04-02-PLAN.md — Pythagoras topic page with Desmos embed (ADD-03, GRAPH-04)
+- [x] 04-01-PLAN.md — Index Laws and Expanding/Factorising topic pages (ADD-01, ADD-02)
+- [x] 04-02-PLAN.md — Pythagoras topic page with Desmos embed (ADD-03, GRAPH-04)
+
+### Phase 4.1: Site Polish
+**Goal**: All v1.0 audit tech debt items resolved — CSS is clean and maintainable, documentation is accurate, Phase 2 has a formal verification report
+**Depends on**: Phase 4
+**Requirements**: INFRA-04, DESIGN-04 (documentation fix)
+**Gap Closure**: Closes audit tech debt items 1, 3, 4, 5, 7, 8
+**Success Criteria** (what must be TRUE):
+  1. `.non-calc-badge` CSS class exists in styles.css and all 6 Foundation pages use it (no inline style attributes for the badge)
+  2. `.desmos-toggle-btn` on the Pythagoras page renders purple, not blue — a CSS scope override exists in styles.css for Additional-level pages
+  3. INFRA-04 and DESIGN-04 checkboxes are `[x]` in REQUIREMENTS.md
+  4. Phase 4 plan checkboxes are `[x]` in ROADMAP.md (already fixed above)
+  5. Phase 4 SUMMARY files use `requirements-completed` field in frontmatter
+  6. A `02-VERIFICATION.md` exists in the Phase 2 directory, status passed
+**Plans**: TBD
+
+Plans:
+- [ ] 04.1-01: CSS polish and documentation fixes (non-calc-badge class, Desmos button colour, REQUIREMENTS.md, SUMMARY frontmatter)
+- [ ] 04.1-02: Generate Phase 2 verification report
+
+### Phase 4.2: Go-Live Prep
+**Goal**: Site is ready for pupils — brand colours confirmed and Desmos API key is production-grade
+**Depends on**: Phase 4.1
+**Requirements**: DESIGN-01 (colour confirmation)
+**Gap Closure**: Closes audit tech debt items 2, 6
+**Success Criteria** (what must be TRUE):
+  1. `--mh-navy` and `--mh-gold` in styles.css reflect confirmed Mowden Hall brand colours (PLACEHOLDER comment removed)
+  2. All 4 Desmos pages use a production API key (demo key replaced, REPLACE comment removed)
+**Plans**: TBD
+
+Plans:
+- [ ] 04.2-01: Confirm brand colours and replace Desmos demo key (checkpoint tasks — requires Josh input)
 
 ### Phase 5: RAG Tracker and Formula Sheets
 **Goal**: Pupils can self-assess confidence on every topic using a Red/Amber/Green tracker that persists across sessions, and can access formula reference sheets for each level
@@ -103,7 +136,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 4.1 → 4.2 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -111,4 +144,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. Foundation Content | 2/2 | Complete    | 2026-02-26 |
 | 3. Core Content | 4/4 | Complete    | 2026-02-27 |
 | 4. Additional Content | 2/2 | Complete    | 2026-02-27 |
+| 4.1. Site Polish | 0/2 | Not started | - |
+| 4.2. Go-Live Prep | 0/1 | Not started | - |
 | 5. RAG Tracker and Formula Sheets | 0/2 | Not started | - |

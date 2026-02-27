@@ -10,7 +10,7 @@
 - [x] **INFRA-01**: Site is deployed and publicly accessible on GitHub Pages
 - [x] **INFRA-02**: KaTeX equations render correctly on the live GitHub Pages URL (inline and display)
 - [x] **INFRA-03**: Jekyll processing is disabled (`.nojekyll`) — prime notation and underscores render correctly
-- [ ] **INFRA-04**: Topic URL structure is locked (kebab-case slugs, `/level/topic-slug/` pattern) before content authoring
+- [x] **INFRA-04**: Topic URL structure is locked (kebab-case slugs, `/level/topic-slug/` pattern) before content authoring
 - [x] **INFRA-05**: Mobile CSS is in place including KaTeX display equation overflow fix before content authoring
 
 ### Design and Navigation
@@ -18,7 +18,7 @@
 - [x] **DESIGN-01**: Site uses Dosis font and Mowden Hall colour scheme throughout
 - [x] **DESIGN-02**: Pupil can navigate between Foundation, Core, and Additional from any page
 - [x] **DESIGN-03**: Pupil can see the full topic list for a level from the level index page
-- [ ] **DESIGN-04**: Every topic page has a breadcrumb or back-link to its level index
+- [x] **DESIGN-04**: Every topic page has a breadcrumb or back-link to its level index
 - [x] **DESIGN-05**: Layout is usable on mobile (phone-width) without horizontal scrolling
 
 ### Foundation Content (6 topics)
@@ -110,12 +110,12 @@
 | INFRA-01 | Phase 1 | Complete (01-01) |
 | INFRA-02 | Phase 1 | Complete |
 | INFRA-03 | Phase 1 | Complete (01-01) |
-| INFRA-04 | Phase 1 | Pending |
+| INFRA-04 | Phase 1 | Complete (01-03) |
 | INFRA-05 | Phase 1 | Complete |
 | DESIGN-01 | Phase 1 | Complete (01-01) |
 | DESIGN-02 | Phase 1 | Complete (01-01) |
 | DESIGN-03 | Phase 1 | Complete (01-01) |
-| DESIGN-04 | Phase 1 | Pending |
+| DESIGN-04 | Phase 1 | Complete (01-03) |
 | DESIGN-05 | Phase 1 | Complete (01-01) |
 | FND-01 | Phase 2 | Complete |
 | FND-02 | Phase 2 | Complete |
