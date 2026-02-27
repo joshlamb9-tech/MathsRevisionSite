@@ -275,7 +275,7 @@
     // 33. Powers of 2
     function genPow2() {
       var n = pick([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-      return { q: '2\u00b' + (n <= 9 ? n : n) + ' — Wait. What is 2 to the power ' + n + '?', a: String(Math.pow(2, n)) };
+      return { q: 'What is 2 to the power of ' + n + '?', a: String(Math.pow(2, n)) };
     },
 
     // 34. Simple interest / percentage change context
@@ -346,11 +346,7 @@
 
   // ─── MARKING ────────────────────────────────────────────────────────────────
   function normalise(str) {
-    return str.trim().toLowerCase()
-      .replace(/\s+/g, '')
-      .replace(/°/g, '')
-      .replace(/²/g, '')
-      .replace(/£/g, '');
+    return str.trim().replace(/[^0-9.\-]/g, '');
   }
 
   function markTest() {
