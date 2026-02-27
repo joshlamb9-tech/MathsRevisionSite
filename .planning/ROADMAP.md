@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Scaffold and Foundation** - GitHub Pages deployment, KaTeX rendering verified, shared nav, base CSS, URL structure locked
 - [x] **Phase 2: Foundation Content** - All 6 Foundation topics live with worked examples and non-calculator labelling
 - [x] **Phase 3: Core Content** - All 15 Core topics live with worked examples and Desmos embeds on graph topics
-- [ ] **Phase 4: Additional Content** - All 3 Additional topics live with worked examples and Desmos on Pythagoras
+- [x] **Phase 4: Additional Content** - All 3 Additional topics live with worked examples and Desmos on Pythagoras (completed 2026-02-27)
 - [ ] **Phase 5: RAG Tracker and Formula Sheets** - Confidence tracker on every topic page, formula reference sheets per level
 
 ## Phase Details
@@ -110,5 +110,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Scaffold and Foundation | 3/3 | Complete    | 2026-02-26 |
 | 2. Foundation Content | 2/2 | Complete    | 2026-02-26 |
 | 3. Core Content | 4/4 | Complete    | 2026-02-27 |
-| 4. Additional Content | 0/2 | Not started | - |
+| 4. Additional Content | 2/2 | Complete   | 2026-02-27 |
 | 5. RAG Tracker and Formula Sheets | 0/2 | Not started | - |

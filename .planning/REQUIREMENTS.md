@@ -53,14 +53,14 @@
 
 - [ ] **ADD-01**: Pupil can access a worked example for index laws (Additional)
 - [ ] **ADD-02**: Pupil can access a worked example for algebra — expanding and factorising (Additional)
-- [ ] **ADD-03**: Pupil can access a worked example for Pythagoras (Additional)
+- [x] **ADD-03**: Pupil can access a worked example for Pythagoras (Additional)
 
 ### Interactive Graphs (Desmos)
 
 - [x] **GRAPH-01**: Pupil can interact with a Desmos graph on coordinates/graphs topic page
 - [x] **GRAPH-02**: Pupil can interact with a Desmos graph on straight line graphs topic page
 - [x] **GRAPH-03**: Pupil can interact with a Desmos graph on transformations topic page
-- [ ] **GRAPH-04**: Pupil can interact with a Desmos graph on Pythagoras topic page
+- [x] **GRAPH-04**: Pupil can interact with a Desmos graph on Pythagoras topic page
 - [x] **GRAPH-05**: Desmos embeds are scroll-friendly on mobile (do not trap page scroll)
 
 ### RAG Confidence Tracker
@@ -141,11 +141,11 @@
 | CORE-15 | Phase 3 | Complete (03-04) |
 | ADD-01 | Phase 4 | Pending |
 | ADD-02 | Phase 4 | Pending |
-| ADD-03 | Phase 4 | Pending |
+| ADD-03 | Phase 4 | Complete |
 | GRAPH-01 | Phase 3 | Complete |
 | GRAPH-02 | Phase 3 | Complete (03-04) |
 | GRAPH-03 | Phase 3 | Complete (03-03) |
-| GRAPH-04 | Phase 4 | Pending |
+| GRAPH-04 | Phase 4 | Complete |
 | GRAPH-05 | Phase 3 | Complete |
 | RAG-01 | Phase 5 | Pending |
 | RAG-02 | Phase 5 | Pending |
