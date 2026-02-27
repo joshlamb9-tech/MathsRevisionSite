@@ -18,7 +18,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 4: Additional Content** - All 3 Additional topics live with worked examples and Desmos on Pythagoras (completed 2026-02-27)
 - [x] **Phase 4.1: Site Polish** (INSERTED) - CSS cleanup, doc fixes, Phase 2 verification (completed 2026-02-27)
 - [ ] **Phase 4.2: Go-Live Prep** (INSERTED) - Brand colour confirmation and Desmos production API key
-- [ ] **Phase 5: RAG Tracker and Formula Sheets** - Confidence tracker on every topic page, formula reference sheets per level
+- [x] **Phase 5: RAG Tracker and Formula Sheets** - Confidence tracker on every topic page, formula reference sheets per level (completed 2026-02-27)
 
 ## Phase Details
 
@@ -146,4 +146,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 4.1 → 4.2 → 5
 | 4. Additional Content | 2/2 | Complete    | 2026-02-27 |
 | 4.1. Site Polish | 1/2 | Complete    | 2026-02-27 |
 | 4.2. Go-Live Prep | 0/1 | Not started | - |
-| 5. RAG Tracker and Formula Sheets | 1/2 | In Progress|  |
+| 5. RAG Tracker and Formula Sheets | 2/2 | Complete   | 2026-02-27 |

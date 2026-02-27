@@ -73,10 +73,10 @@
 
 ### Formula Reference Sheets
 
-- [ ] **FORM-01**: Pupil can view a Foundation formula reference page
-- [ ] **FORM-02**: Pupil can view a Core formula reference page
-- [ ] **FORM-03**: Pupil can view an Additional formula reference page
-- [ ] **FORM-04**: Formula sheets are printable from desktop (print CSS or static PDF)
+- [x] **FORM-01**: Pupil can view a Foundation formula reference page
+- [x] **FORM-02**: Pupil can view a Core formula reference page
+- [x] **FORM-03**: Pupil can view an Additional formula reference page
+- [x] **FORM-04**: Formula sheets are printable from desktop (print CSS or static PDF)
 
 ## v2 Requirements
 
@@ -152,10 +152,10 @@
 | RAG-03 | Phase 5 | Complete |
 | RAG-04 | Phase 5 | Complete |
 | RAG-05 | Phase 5 | Complete |
-| FORM-01 | Phase 5 | Pending |
-| FORM-02 | Phase 5 | Pending |
-| FORM-03 | Phase 5 | Pending |
-| FORM-04 | Phase 5 | Pending |
+| FORM-01 | Phase 5 | Complete |
+| FORM-02 | Phase 5 | Complete |
+| FORM-03 | Phase 5 | Complete |
+| FORM-04 | Phase 5 | Complete |
 
 **Coverage:**
 - v1 requirements: 43 total

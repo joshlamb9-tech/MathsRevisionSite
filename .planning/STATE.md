@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** Year 8 pupils can find, understand, and practise any CE Maths topic in the right level (Foundation/Core/Additional) — presented clearly enough to revise from independently.
-**Current focus:** Phase 5 (RAG Tracker and Formula Sheets) in progress — 05-01 complete (RAG tracker module, CSS, all 27 pages wired); 05-02 (formula sheets) next
+**Current focus:** Phase 5 (RAG Tracker and Formula Sheets) COMPLETE — all 5 phases done; 05-02 formula sheets (Foundation/Core/Additional) with KaTeX and print CSS complete
 
 ## Current Position
 
-Phase: 5 of 5 (RAG Tracker and Formula Sheets) — IN PROGRESS
-Plan: 1 of 2 complete (05-01 — RAG tracker.js, CSS, 24 topic pages + 3 index pages wired)
-Status: RAG-01, RAG-02, RAG-03, RAG-04, RAG-05 complete; 05-01 done
-Last activity: 2026-02-27 — 05-01 RAG confidence tracker (window.tracker, localStorage, all 27 HTML pages)
+Phase: 5 of 5 (RAG Tracker and Formula Sheets) — COMPLETE
+Plan: 2 of 2 complete (05-02 — formula reference pages, KaTeX render, A4 print CSS)
+Status: RAG-01 through RAG-05 complete; FORM-01 through FORM-04 complete; all phases done
+Last activity: 2026-02-27 — 05-02 formula sheets (3 KaTeX pages, print CSS, A4 layout)
 
-Progress: [██████████████████░░] 93%
+Progress: [████████████████████] 100%
 
 ## Performance Metrics
 
@@ -32,11 +32,11 @@ Progress: [██████████████████░░] 93%
 | 03-core-content | 4 | 18 min | 4.5 min |
 | 04-additional-content | 3 | ~3 min | ~1 min |
 | 04.1-site-polish | 1 | 2 min | 2 min |
-| 05-rag-tracker-and-formula-sheets | 1 | 7 min | 7 min |
+| 05-rag-tracker-and-formula-sheets | 2 | 9 min | 4.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-01 (~2 min), 04.1-02 (1 min), 04.1-01 (2 min), 05-01 (7 min)
-- Trend: RAG tracker plan was more involved (27 files) but remained well under target velocity
+- Last 5 plans: 04.1-01 (2 min), 04.1-02 (1 min), 05-01 (7 min), 05-02 (2 min)
+- Trend: Formula sheets plan was fast (2 min) — clean HTML templating task, no JS complexity
 
 *Updated after each plan completion*
 
@@ -94,6 +94,10 @@ Recent decisions affecting current work:
 - [05-01]: Foundation RAG block after .non-calc-badge; Core/Additional after h1.page-title — consistent placement per level
 - [05-01]: Formula sheet links added to all 3 index pages pointing to /level/formulas/ — safe forward links for 05-02
 - [05-01]: Inline DOMContentLoaded scripts used on all pages — no ES modules, matches GitHub Pages static constraint
+- [05-02]: Second @media print block added (not merged into RAG block) — additive CSS, browsers merge @media print blocks
+- [05-02]: No tracker.js on formula pages — no topic slug, no RAG buttons needed on reference sheets
+- [05-02]: break-inside: avoid + page-break-inside: avoid on .formula-block — modern + legacy Safari fallback
+- [05-02]: Formula page structure established: breadcrumb > level-badge > h1 > formula-print-hint > formula-section* > footer
 
 ### Pending Todos
 
@@ -110,6 +114,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-27T09:07:29Z
-Stopped at: Completed 05-01-PLAN.md — RAG confidence tracker (tracker.js module, RAG CSS, all 24 topic pages + 3 level index pages wired). Requirements RAG-01 through RAG-05 satisfied.
+Last session: 2026-02-27T10:41:49Z
+Stopped at: Completed 05-02-PLAN.md — formula sheets (foundation/core/additional formula reference pages with KaTeX, A4 print CSS). Requirements FORM-01 through FORM-04 satisfied. ALL PHASES COMPLETE.
 Resume file: None
