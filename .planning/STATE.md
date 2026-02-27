@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** Year 8 pupils can find, understand, and practise any CE Maths topic in the right level (Foundation/Core/Additional) — presented clearly enough to revise from independently.
-**Current focus:** Phase 4.1 (Site Polish) in progress — 04.1-01 complete (CSS badge extraction, Desmos button fix, SUMMARY standardisation); 04.1-02 already complete; phase done
+**Current focus:** Phase 5 (RAG Tracker and Formula Sheets) in progress — 05-01 complete (RAG tracker module, CSS, all 27 pages wired); 05-02 (formula sheets) next
 
 ## Current Position
 
-Phase: 4.1 of 5 (Site Polish) — IN PROGRESS
-Plan: 1 of 2 complete (04.1-01 — CSS badge extraction, Desmos button fix, SUMMARY frontmatter standardisation)
-Status: INFRA-04, DESIGN-04 complete; 04.1-01 done
-Last activity: 2026-02-27 — 04.1-01 CSS polish and SUMMARY standardisation (INFRA-04, DESIGN-04)
+Phase: 5 of 5 (RAG Tracker and Formula Sheets) — IN PROGRESS
+Plan: 1 of 2 complete (05-01 — RAG tracker.js, CSS, 24 topic pages + 3 index pages wired)
+Status: RAG-01, RAG-02, RAG-03, RAG-04, RAG-05 complete; 05-01 done
+Last activity: 2026-02-27 — 05-01 RAG confidence tracker (window.tracker, localStorage, all 27 HTML pages)
 
-Progress: [█████████████████░░░] 87%
+Progress: [██████████████████░░] 93%
 
 ## Performance Metrics
 
@@ -32,10 +32,11 @@ Progress: [█████████████████░░░] 87%
 | 03-core-content | 4 | 18 min | 4.5 min |
 | 04-additional-content | 3 | ~3 min | ~1 min |
 | 04.1-site-polish | 1 | 2 min | 2 min |
+| 05-rag-tracker-and-formula-sheets | 1 | 7 min | 7 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-02 (1 min), 04-01 (~2 min), 04.1-02 (1 min), 04.1-01 (2 min)
-- Trend: Polish and CSS refactor tasks fast — clear specifications, mechanical edits
+- Last 5 plans: 04-01 (~2 min), 04.1-02 (1 min), 04.1-01 (2 min), 05-01 (7 min)
+- Trend: RAG tracker plan was more involved (27 files) but remained well under target velocity
 
 *Updated after each plan completion*
 
@@ -87,6 +88,12 @@ Recent decisions affecting current work:
 - [Phase 04.1-site-polish]: Non-calc badge accepted in both class and inline-style forms as satisfying FND-07 in Phase 2 verification
 - [04.1-01]: .page-additional scoping approach chosen for Desmos button override — avoids touching existing .desmos-toggle-btn rule, zero risk of breaking Core pages
 - [04.1-01]: .non-calc-badge placed in LEVEL BADGE section of styles.css — logical grouping with level-badge rules
+- [05-01]: Write-test localStorage check used (not typeof) — handles Safari private browsing which throws on setItem
+- [05-01]: var throughout tracker.js (not const/let) — broadest compatibility with old school iPad Safari versions
+- [05-01]: Single namespaced key 'maths-revision:tracker' — prevents localStorage collision with French revision site on same GitHub Pages origin
+- [05-01]: Foundation RAG block after .non-calc-badge; Core/Additional after h1.page-title — consistent placement per level
+- [05-01]: Formula sheet links added to all 3 index pages pointing to /level/formulas/ — safe forward links for 05-02
+- [05-01]: Inline DOMContentLoaded scripts used on all pages — no ES modules, matches GitHub Pages static constraint
 
 ### Pending Todos
 
@@ -103,6 +110,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-27T09:00:00Z
-Stopped at: Completed 04.1-01-PLAN.md — CSS badge extraction (.non-calc-badge), Desmos purple toggle fix on Pythagoras, and Phase 4 SUMMARY frontmatter standardised (requirements-completed field).
+Last session: 2026-02-27T09:07:29Z
+Stopped at: Completed 05-01-PLAN.md — RAG confidence tracker (tracker.js module, RAG CSS, all 24 topic pages + 3 level index pages wired). Requirements RAG-01 through RAG-05 satisfied.
 Resume file: None

@@ -65,11 +65,11 @@
 
 ### RAG Confidence Tracker
 
-- [ ] **RAG-01**: Pupil can mark any topic as Red, Amber, or Green from the topic page
-- [ ] **RAG-02**: Pupil's RAG ratings persist across browser sessions (localStorage)
-- [ ] **RAG-03**: Level index pages show each topic's RAG status as a colour badge
-- [ ] **RAG-04**: Tracker works gracefully in Safari private browsing (no crash, clear message)
-- [ ] **RAG-05**: localStorage key is namespaced (`maths-revision:tracker`) to avoid collision with French revision site
+- [x] **RAG-01**: Pupil can mark any topic as Red, Amber, or Green from the topic page
+- [x] **RAG-02**: Pupil's RAG ratings persist across browser sessions (localStorage)
+- [x] **RAG-03**: Level index pages show each topic's RAG status as a colour badge
+- [x] **RAG-04**: Tracker works gracefully in Safari private browsing (no crash, clear message)
+- [x] **RAG-05**: localStorage key is namespaced (`maths-revision:tracker`) to avoid collision with French revision site
 
 ### Formula Reference Sheets
 
@@ -147,11 +147,11 @@
 | GRAPH-03 | Phase 3 | Complete (03-03) |
 | GRAPH-04 | Phase 4 | Complete |
 | GRAPH-05 | Phase 3 | Complete |
-| RAG-01 | Phase 5 | Pending |
-| RAG-02 | Phase 5 | Pending |
-| RAG-03 | Phase 5 | Pending |
-| RAG-04 | Phase 5 | Pending |
-| RAG-05 | Phase 5 | Pending |
+| RAG-01 | Phase 5 | Complete |
+| RAG-02 | Phase 5 | Complete |
+| RAG-03 | Phase 5 | Complete |
+| RAG-04 | Phase 5 | Complete |
+| RAG-05 | Phase 5 | Complete |
 | FORM-01 | Phase 5 | Pending |
 | FORM-02 | Phase 5 | Pending |
 | FORM-03 | Phase 5 | Pending |
