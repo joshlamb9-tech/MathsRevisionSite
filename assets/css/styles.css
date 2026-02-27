@@ -378,6 +378,31 @@ footer {
   background: var(--additional-accent);
 }
 
+/* ─── STEP REVEAL ─── */
+
+.reveal-hidden {
+  display: none;
+}
+
+.reveal-btn {
+  display: inline-block;
+  margin: 0.5rem 0 0.75rem;
+  padding: 0.4rem 1.1rem;
+  background: var(--mh-navy);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.reveal-btn:hover {
+  background: var(--mh-navy-light);
+}
+
 /* ─── RAG TRACKER ─── */
 
 .rag-selector {
