@@ -297,6 +297,65 @@
 
   ];
 
+  // ─── TOPIC MAP ───────────────────────────────────────────────────────────────
+  // Index matches position in generators array above
+  var generatorTopics = [
+    'arithmetic',    // 0  genAddition
+    'arithmetic',    // 1  genSubtraction
+    'multiplication',// 2  genMultiplication
+    'arithmetic',    // 3  genMultBy10
+    'division',      // 4  genDivision
+    'division',      // 5  genDivBy10
+    'fractions',     // 6  genFractionOf
+    'percentages',   // 7  genPercentageOf
+    'percentages',   // 8  genPercentChange
+    'powers-roots',  // 9  genSquare
+    'powers-roots',  // 10 genSqrt
+    'powers-roots',  // 11 genCube
+    'algebra',       // 12 genAlgebraAdd
+    'algebra',       // 13 genAlgebraSub
+    'estimation',    // 14 genRound10
+    'estimation',    // 15 genRound100
+    'estimation',    // 16 genRoundDp
+    'units',         // 17 genKmToM
+    'units',         // 18 genKgToG
+    'units',         // 19 genCmToMm
+    'angles',        // 20 genTriangleAngle
+    'angles',        // 21 genStraightLine
+    'angles',        // 22 genAroundPoint
+    'ratio',         // 23 genRatio
+    'decimals',      // 24 genDecimalMult
+    'sequences',     // 25 genSequence
+    'averages',      // 26 genMean
+    'averages',      // 27 genRange
+    'shape',         // 28 genAreaRect
+    'shape',         // 29 genPerimRect
+    'speed',         // 30 genSpeed
+    'speed',         // 31 genDistance
+    'powers-roots',  // 32 genPow2
+    'percentages',   // 33 genSimplePercent
+    'decimals',      // 34 genDecimalTimesTable
+  ];
+
+  var TOPICS = {
+    'arithmetic':    { name: 'Arithmetic',             url: '/MathsRevisionSite/foundation/' },
+    'multiplication':{ name: 'Multiplication',          url: '/MathsRevisionSite/foundation/long-multiplication/' },
+    'division':      { name: 'Division',                url: '/MathsRevisionSite/foundation/division/' },
+    'fractions':     { name: 'Fractions',               url: '/MathsRevisionSite/foundation/fractions/' },
+    'percentages':   { name: 'Percentages',             url: '/MathsRevisionSite/core/percentages/' },
+    'powers-roots':  { name: 'Powers & Roots',          url: '/MathsRevisionSite/core/powers-roots/' },
+    'algebra':       { name: 'Algebra',                 url: '/MathsRevisionSite/core/algebra-basics/' },
+    'estimation':    { name: 'Estimation & Rounding',   url: '/MathsRevisionSite/foundation/estimation/' },
+    'units':         { name: 'Unit Conversions',        url: null },
+    'angles':        { name: 'Angles',                  url: '/MathsRevisionSite/core/angles/' },
+    'ratio':         { name: 'Ratio',                   url: '/MathsRevisionSite/core/ratio/' },
+    'decimals':      { name: 'Decimals',                url: '/MathsRevisionSite/foundation/fractions/' },
+    'sequences':     { name: 'Sequences',               url: '/MathsRevisionSite/core/sequences-nth-term/' },
+    'averages':      { name: 'Averages',                url: '/MathsRevisionSite/core/averages/' },
+    'shape':         { name: 'Area & Perimeter',        url: '/MathsRevisionSite/core/shape/' },
+    'speed':         { name: 'Speed, Distance & Time',  url: '/MathsRevisionSite/core/speed-distance-time/' },
+  };
+
   // ─── STATE ───────────────────────────────────────────────────────────────────
   var questions = [];
   var timerInterval = null;
@@ -309,10 +368,13 @@
 
   // ─── QUESTION GENERATION ────────────────────────────────────────────────────
   function generateQuestions(count) {
-    var qs = [], order = shuffle(generators.slice());
+    var qs = [];
+    var indices = shuffle(generators.map(function (_, i) { return i; }));
     for (var i = 0; i < count; i++) {
-      // cycle through shuffled generators so variety is guaranteed
-      qs.push(order[i % order.length]());
+      var idx = indices[i % indices.length];
+      var q = generators[idx]();
+      q.topic = generatorTopics[idx];
+      qs.push(q);
     }
     return qs;
   }
@@ -351,15 +413,63 @@
 
   function markTest() {
     var inputs = document.querySelectorAll('.ma-answer-input');
-    var correct = 0, results = [];
+    var correct = 0, results = [], topicStats = {};
     inputs.forEach(function (inp, i) {
       var given = normalise(inp.value);
       var expected = normalise(questions[i].a);
       var ok = given === expected;
       if (ok) correct++;
+      var topic = questions[i].topic;
+      if (topic) {
+        if (!topicStats[topic]) topicStats[topic] = { correct: 0, total: 0 };
+        topicStats[topic].total++;
+        if (ok) topicStats[topic].correct++;
+      }
       results.push({ q: questions[i].q, a: questions[i].a, given: inp.value.trim(), ok: ok });
     });
-    return { correct: correct, total: questions.length, results: results };
+    return { correct: correct, total: questions.length, results: results, topicStats: topicStats };
+  }
+
+  // ─── FEEDBACK ────────────────────────────────────────────────────────────────
+  function buildFeedback(topicStats) {
+    var strong = [], weak = [];
+    Object.keys(topicStats).forEach(function (slug) {
+      var t = topicStats[slug];
+      var pct = t.correct / t.total;
+      if (pct >= 0.75) strong.push(slug);
+      else if (pct <= 0.25) weak.push(slug);
+    });
+
+    if (!strong.length && !weak.length) return '';
+
+    var html = '<div class="ma-feedback">';
+
+    if (strong.length) {
+      var names = strong.map(function (s) {
+        return '<strong>' + TOPICS[s].name + '</strong>';
+      });
+      var nameStr = names.length === 1
+        ? names[0]
+        : names.slice(0, -1).join(', ') + ' and ' + names[names.length - 1];
+      html += '<p class="ma-feedback-good">You did really well on ' + nameStr + '!</p>';
+    }
+
+    if (weak.length) {
+      html += '<p class="ma-feedback-improve">Try having a look over these for next time:</p>';
+      html += '<div class="ma-topic-links">';
+      weak.forEach(function (slug) {
+        var t = TOPICS[slug];
+        if (t.url) {
+          html += '<a href="' + t.url + '" class="ma-topic-link">' + t.name + ' &rarr;</a>';
+        } else {
+          html += '<span class="ma-topic-link ma-topic-nolink">' + t.name + '</span>';
+        }
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+    return html;
   }
 
   // ─── SHOW RESULTS ───────────────────────────────────────────────────────────
@@ -388,6 +498,8 @@
             'Answer: <strong>' + r.a + '</strong></span>');
       list.appendChild(li);
     });
+
+    document.getElementById('ma-feedback').innerHTML = buildFeedback(data.topicStats);
 
     // Scroll to top of results
     res.scrollIntoView({ behavior: 'smooth' });

@@ -566,6 +566,55 @@ footer {
   background: var(--mh-navy-light);
 }
 
+/* ── Mental Arithmetic — Feedback ─────────────────────────────────── */
+.ma-feedback {
+  margin: 1.5rem auto;
+  max-width: 640px;
+  padding: 1rem 1.25rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid var(--mh-navy);
+}
+
+.ma-feedback-good {
+  margin: 0 0 0.5rem;
+  color: #16a34a;
+  font-size: 1rem;
+}
+
+.ma-feedback-improve {
+  margin: 0.5rem 0 0.75rem;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.ma-topic-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ma-topic-link {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background: var(--mh-navy);
+  color: var(--white);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.ma-topic-link:hover {
+  background: var(--mh-navy-light);
+}
+
+.ma-topic-nolink {
+  background: #9ca3af;
+  cursor: default;
+}
+
 /* ─── ADDITIONAL LEVEL OVERRIDES ─── */
 /* Scope Desmos toggle button to purple on Additional pages.
    Core pages use .desmos-toggle-btn { background: var(--core-accent) } (blue).
