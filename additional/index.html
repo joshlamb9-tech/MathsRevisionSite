@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/MathsRevisionSite/assets/css/styles.css">
+  <script defer src="/MathsRevisionSite/assets/js/tracker.js"></script>
 </head>
 <body>
 
@@ -34,10 +35,26 @@
     <p>Additional topics are for the higher CE paper. Requires solid Core knowledge first.</p>
 
     <ul class="topic-list">
-      <li><a href="/MathsRevisionSite/additional/index-laws/">Index Laws</a></li>
-      <li><a href="/MathsRevisionSite/additional/expanding-factorising/">Expanding and Factorising</a></li>
-      <li><a href="/MathsRevisionSite/additional/pythagoras/">Pythagoras</a></li>
+      <li data-topic-slug="additional/index-laws"><a href="/MathsRevisionSite/additional/index-laws/">Index Laws</a></li>
+      <li data-topic-slug="additional/expanding-factorising"><a href="/MathsRevisionSite/additional/expanding-factorising/">Expanding and Factorising</a></li>
+      <li data-topic-slug="additional/pythagoras"><a href="/MathsRevisionSite/additional/pythagoras/">Pythagoras</a></li>
     </ul>
+
+    <p class="formula-sheet-link"><a href="/MathsRevisionSite/additional/formulas/">Additional Formula Sheet &rsaquo;</a></p>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!window.tracker || !window.tracker.available) return;
+      document.querySelectorAll('.topic-list li[data-topic-slug]').forEach(function (li) {
+        var slug = li.dataset.topicSlug;
+        var rating = window.tracker.getRating(slug);
+        if (!rating) return;
+        var badge = document.createElement('span');
+        badge.className = 'rag-index-badge rag-' + rating;
+        li.querySelector('a').appendChild(badge);
+      });
+    });
+    </script>
   </main>
 
   <footer>

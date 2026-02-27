@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/MathsRevisionSite/assets/css/styles.css">
+  <script defer src="/MathsRevisionSite/assets/js/tracker.js"></script>
 </head>
 <body>
 
@@ -34,13 +35,29 @@
     <p>Foundation topics are Paper 1 (non-calculator). These form the core arithmetic skills tested at CE.</p>
 
     <ul class="topic-list">
-      <li><a href="/MathsRevisionSite/foundation/fractions/">Fractions</a></li>
-      <li><a href="/MathsRevisionSite/foundation/division/">Division</a></li>
-      <li><a href="/MathsRevisionSite/foundation/prime-factors/">Prime Factors</a></li>
-      <li><a href="/MathsRevisionSite/foundation/estimation/">Estimation</a></li>
-      <li><a href="/MathsRevisionSite/foundation/long-multiplication/">Long Multiplication</a></li>
-      <li><a href="/MathsRevisionSite/foundation/averages/">Averages</a></li>
+      <li data-topic-slug="foundation/fractions"><a href="/MathsRevisionSite/foundation/fractions/">Fractions</a></li>
+      <li data-topic-slug="foundation/division"><a href="/MathsRevisionSite/foundation/division/">Division</a></li>
+      <li data-topic-slug="foundation/prime-factors"><a href="/MathsRevisionSite/foundation/prime-factors/">Prime Factors</a></li>
+      <li data-topic-slug="foundation/estimation"><a href="/MathsRevisionSite/foundation/estimation/">Estimation</a></li>
+      <li data-topic-slug="foundation/long-multiplication"><a href="/MathsRevisionSite/foundation/long-multiplication/">Long Multiplication</a></li>
+      <li data-topic-slug="foundation/averages"><a href="/MathsRevisionSite/foundation/averages/">Averages</a></li>
     </ul>
+
+    <p class="formula-sheet-link"><a href="/MathsRevisionSite/foundation/formulas/">Foundation Formula Sheet &rsaquo;</a></p>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!window.tracker || !window.tracker.available) return;
+      document.querySelectorAll('.topic-list li[data-topic-slug]').forEach(function (li) {
+        var slug = li.dataset.topicSlug;
+        var rating = window.tracker.getRating(slug);
+        if (!rating) return;
+        var badge = document.createElement('span');
+        badge.className = 'rag-index-badge rag-' + rating;
+        li.querySelector('a').appendChild(badge);
+      });
+    });
+    </script>
   </main>
 
   <footer>

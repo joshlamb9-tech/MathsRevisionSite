@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/MathsRevisionSite/assets/css/styles.css">
+  <script defer src="/MathsRevisionSite/assets/js/tracker.js"></script>
 </head>
 <body>
 
@@ -34,22 +35,38 @@
     <p>Core topics cover the main CE Maths paper. Mix of calculator and non-calculator questions.</p>
 
     <ul class="topic-list">
-      <li><a href="/MathsRevisionSite/core/ratio/">Ratio</a></li>
-      <li><a href="/MathsRevisionSite/core/percentages/">Percentages</a></li>
-      <li><a href="/MathsRevisionSite/core/algebra-basics/">Algebra Basics</a></li>
-      <li><a href="/MathsRevisionSite/core/shape/">Shape</a></li>
-      <li><a href="/MathsRevisionSite/core/averages/">Averages</a></li>
-      <li><a href="/MathsRevisionSite/core/angles/">Angles</a></li>
-      <li><a href="/MathsRevisionSite/core/probability/">Probability</a></li>
-      <li><a href="/MathsRevisionSite/core/coordinates-graphs/">Coordinates and Graphs</a></li>
-      <li><a href="/MathsRevisionSite/core/transformations/">Transformations</a></li>
-      <li><a href="/MathsRevisionSite/core/volume-surface-area/">Volume and Surface Area</a></li>
-      <li><a href="/MathsRevisionSite/core/sequences-nth-term/">Sequences and nth Term</a></li>
-      <li><a href="/MathsRevisionSite/core/straight-line-graphs/">Straight Line Graphs</a></li>
-      <li><a href="/MathsRevisionSite/core/speed-distance-time/">Speed, Distance and Time</a></li>
-      <li><a href="/MathsRevisionSite/core/powers-roots/">Powers and Roots</a></li>
-      <li><a href="/MathsRevisionSite/core/charts-data/">Charts and Data Interpretation</a></li>
+      <li data-topic-slug="core/ratio"><a href="/MathsRevisionSite/core/ratio/">Ratio</a></li>
+      <li data-topic-slug="core/percentages"><a href="/MathsRevisionSite/core/percentages/">Percentages</a></li>
+      <li data-topic-slug="core/algebra-basics"><a href="/MathsRevisionSite/core/algebra-basics/">Algebra Basics</a></li>
+      <li data-topic-slug="core/shape"><a href="/MathsRevisionSite/core/shape/">Shape</a></li>
+      <li data-topic-slug="core/averages"><a href="/MathsRevisionSite/core/averages/">Averages</a></li>
+      <li data-topic-slug="core/angles"><a href="/MathsRevisionSite/core/angles/">Angles</a></li>
+      <li data-topic-slug="core/probability"><a href="/MathsRevisionSite/core/probability/">Probability</a></li>
+      <li data-topic-slug="core/coordinates-graphs"><a href="/MathsRevisionSite/core/coordinates-graphs/">Coordinates and Graphs</a></li>
+      <li data-topic-slug="core/transformations"><a href="/MathsRevisionSite/core/transformations/">Transformations</a></li>
+      <li data-topic-slug="core/volume-surface-area"><a href="/MathsRevisionSite/core/volume-surface-area/">Volume and Surface Area</a></li>
+      <li data-topic-slug="core/sequences-nth-term"><a href="/MathsRevisionSite/core/sequences-nth-term/">Sequences and nth Term</a></li>
+      <li data-topic-slug="core/straight-line-graphs"><a href="/MathsRevisionSite/core/straight-line-graphs/">Straight Line Graphs</a></li>
+      <li data-topic-slug="core/speed-distance-time"><a href="/MathsRevisionSite/core/speed-distance-time/">Speed, Distance and Time</a></li>
+      <li data-topic-slug="core/powers-roots"><a href="/MathsRevisionSite/core/powers-roots/">Powers and Roots</a></li>
+      <li data-topic-slug="core/charts-data"><a href="/MathsRevisionSite/core/charts-data/">Charts and Data Interpretation</a></li>
     </ul>
+
+    <p class="formula-sheet-link"><a href="/MathsRevisionSite/core/formulas/">Core Formula Sheet &rsaquo;</a></p>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!window.tracker || !window.tracker.available) return;
+      document.querySelectorAll('.topic-list li[data-topic-slug]').forEach(function (li) {
+        var slug = li.dataset.topicSlug;
+        var rating = window.tracker.getRating(slug);
+        if (!rating) return;
+        var badge = document.createElement('span');
+        badge.className = 'rag-index-badge rag-' + rating;
+        li.querySelector('a').appendChild(badge);
+      });
+    });
+    </script>
   </main>
 
   <footer>
