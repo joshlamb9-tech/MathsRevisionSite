@@ -32,6 +32,7 @@
           });"></script>
 
   <link rel="stylesheet" href="/MathsRevisionSite/assets/css/styles.css">
+  <script defer src="/MathsRevisionSite/assets/js/tracker.js"></script>
 </head>
 <body>
 
@@ -59,6 +60,43 @@
     <span class="level-badge foundation">Foundation</span>
     <h1 class="page-title">Long Multiplication</h1>
     <p class="non-calc-badge">Non-calculator &mdash; Paper 1</p>
+
+    <!-- RAG Confidence Tracker -->
+    <div class="rag-selector" data-topic-slug="foundation/long-multiplication">
+      <span class="rag-label">How confident are you?</span>
+      <button class="rag-btn rag-red"   data-rating="red">Not sure</button>
+      <button class="rag-btn rag-amber" data-rating="amber">Getting there</button>
+      <button class="rag-btn rag-green" data-rating="green">Got it</button>
+    </div>
+    <div class="rag-unavailable" style="display:none">
+      Confidence tracker not available in private browsing.
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var sel = document.querySelector('.rag-selector');
+      if (!sel) return;
+      var slug = sel.dataset.topicSlug;
+      if (!window.tracker || !window.tracker.available) {
+        var msg = document.querySelector('.rag-unavailable');
+        if (msg) msg.style.display = '';
+        sel.style.display = 'none';
+        return;
+      }
+      function applyRating(rating) {
+        sel.querySelectorAll('.rag-btn').forEach(function (btn) {
+          btn.classList.toggle('rag-active', btn.dataset.rating === rating);
+        });
+      }
+      applyRating(window.tracker.getRating(slug));
+      sel.addEventListener('click', function (e) {
+        var btn = e.target.closest('.rag-btn');
+        if (!btn) return;
+        window.tracker.setRating(slug, btn.dataset.rating);
+        applyRating(btn.dataset.rating);
+      });
+    });
+    </script>
 
     <h2>Key Facts</h2>
     <ul>
