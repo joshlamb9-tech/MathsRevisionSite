@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Arithmetic Practice | Mowden Hall Maths Revision</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/MathsRevisionSite/assets/css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/MathsRevisionSite/" class="header-brand" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none">
+        <div class="brand-name">Maths Revision</div>
+      </a>
+      <nav class="header-nav">
+        <a href="/MathsRevisionSite/" class="hn-link">Home</a>
+        <a href="/MathsRevisionSite/foundation/" class="hn-link">Foundation</a>
+        <a href="/MathsRevisionSite/core/" class="hn-link">Core</a>
+        <a href="/MathsRevisionSite/additional/" class="hn-link">Additional</a>
+        <a href="/MathsRevisionSite/mental-arithmetic/" class="hn-link active">Mental Arithmetic</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- ── SETUP SCREEN ── -->
+    <div id="ma-setup">
+      <div class="hero">
+        <h1>Mental Arithmetic Practice</h1>
+        <p>Choose how many questions, work through them, then stop the timer when you're done. Questions are different every time.</p>
+      </div>
+
+      <div class="level-grid">
+        <button class="level-card foundation ma-level-btn" data-ma-count="10">
+          <h2>10 Questions</h2>
+          <p>Quick warm-up. Good for a focused drill on any topic area.</p>
+        </button>
+        <button class="level-card core ma-level-btn" data-ma-count="20">
+          <h2>20 Questions</h2>
+          <p>Half a full test. A solid practice session.</p>
+        </button>
+        <button class="level-card additional ma-level-btn" data-ma-count="30">
+          <h2>30 Questions</h2>
+          <p>Extended practice — close to the real thing.</p>
+        </button>
+        <button class="level-card ma-full ma-level-btn" data-ma-count="40">
+          <h2>Full Test (40)</h2>
+          <p>40 questions, just like the real CE Mental Arithmetic paper. Aim for under 10 minutes.</p>
+        </button>
+      </div>
+    </div>
+
+    <!-- ── TEST SCREEN ── -->
+    <div id="ma-test" hidden>
+      <div class="ma-timer-bar">
+        <span id="ma-progress">0 / 10</span>
+        <div class="ma-timer-centre">
+          <span class="ma-timer-label">Time</span>
+          <span id="ma-timer">0:00</span>
+        </div>
+        <button id="ma-stop-btn" class="ma-stop-btn">Stop &amp; Mark &#10003;</button>
+      </div>
+      <ol id="ma-questions"></ol>
+      <div style="text-align:center;margin-top:1.5rem">
+        <button id="ma-stop-btn-bottom" class="ma-stop-btn">Stop &amp; Mark &#10003;</button>
+      </div>
+    </div>
+
+    <!-- ── RESULTS SCREEN ── -->
+    <div id="ma-results" hidden>
+      <div class="ma-results-summary">
+        <span id="ma-score" class="ma-score-big"></span>
+        <span id="ma-time-taken" class="ma-time-taken"></span>
+      </div>
+      <ol id="ma-results-list"></ol>
+      <div style="text-align:center;margin-top:1.5rem">
+        <button id="ma-retry-btn" class="ma-retry-btn">Try again</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    Mowden Hall School &middot; Year 8 CE Maths Revision
+  </footer>
+
+  <script src="/MathsRevisionSite/assets/js/mental-arithmetic.js"></script>
+
+</body>
+</html>

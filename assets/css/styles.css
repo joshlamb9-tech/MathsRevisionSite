@@ -370,6 +370,202 @@ footer {
   }
 }
 
+/* ─── MENTAL ARITHMETIC ─── */
+
+.ma-full {
+  background: #fce7e7;
+  border-color: var(--mh-gold);
+}
+
+.ma-level-btn {
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Dosis', sans-serif;
+  background: inherit;
+  border: inherit;
+}
+
+.ma-timer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: var(--mh-navy);
+  color: var(--white);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.ma-timer-centre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ma-timer-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+#ma-timer {
+  font-size: 2rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+#ma-progress {
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.85;
+  min-width: 5rem;
+}
+
+.ma-stop-btn {
+  background: var(--mh-gold);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ma-stop-btn:hover {
+  filter: brightness(1.1);
+}
+
+#ma-questions {
+  list-style: none;
+  padding: 0;
+  counter-reset: q-counter;
+}
+
+.ma-question {
+  counter-increment: q-counter;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.ma-question::before {
+  content: counter(q-counter) ".";
+  font-weight: 700;
+  color: var(--text-muted);
+  min-width: 2rem;
+  flex-shrink: 0;
+}
+
+.ma-q-text {
+  flex: 1;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.ma-answer-input {
+  width: 100px;
+  padding: 0.35rem 0.5rem;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.ma-answer-input:focus {
+  outline: none;
+  border-color: var(--mh-navy);
+}
+
+/* Results */
+.ma-results-summary {
+  background: var(--mh-navy);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.ma-score-big {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.ma-time-taken {
+  display: block;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+#ma-results-list {
+  list-style: none;
+  padding: 0;
+  counter-reset: r-counter;
+}
+
+.ma-result-item {
+  counter-increment: r-counter;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.ma-result-item::before {
+  content: counter(r-counter) ".";
+  font-weight: 700;
+  color: var(--text-muted);
+  min-width: 2rem;
+  flex-shrink: 0;
+}
+
+.ma-result-item .ma-q-text {
+  font-size: 0.95rem;
+}
+
+.ma-result-mark {
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ma-correct .ma-result-mark { color: #16a34a; }
+.ma-wrong .ma-result-mark   { color: #dc2626; }
+
+.ma-retry-btn {
+  padding: 0.6rem 1.5rem;
+  background: var(--mh-navy);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ma-retry-btn:hover {
+  background: var(--mh-navy-light);
+}
+
 /* ─── ADDITIONAL LEVEL OVERRIDES ─── */
 /* Scope Desmos toggle button to purple on Additional pages.
    Core pages use .desmos-toggle-btn { background: var(--core-accent) } (blue).
