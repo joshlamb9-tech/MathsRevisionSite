@@ -244,6 +244,20 @@ body {
   color: var(--additional-accent);
 }
 
+/* ─── NON-CALCULATOR BADGE ─── */
+/* Used on all 6 Foundation topic pages (Paper 1 = non-calculator) */
+.non-calc-badge {
+  display: inline-block;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0.5rem 0 1.5rem;
+}
+
 /* ─── FOOTER ─── */
 footer {
   text-align: center;
