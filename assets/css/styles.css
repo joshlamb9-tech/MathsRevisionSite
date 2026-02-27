@@ -1,17 +1,18 @@
 /* ============================================================
    MATHS REVISION — Year 8 CE  |  Mowden Hall
    Font: Dosis (Google Fonts)
-   Colours: --mh-navy and --mh-gold are PLACEHOLDER values
-            Josh must confirm before go-live.
+   Colours: Mowden Hall brand colours (confirmed 2026-02-27)
+            --mh-navy = Pantone 330C (dark green) #00534C
+            --mh-gold = Pantone 704C (dark red)   #81001C
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap');
 
 /* ─── DESIGN TOKENS ─── */
 :root {
-  --mh-navy:         #1a2744;   /* PLACEHOLDER — Josh to confirm */
-  --mh-gold:         #c9962c;   /* PLACEHOLDER — Josh to confirm */
-  --mh-navy-light:   #2a3a5c;
+  --mh-navy:         #00534C;   /* Pantone 330C — Mowden green */
+  --mh-gold:         #81001C;   /* Pantone 704C — Mowden red   */
+  --mh-navy-light:   #006b61;
   --bg:              #f4f2ef;
   --white:           #ffffff;
   --text:            #18181b;
