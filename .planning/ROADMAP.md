@@ -101,7 +101,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 04.1-01-PLAN.md — CSS polish and documentation fixes (non-calc-badge class, Desmos button colour, Phase 4 SUMMARY frontmatter)
+- [x] 04.1-01-PLAN.md — CSS polish and documentation fixes (non-calc-badge class, Desmos button colour, Phase 4 SUMMARY frontmatter)
 - [ ] 04.1-02-PLAN.md — Generate Phase 2 verification report
 
 ### Phase 4.2: Go-Live Prep
