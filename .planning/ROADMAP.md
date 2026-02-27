@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Foundation Content** - All 6 Foundation topics live with worked examples and non-calculator labelling
 - [x] **Phase 3: Core Content** - All 15 Core topics live with worked examples and Desmos embeds on graph topics
 - [x] **Phase 4: Additional Content** - All 3 Additional topics live with worked examples and Desmos on Pythagoras (completed 2026-02-27)
-- [ ] **Phase 4.1: Site Polish** (INSERTED) - CSS cleanup, doc fixes, Phase 2 verification
+- [x] **Phase 4.1: Site Polish** (INSERTED) - CSS cleanup, doc fixes, Phase 2 verification (completed 2026-02-27)
 - [ ] **Phase 4.2: Go-Live Prep** (INSERTED) - Brand colour confirmation and Desmos production API key
 - [ ] **Phase 5: RAG Tracker and Formula Sheets** - Confidence tracker on every topic page, formula reference sheets per level
 
@@ -102,7 +102,7 @@ Plans:
 
 Plans:
 - [x] 04.1-01-PLAN.md — CSS polish and documentation fixes (non-calc-badge class, Desmos button colour, Phase 4 SUMMARY frontmatter)
-- [ ] 04.1-02-PLAN.md — Generate Phase 2 verification report
+- [x] 04.1-02-PLAN.md — Generate Phase 2 verification report
 
 ### Phase 4.2: Go-Live Prep
 **Goal**: Site is ready for pupils — brand colours confirmed and Desmos API key is production-grade
@@ -144,6 +144,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 4.1 → 4.2 → 5
 | 2. Foundation Content | 2/2 | Complete    | 2026-02-26 |
 | 3. Core Content | 4/4 | Complete    | 2026-02-27 |
 | 4. Additional Content | 2/2 | Complete    | 2026-02-27 |
-| 4.1. Site Polish | 1/2 | In Progress|  |
+| 4.1. Site Polish | 1/2 | Complete    | 2026-02-27 |
 | 4.2. Go-Live Prep | 0/1 | Not started | - |
 | 5. RAG Tracker and Formula Sheets | 0/2 | Not started | - |
