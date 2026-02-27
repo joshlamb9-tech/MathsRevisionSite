@@ -127,11 +127,11 @@ Plans:
   3. Level index pages display each topic's RAG status as a colour badge
   4. Pupil using Safari private browsing sees a clear message rather than a crash
   5. Pupil can open a formula reference page for Foundation, Core, and Additional — and print it cleanly from desktop
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 05-01: tracker.js — RAG localStorage module with namespaced key and Safari try/catch; wire to all topic pages and level indexes
-- [ ] 05-02: Formula reference pages — Foundation, Core, Additional — with print CSS
+- [ ] 05-01-PLAN.md — tracker.js localStorage module + RAG CSS; wire RAG selector to all 24 topic pages and badge injection to 3 level index pages
+- [ ] 05-02-PLAN.md — Formula reference pages for Foundation, Core, Additional with KaTeX formulas and A4 print CSS
 
 ## Progress
 
