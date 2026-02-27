@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-26)
 
 **Core value:** Year 8 pupils can find, understand, and practise any CE Maths topic in the right level (Foundation/Core/Additional) — presented clearly enough to revise from independently.
-**Current focus:** Phase 4 (Additional Content) in progress — Pythagoras page complete (ADD-03, GRAPH-04)
+**Current focus:** Phase 4 (Additional Content) in progress — 04-01 and 04-02 complete; 04-03 and 04-04 remain
 
 ## Current Position
 
 Phase: 4 of 5 (Additional Content) — IN PROGRESS
-Plan: 2 of 4 in phase (04-02 complete — Pythagoras with Desmos right-triangle graph)
-Status: 04-02 complete; 04-03 and 04-04 remain
-Last activity: 2026-02-27 — 04-02 Pythagoras page authored with KaTeX worked examples and Desmos embed
+Plan: 2 of 4 in phase (04-01 complete — Index Laws and Expanding/Factorising; 04-02 complete — Pythagoras with Desmos)
+Status: ADD-01, ADD-02, ADD-03, GRAPH-04 complete; 04-03 and 04-04 remain
+Last activity: 2026-02-27 — 04-01 Index Laws and Expanding/Factorising authored (ADD-01, ADD-02); 04-02 Pythagoras page authored with KaTeX and Desmos embed (ADD-03, GRAPH-04)
 
 Progress: [█████████████████░░░] 85%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
-- Average duration: 18 min
-- Total execution time: 145 min
+- Total plans completed: 9
+- Average duration: ~17 min
+- Total execution time: ~146 min
 
 **By Phase:**
 
@@ -30,11 +30,11 @@ Progress: [█████████████████░░░] 85%
 | 01-scaffold-and-foundation | 3 | 131 min | 44 min |
 | 02-foundation-content | 2 | 4 min | 2 min |
 | 03-core-content | 4 | 18 min | 4.5 min |
-| 04-additional-content | 2 | ~2 min | ~1 min |
+| 04-additional-content | 3 | ~3 min | ~1 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-01 (3 min), 03-02 (2 min), 03-03 (8 min), 03-04 (5 min), 04-02 (1 min)
-- Trend: Additional content authoring extremely fast — same stub-replace pattern, single-task plans
+- Last 5 plans: 03-03 (8 min), 03-04 (5 min), 04-02 (1 min), 04-01 (~2 min)
+- Trend: Additional content authoring extremely fast — same stub-replace pattern, pure content authoring
 
 *Updated after each plan completion*
 
@@ -75,6 +75,11 @@ Recent decisions affecting current work:
 - [03-04]: desmos-wrapper-slg id used on straight-line-graphs page — avoids ID conflicts with other Desmos pages
 - [03-04]: expressions: true in Desmos constructor (SLG page) — expression panel visible so pupils can see and drag m and c sliders
 - [03-04]: Decimal root worked examples (sqrt(0.49), cbrt(0.008)) — fraction decomposition method established for powers-roots page
+- [04-01]: No non-calculator badge on Additional pages — Additional = Calculator (Paper 2), consistent with Core pages
+- [04-01]: Breadcrumb uses &rsaquo; entity (matches Core page pattern, not raw ›)
+- [04-01]: Difference of two squares included as third Key Fact on Expanding/Factorising page — adds genuine pedagogical value and meets CE 13+ spec
+- [04-01]: FOIL labelled explicitly (First/Outer/Inner/Last) — helps pupils who have been taught the mnemonic
+- [04-01]: Factorising check step shown as full FOIL expansion — pupils can verify their own work using the same technique
 - [04-02]: desmos-wrapper-pyth ID used — scoped, consistent with desmos-wrapper-slg and desmos-wrapper-trans pattern from Phase 3
 - [04-02]: Default a=3, b=4 — 3-4-5 triple loads immediately so pupils see c=5 without needing to adjust sliders
 - [04-02]: Purple (#7c3aed) for Desmos hypotenuse and triangle — matches Additional level brand colour
@@ -95,5 +100,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-27T08:22:52Z
-Stopped at: Completed 04-02-PLAN.md — Pythagoras page with KaTeX worked examples and Desmos right-triangle graph (ADD-03, GRAPH-04 complete).
+Stopped at: Completed 04-01-PLAN.md — Index Laws page (ADD-01) and Expanding/Factorising page (ADD-02) authored with KaTeX Key Facts and worked examples.
 Resume file: None

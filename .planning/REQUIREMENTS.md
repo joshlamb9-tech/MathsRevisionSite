@@ -51,8 +51,8 @@
 
 ### Additional Content (3 topics)
 
-- [ ] **ADD-01**: Pupil can access a worked example for index laws (Additional)
-- [ ] **ADD-02**: Pupil can access a worked example for algebra — expanding and factorising (Additional)
+- [x] **ADD-01**: Pupil can access a worked example for index laws (Additional)
+- [x] **ADD-02**: Pupil can access a worked example for algebra — expanding and factorising (Additional)
 - [x] **ADD-03**: Pupil can access a worked example for Pythagoras (Additional)
 
 ### Interactive Graphs (Desmos)
@@ -139,8 +139,8 @@
 | CORE-13 | Phase 3 | Complete (03-04) |
 | CORE-14 | Phase 3 | Complete (03-04) |
 | CORE-15 | Phase 3 | Complete (03-04) |
-| ADD-01 | Phase 4 | Pending |
-| ADD-02 | Phase 4 | Pending |
+| ADD-01 | Phase 4 | Complete |
+| ADD-02 | Phase 4 | Complete |
 | ADD-03 | Phase 4 | Complete |
 | GRAPH-01 | Phase 3 | Complete |
 | GRAPH-02 | Phase 3 | Complete (03-04) |
