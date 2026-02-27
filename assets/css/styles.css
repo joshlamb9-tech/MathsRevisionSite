@@ -368,3 +368,11 @@ footer {
     display: block;
   }
 }
+
+/* ─── ADDITIONAL LEVEL OVERRIDES ─── */
+/* Scope Desmos toggle button to purple on Additional pages.
+   Core pages use .desmos-toggle-btn { background: var(--core-accent) } (blue).
+   Additional pages use .page-additional class on <body> to override. */
+.page-additional .desmos-toggle-btn {
+  background: var(--additional-accent);
+}
