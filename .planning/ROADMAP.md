@@ -98,11 +98,11 @@ Plans:
   4. Phase 4 plan checkboxes are `[x]` in ROADMAP.md (already fixed above)
   5. Phase 4 SUMMARY files use `requirements-completed` field in frontmatter
   6. A `02-VERIFICATION.md` exists in the Phase 2 directory, status passed
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 04.1-01: CSS polish and documentation fixes (non-calc-badge class, Desmos button colour, REQUIREMENTS.md, SUMMARY frontmatter)
-- [ ] 04.1-02: Generate Phase 2 verification report
+- [ ] 04.1-01-PLAN.md — CSS polish and documentation fixes (non-calc-badge class, Desmos button colour, Phase 4 SUMMARY frontmatter)
+- [ ] 04.1-02-PLAN.md — Generate Phase 2 verification report
 
 ### Phase 4.2: Go-Live Prep
 **Goal**: Site is ready for pupils — brand colours confirmed and Desmos API key is production-grade
