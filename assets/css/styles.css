@@ -463,3 +463,75 @@ footer {
     display: none !important;
   }
 }
+
+/* ─── FORMULA SHEETS ─── */
+.formula-section {
+  margin: 1.5rem 0;
+}
+
+.formula-section h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--mh-navy);
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--mh-navy);
+  padding-bottom: 0.25rem;
+}
+
+.formula-block {
+  background: var(--white, #fff);
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+}
+
+.formula-block p {
+  margin: 0.2rem 0;
+}
+
+.formula-print-hint {
+  font-size: 0.85rem;
+  color: var(--text-muted, #64748b);
+  margin-bottom: 1.25rem;
+  padding: 0.5rem 0.75rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+/* ─── PRINT: FORMULA SHEETS ─── */
+@media print {
+  @page {
+    size: A4;
+    margin: 1.5cm;
+  }
+
+  .site-header,
+  .breadcrumb,
+  footer,
+  .formula-print-hint {
+    display: none !important;
+  }
+
+  .formula-block {
+    break-inside: avoid;
+    page-break-inside: avoid; /* fallback for older Safari */
+    border: 1px solid #ccc;
+  }
+
+  .formula-section h2 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .main-content {
+    max-width: 100%;
+    padding: 0;
+  }
+}
