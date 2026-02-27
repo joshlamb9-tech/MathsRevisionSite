@@ -51,17 +51,66 @@
 
   <main class="main-content">
     <p class="breadcrumb">
-      <a href="/MathsRevisionSite/">Home</a> ›
-      <a href="/MathsRevisionSite/additional/">Additional</a> ›
+      <a href="/MathsRevisionSite/">Home</a> &rsaquo;
+      <a href="/MathsRevisionSite/additional/">Additional</a> &rsaquo;
       Expanding and Factorising
     </p>
 
     <span class="level-badge additional">Additional</span>
     <h1 class="page-title">Expanding and Factorising</h1>
 
-    <p style="color:var(--text-muted);margin-top:1rem">
-      Content for this topic will be added in a later phase.
-    </p>
+    <h2>Key Facts</h2>
+    <ul>
+      <li>
+        <strong>Expanding double brackets (FOIL):</strong> Multiply every term in the first bracket by every term in the second bracket using the order <em>First, Outer, Inner, Last</em>:
+        $$(x + a)(x + b) = x^2 + (a+b)x + ab$$
+        Collect like terms after expanding.
+      </li>
+      <li>
+        <strong>Factorising $x^2 + bx + c$:</strong> Find two numbers that <em>multiply</em> to $c$ and <em>add</em> to $b$. If those numbers are $p$ and $q$, then:
+        $$x^2 + bx + c = (x + p)(x + q)$$
+        Always check by expanding back out.
+      </li>
+      <li>
+        <strong>Difference of two squares:</strong> A special pattern — the factorisation of $a^2 - b^2$ is:
+        $$a^2 - b^2 = (a + b)(a - b)$$
+        Example: $x^2 - 9 = (x + 3)(x - 3)$
+      </li>
+    </ul>
+
+    <h2>Worked Example 1: Expanding $(x + 3)(x - 2)$</h2>
+    <p>Use FOIL to expand the double brackets, then collect like terms.</p>
+    <ol>
+      <li><strong>First:</strong> Multiply the first term of each bracket: $x \times x = x^2$</li>
+      <li><strong>Outer:</strong> Multiply the outer terms: $x \times (-2) = -2x$</li>
+      <li><strong>Inner:</strong> Multiply the inner terms: $3 \times x = 3x$</li>
+      <li><strong>Last:</strong> Multiply the last term of each bracket: $3 \times (-2) = -6$</li>
+      <li>
+        <strong>Collect like terms</strong> — combine the $-2x$ and $+3x$:
+        $$x^2 - 2x + 3x - 6 = x^2 + x - 6$$
+      </li>
+    </ol>
+    <p><strong>Answer: $x^2 + x - 6$</strong></p>
+
+    <h2>Worked Example 2: Factorising $x^2 + 5x + 6$</h2>
+    <p>Find two numbers that multiply to $6$ and add to $5$, then write the factorised form and verify by expanding.</p>
+    <ol>
+      <li>
+        <strong>List factor pairs of 6:</strong> $(1, 6)$ and $(2, 3)$.
+        Check which pair adds to 5: $1 + 6 = 7$ (no) &nbsp; $2 + 3 = 5$ (yes!).
+        The two numbers are $2$ and $3$: $2 \times 3 = 6$ and $2 + 3 = 5$.
+      </li>
+      <li>
+        <strong>Write the factorised form:</strong>
+        $$x^2 + 5x + 6 = (x + 2)(x + 3)$$
+      </li>
+      <li>
+        <strong>Check by expanding (FOIL):</strong>
+        $$(x + 2)(x + 3) = x^2 + 3x + 2x + 6 = x^2 + 5x + 6 \checkmark$$
+        The expansion matches the original expression — the factorisation is correct.
+      </li>
+    </ol>
+    <p><strong>Answer: $(x + 2)(x + 3)$</strong></p>
   </main>
 
   <footer>
