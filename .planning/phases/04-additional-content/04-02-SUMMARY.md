@@ -1,40 +1,22 @@
 ---
 phase: 04-additional-content
-plan: 02
+plan: "02"
 subsystem: additional-content
 tags: [pythagoras, desmos, katex, interactive-graph, additional-level]
 one-liner: "Pythagoras topic page with KaTeX worked examples (6-8-10 hypotenuse, 5-12-13 shorter side) and Desmos right-triangle graph with a/b sliders and mobile scroll fix"
-
 dependency-graph:
   requires:
     - 04-01 (additional stubs and Additional index — provides page shell)
     - Phase 3 Desmos CSS pattern (desmos-wrapper, overlay, toggle button in styles.css)
-  provides:
-    - additional/pythagoras/index.html (fully authored topic page)
-    - ADD-03 requirement complete
-    - GRAPH-04 requirement complete
-  affects:
-    - Phase 5 RAG tracker (slug "pythagoras" is a localStorage key — must not change)
-
-tech-stack:
-  added:
-    - Desmos GraphingCalculator API v1.11 (added to Pythagoras page head only)
-  patterns:
-    - KaTeX display equations in Key Facts and Worked Examples (established pattern)
-    - Scoped Desmos wrapper ID (desmos-wrapper-pyth) — avoids ID conflicts across pages
-    - CSS overlay + JS toggle for mobile scroll fix (established in Phase 3)
-    - expressions:true in Desmos constructor — slider panel visible to pupils
-
 key-files:
   created: []
   modified:
     - additional/pythagoras/index.html
-
 decisions:
   - "[04-02]: desmos-wrapper-pyth ID used — scoped, consistent with desmos-wrapper-slg and desmos-wrapper-trans pattern from Phase 3"
   - "[04-02]: Default a=3, b=4 — 3-4-5 triple loads immediately so pupils see c=5 without needing to adjust sliders"
   - "[04-02]: Purple (#7c3aed) used for Desmos hypotenuse and triangle — matches Additional level brand colour"
-
+requirements-completed: [ADD-03, GRAPH-04]
 metrics:
   duration: "1 min"
   completed: "2026-02-27"

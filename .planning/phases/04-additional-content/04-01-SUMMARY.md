@@ -5,8 +5,7 @@ subsystem: additional-content
 tags: [html, katex, index-laws, expanding-factorising, algebra, additional-level]
 dependency_graph:
   requires: []
-  provides: [ADD-01, ADD-02]
-  affects: [additional/index-laws/index.html, additional/expanding-factorising/index.html]
+requirements-completed: [ADD-01, ADD-02]
 tech_stack:
   added: []
   patterns: [topic-page-content-structure, katex-display-equations, foil-worked-example]
