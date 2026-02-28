@@ -101,15 +101,24 @@
     <!-- ── LEADERBOARD (always visible) ── -->
     <section class="ma-leaderboard">
       <h2>&#127942; This Week&#8217;s Top Ten</h2>
-      <div class="ma-lb-tabs">
-        <button class="ma-lb-tab ma-lb-tab-active" data-total="10">10 Qs</button>
-        <button class="ma-lb-tab" data-total="15">15 Qs</button>
-        <button class="ma-lb-tab" data-total="30">30 Qs</button>
-        <button class="ma-lb-tab" data-total="40">40 Qs</button>
+      <div class="ma-lb-grid">
+        <div class="ma-lb-board">
+          <h3>10 Questions</h3>
+          <ol id="ma-lb-list-10" class="ma-lb-list"><li class="ma-lb-loading">Loading&hellip;</li></ol>
+        </div>
+        <div class="ma-lb-board">
+          <h3>15 Questions</h3>
+          <ol id="ma-lb-list-15" class="ma-lb-list"><li class="ma-lb-loading">Loading&hellip;</li></ol>
+        </div>
+        <div class="ma-lb-board">
+          <h3>30 Questions</h3>
+          <ol id="ma-lb-list-30" class="ma-lb-list"><li class="ma-lb-loading">Loading&hellip;</li></ol>
+        </div>
+        <div class="ma-lb-board">
+          <h3>40 Questions</h3>
+          <ol id="ma-lb-list-40" class="ma-lb-list"><li class="ma-lb-loading">Loading&hellip;</li></ol>
+        </div>
       </div>
-      <ol id="ma-lb-list" class="ma-lb-list">
-        <li class="ma-lb-loading">Loading&hellip;</li>
-      </ol>
     </section>
 
   </main>

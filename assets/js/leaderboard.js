@@ -5,7 +5,7 @@
   var SUPABASE_KEY = 'sb_publishable_q9qOX43dA9SoxZ3Bq2p2Pw_c-GUaYw_';
 
   var lastResult = null;
-  var activeTotal = 10;
+  var TEST_SIZES = [10, 15, 30, 40];
 
   // ─── SUPABASE HELPERS ─────────────────────────────────────────────────────
 
@@ -30,7 +30,7 @@
     });
   }
 
-  function fetchLeaderboard(total) {
+  function fetchBoard(total) {
     var since = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
     var url = SUPABASE_URL + '/rest/v1/ma_scores' +
       '?select=initials,score,total,time_seconds,percentage' +
@@ -47,13 +47,13 @@
     return Math.floor(s / 60) + ':' + (s % 60 < 10 ? '0' : '') + (s % 60);
   }
 
-  function renderLeaderboard(scores) {
-    var list = document.getElementById('ma-lb-list');
+  function renderBoard(total, scores) {
+    var list = document.getElementById('ma-lb-list-' + total);
     if (!list) return;
     list.innerHTML = '';
 
     if (!Array.isArray(scores) || !scores.length) {
-      list.innerHTML = '<li class="ma-lb-empty">No scores yet \u2014 be the first!</li>';
+      list.innerHTML = '<li class="ma-lb-empty">No scores yet</li>';
       return;
     }
 
@@ -67,48 +67,33 @@
       li.innerHTML =
         '<span class="ma-lb-pos">' + (i + 1) + '</span>' +
         '<span class="ma-lb-name">' + s.initials + '</span>' +
-        '<span class="ma-lb-score">' + s.score + '/' + s.total + ' &nbsp;(' + pct + '%)</span>' +
+        '<span class="ma-lb-score">' + s.score + '/' + s.total + '</span>' +
+        '<span class="ma-lb-pct">(' + pct + '%)</span>' +
         '<span class="ma-lb-time">' + formatTime(s.time_seconds) + '</span>';
       list.appendChild(li);
     });
   }
 
-  function setActiveTab(total) {
-    activeTotal = total;
-    document.querySelectorAll('.ma-lb-tab').forEach(function (btn) {
-      btn.classList.toggle('ma-lb-tab-active', parseInt(btn.dataset.total, 10) === total);
+  function refreshAll() {
+    TEST_SIZES.forEach(function (total) {
+      fetchBoard(total)
+        .then(function (scores) { renderBoard(total, scores); })
+        .catch(function () {
+          var list = document.getElementById('ma-lb-list-' + total);
+          if (list) list.innerHTML = '<li class="ma-lb-empty">Error loading</li>';
+        });
     });
-  }
-
-  function refreshLeaderboard() {
-    var list = document.getElementById('ma-lb-list');
-    if (list) list.innerHTML = '<li class="ma-lb-loading">Loading\u2026</li>';
-    fetchLeaderboard(activeTotal)
-      .then(renderLeaderboard)
-      .catch(function () {
-        if (list) list.innerHTML = '<li class="ma-lb-empty">Could not load leaderboard.</li>';
-      });
   }
 
   // ─── INIT ─────────────────────────────────────────────────────────────────
 
   document.addEventListener('DOMContentLoaded', function () {
 
-    // Tab switching
-    document.querySelectorAll('.ma-lb-tab').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        setActiveTab(parseInt(this.dataset.total, 10));
-        refreshLeaderboard();
-      });
-    });
+    refreshAll();
 
-    refreshLeaderboard();
-
-    // When a test completes, switch to that test's tab, show submit form and refresh
+    // When a test completes, show the submit form and refresh all boards
     document.addEventListener('ma:results', function (e) {
       lastResult = e.detail;
-      setActiveTab(lastResult.total);
-      refreshLeaderboard();
       var submitEl = document.getElementById('ma-leaderboard-submit');
       if (submitEl) {
         submitEl.hidden = false;
@@ -117,7 +102,7 @@
         var inp = document.getElementById('ma-initials');
         if (inp) inp.value = '';
       }
-      refreshLeaderboard();
+      refreshAll();
     });
 
     // Submit initials
@@ -135,7 +120,7 @@
         .then(function (r) {
           if (!r.ok) throw new Error('Server error ' + r.status);
           document.getElementById('ma-leaderboard-submit').hidden = true;
-          refreshLeaderboard();
+          refreshAll();
         })
         .catch(function () {
           btn.disabled = false;
