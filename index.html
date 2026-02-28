@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/MathsRevisionSite/assets/css/styles.css">
+  <script defer src="/MathsRevisionSite/assets/js/tracker.js"></script>
 </head>
 <body>
 
@@ -36,11 +37,11 @@
     <div class="level-grid">
       <a href="/MathsRevisionSite/foundation/" class="level-card foundation">
         <h2>Foundation</h2>
-        <p>Two papers: Paper 1 non-calculator (45 mins, 40 marks) and Paper 2 calculator (60 mins, 60 marks). Covers arithmetic, fractions, division, prime factors, estimation, and more.</p>
+        <p>Two papers: Paper 1 non-calculator (60 mins, 40 marks) and Paper 2 calculator (60 mins, 60 marks). Covers arithmetic, fractions, division, prime factors, estimation, and more.</p>
       </a>
       <a href="/MathsRevisionSite/core/" class="level-card core">
         <h2>Core</h2>
-        <p>Two papers: Paper 1 non-calculator (45 mins, 40 marks) and Paper 2 calculator (60 mins, 60 marks). Ratio, percentages, algebra, geometry, probability, and more.</p>
+        <p>Two papers: Paper 1 non-calculator (60 mins, 40 marks) and Paper 2 calculator (60 mins, 60 marks). Ratio, percentages, algebra, geometry, probability, and more.</p>
       </a>
       <a href="/MathsRevisionSite/additional/" class="level-card additional">
         <h2>Additional</h2>
@@ -55,7 +56,75 @@
         <p>Full CE 13+ past papers with mark schemes. Foundation, Core, Additional, and Mental Arithmetic. Spring 2024 available now.</p>
       </a>
     </div>
+
+    <!-- RAG Progress Overview — populated by inline script below -->
+    <div class="progress-overview" id="progress-overview" style="display:none">
+      <h2>Your Progress</h2>
+      <div id="po-grid"></div>
+      <p class="po-hint">Go to any topic and click "Not sure", "Getting there", or "Got it" to track your confidence here.</p>
+    </div>
+
   </main>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var grid = document.getElementById('po-grid');
+    var panel = document.getElementById('progress-overview');
+    if (!grid || !panel) return;
+
+    var data = {};
+    try {
+      var raw = localStorage.getItem('maths-revision:tracker');
+      if (raw) data = JSON.parse(raw) || {};
+    } catch (e) {}
+
+    var levels = [
+      { name: 'Foundation', href: '/MathsRevisionSite/foundation/', slugs: [
+        'foundation/fractions', 'foundation/division', 'foundation/prime-factors',
+        'foundation/estimation', 'foundation/long-multiplication', 'foundation/averages'
+      ]},
+      { name: 'Core', href: '/MathsRevisionSite/core/', slugs: [
+        'core/ratio', 'core/percentages', 'core/algebra-basics', 'core/shape',
+        'core/averages', 'core/angles', 'core/probability', 'core/coordinates-graphs',
+        'core/transformations', 'core/volume-surface-area', 'core/sequences-nth-term',
+        'core/straight-line-graphs', 'core/speed-distance-time', 'core/powers-roots',
+        'core/charts-data'
+      ]},
+      { name: 'Additional', href: '/MathsRevisionSite/additional/', slugs: [
+        'additional/index-laws', 'additional/expanding-factorising', 'additional/pythagoras'
+      ]}
+    ];
+
+    levels.forEach(function (level) {
+      var green = 0, amber = 0, red = 0;
+      var dots = level.slugs.map(function (slug) {
+        var r = data[slug];
+        if (r === 'green') { green++; return '<span class="po-dot po-green" title="Got it"></span>'; }
+        if (r === 'amber') { amber++; return '<span class="po-dot po-amber" title="Getting there"></span>'; }
+        if (r === 'red')   { red++;   return '<span class="po-dot po-red" title="Not sure"></span>'; }
+        return '<span class="po-dot po-grey" title="Not rated"></span>';
+      }).join('');
+
+      var total = level.slugs.length;
+      var done  = green + amber + red;
+
+      var row = document.createElement('div');
+      row.className = 'po-row';
+      row.innerHTML =
+        '<a href="' + level.href + '" class="po-level-name">' + level.name + '</a>' +
+        '<div class="po-dots">' + dots + '</div>' +
+        '<div class="po-summary">' +
+          (green ? '<span class="po-count po-green">' + green + '&nbsp;✓</span>' : '') +
+          (amber ? '<span class="po-count po-amber">' + amber + '</span>' : '') +
+          (red   ? '<span class="po-count po-red">'   + red   + '</span>' : '') +
+          '<span class="po-count po-grey">' + (total - done) + '&nbsp;to go</span>' +
+        '</div>';
+      grid.appendChild(row);
+    });
+
+    panel.style.display = '';
+  });
+  </script>
 
   <footer>
     Mowden Hall School &middot; Year 8 CE Maths Revision

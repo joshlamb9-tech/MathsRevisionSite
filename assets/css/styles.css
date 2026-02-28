@@ -467,7 +467,62 @@ footer {
   font-size: 1.1em; /* slightly larger than body text for readability */
 }
 
+/* ─── PROGRESS OVERVIEW (homepage) ─── */
+.progress-overview {
+  margin: 2rem 0;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+}
+.progress-overview h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--mh-navy);
+}
+.po-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.7rem;
+  flex-wrap: wrap;
+}
+.po-level-name {
+  font-weight: 700;
+  font-size: 0.88rem;
+  min-width: 90px;
+  flex-shrink: 0;
+  color: var(--text);
+  text-decoration: none;
+}
+.po-level-name:hover { color: var(--mh-navy); }
+.po-dots { display: flex; gap: 5px; flex-wrap: wrap; }
+.po-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+.po-dot.po-green { background: #22c55e; }
+.po-dot.po-amber { background: #f59e0b; }
+.po-dot.po-red   { background: #ef4444; }
+.po-dot.po-grey  { background: var(--border); }
+.po-summary { display: flex; gap: 0.4rem; margin-left: auto; font-size: 0.78rem; flex-wrap: wrap; }
+.po-count { padding: 1px 7px; border-radius: 99px; font-weight: 700; }
+.po-count.po-green { background: #dcfce7; color: #15803d; }
+.po-count.po-amber { background: #fef3c7; color: #d97706; }
+.po-count.po-red   { background: #fee2e2; color: #dc2626; }
+.po-count.po-grey  { background: var(--bg); color: var(--text-muted); }
+.po-hint { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem; }
+
 /* ─── RESPONSIVE ─── */
+@media (max-width: 960px) {
+  .level-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 600px) {
   .hero h1 {
     font-size: 1.5rem;
@@ -479,6 +534,25 @@ footer {
 
   .header-inner {
     padding: 0.5rem 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  /* Nav scrolls horizontally on small screens */
+  .header-nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding-bottom: 4px;
+    font-size: 0.82rem;
+  }
+
+  .hn-link {
+    padding: 0.3rem 0.5rem;
+  }
+
+  .po-summary {
+    margin-left: 0;
   }
 }
 
