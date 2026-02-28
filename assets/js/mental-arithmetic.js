@@ -503,6 +503,11 @@
 
     // Scroll to top of results
     res.scrollIntoView({ behavior: 'smooth' });
+
+    // Notify leaderboard module
+    document.dispatchEvent(new CustomEvent('ma:results', {
+      detail: { correct: data.correct, total: data.total, timeSeconds: elapsedSeconds }
+    }));
   }
 
   // ─── START TEST ─────────────────────────────────────────────────────────────

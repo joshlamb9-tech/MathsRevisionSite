@@ -80,10 +80,31 @@
       </div>
       <ol id="ma-results-list"></ol>
       <div id="ma-feedback"></div>
+      <!-- Leaderboard submit (shown after completing a test) -->
+      <div id="ma-leaderboard-submit" hidden style="text-align:center;margin:1.5rem 0 0;">
+        <div class="ma-lb-submit-box">
+          <p class="ma-lb-submit-label">Add your score to the leaderboard</p>
+          <div class="ma-lb-form">
+            <input type="text" id="ma-initials" maxlength="3" placeholder="ABC"
+                   class="ma-initials-input" autocomplete="off" spellcheck="false">
+            <button id="ma-lb-submit-btn" class="ma-lb-btn">Submit</button>
+          </div>
+          <p class="ma-lb-hint">Up to 3 letters &mdash; initials only</p>
+        </div>
+      </div>
+
       <div style="text-align:center;margin-top:1.5rem">
         <button id="ma-retry-btn" class="ma-retry-btn">Try again</button>
       </div>
     </div>
+
+    <!-- ── LEADERBOARD (always visible) ── -->
+    <section class="ma-leaderboard">
+      <h2>&#127942; All-time Top 10</h2>
+      <ol id="ma-lb-list" class="ma-lb-list">
+        <li class="ma-lb-loading">Loading&hellip;</li>
+      </ol>
+    </section>
 
   </main>
 
@@ -93,6 +114,7 @@
 </footer>
 
   <script src="/MathsRevisionSite/assets/js/mental-arithmetic.js"></script>
+  <script src="/MathsRevisionSite/assets/js/leaderboard.js"></script>
 
 </body>
 </html>
