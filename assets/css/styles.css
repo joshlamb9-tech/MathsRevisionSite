@@ -1310,7 +1310,8 @@ footer {
 /* ─── MENTAL ARITHMETIC — LEADERBOARD ─── */
 
 .ma-leaderboard {
-  margin-top: 3rem;
+  margin: 3rem auto 0;
+  max-width: 560px;
   border-top: 2px solid var(--border);
   padding-top: 1.5rem;
   text-align: center;
