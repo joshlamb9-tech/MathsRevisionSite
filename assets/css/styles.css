@@ -34,6 +34,15 @@
   padding: 0;
 }
 
+/* ─── FOCUS STATES ─── */
+/* Visible ring for keyboard / assistive-tech users.
+   Inputs use a box-shadow ring instead (see .ma-answer-input:focus). */
+:focus-visible {
+  outline: 3px solid var(--mh-navy);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 /* ─── BODY ─── */
 body {
   font-family: 'Dosis', sans-serif;
@@ -129,15 +138,18 @@ body {
 
 .level-card {
   display: block;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 1.25rem;
   text-decoration: none;
-  transition: transform 0.15s;
+  cursor: pointer;
   border: 1px solid var(--border);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
 .level-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.10), 0 3px 8px rgba(0,0,0,0.07);
 }
 
 .level-card.foundation {
@@ -179,19 +191,36 @@ body {
 }
 
 .topic-list a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 0.6rem 0.75rem;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
   color: var(--text);
   border: 1px solid var(--border);
   margin-bottom: 0.5rem;
   font-weight: 500;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+
+.topic-list a::after {
+  content: '→';
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: color 0.15s, transform 0.15s;
 }
 
 .topic-list a:hover {
   background: var(--white);
   border-color: var(--mh-navy);
+  box-shadow: 0 2px 6px rgba(0,83,76,0.10);
+}
+
+.topic-list a:hover::after {
+  color: var(--mh-navy);
+  transform: translateX(3px);
 }
 
 /* ─── BREADCRUMB ─── */
@@ -434,14 +463,16 @@ footer {
   border: none;
   border-radius: 6px;
   padding: 0.5rem 1.2rem;
+  min-height: 44px;
   font-family: 'Dosis', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+  transition: filter 0.15s;
 }
 
 .ma-stop-btn:hover {
-  filter: brightness(1.1);
+  filter: brightness(1.12);
 }
 
 #ma-questions {
@@ -476,6 +507,7 @@ footer {
 
 .ma-answer-input {
   width: 100px;
+  min-height: 44px;
   padding: 0.35rem 0.5rem;
   border: 2px solid var(--border);
   border-radius: 6px;
@@ -483,11 +515,13 @@ footer {
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
 
 .ma-answer-input:focus {
-  outline: none;
+  outline: none; /* replaced by box-shadow ring below */
   border-color: var(--mh-navy);
+  box-shadow: 0 0 0 3px rgba(0, 83, 76, 0.18);
 }
 
 /* Results */
@@ -552,6 +586,7 @@ footer {
 
 .ma-retry-btn {
   padding: 0.6rem 1.5rem;
+  min-height: 44px;
   background: var(--mh-navy);
   color: var(--white);
   border: none;
@@ -560,6 +595,7 @@ footer {
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+  transition: background 0.15s;
 }
 
 .ma-retry-btn:hover {
@@ -749,7 +785,8 @@ footer {
 .reveal-btn {
   display: inline-block;
   margin: 0.5rem 0 0.75rem;
-  padding: 0.4rem 1.1rem;
+  padding: 0.5rem 1.1rem;
+  min-height: 44px;
   background: var(--mh-navy);
   color: var(--white);
   border: none;
@@ -785,14 +822,15 @@ footer {
 .rag-btn {
   border: 2px solid transparent;
   border-radius: 6px;
-  padding: 0.35rem 0.9rem;
+  padding: 0.5rem 1rem;
+  min-height: 44px;
   font-family: 'Dosis', sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  opacity: 0.45;
+  opacity: 0.5;
   color: white;
-  transition: opacity 0.1s;
+  transition: opacity 0.15s, box-shadow 0.15s;
 }
 
 .rag-btn.rag-red {
@@ -885,6 +923,32 @@ footer {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
+}
+
+/* ─── REDUCED MOTION ─── */
+/* Disable all decorative animations for users who prefer it.
+   Functional transitions (focus rings, input highlights) are kept. */
+@media (prefers-reduced-motion: reduce) {
+  .level-card,
+  .topic-list a,
+  .topic-list a::after,
+  .rag-btn,
+  .reveal-btn,
+  .ma-topic-link,
+  .ma-stop-btn,
+  .ma-retry-btn,
+  .pp-year-btn,
+  .pp-card {
+    transition: none;
+  }
+
+  .level-card:hover {
+    transform: none;
+  }
+
+  .topic-list a:hover::after {
+    transform: none;
+  }
 }
 
 /* ─── PRINT: FORMULA SHEETS ─── */
