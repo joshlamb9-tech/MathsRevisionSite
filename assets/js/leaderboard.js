@@ -18,15 +18,18 @@
   }
 
   function submitScore(initials, score, total, timeSeconds) {
-    return fetch(SUPABASE_URL + '/rest/v1/ma_scores', {
+    return fetch(SUPABASE_URL + '/functions/v1/submit-score', {
       method: 'POST',
-      headers: apiHeaders({ 'Prefer': 'return=minimal' }),
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         initials: initials.toUpperCase().slice(0, 3),
         score: score,
         total: total,
         time_seconds: timeSeconds
       })
+    }).then(function (r) {
+      if (!r.ok) return r.json().then(function (d) { throw new Error(d.error || 'Error'); });
+      return r;
     });
   }
 
@@ -122,10 +125,13 @@
           document.getElementById('ma-leaderboard-submit').hidden = true;
           refreshAll();
         })
-        .catch(function () {
+        .catch(function (err) {
           btn.disabled = false;
           btn.textContent = 'Submit';
-          alert('Could not save score \u2014 check your connection and try again.');
+          var msg = (err && err.message === 'Time too fast')
+            ? 'Score not accepted \u2014 time looks too fast.'
+            : 'Could not save score \u2014 check your connection and try again.';
+          alert(msg);
         });
     });
 
