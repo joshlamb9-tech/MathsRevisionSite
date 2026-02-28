@@ -516,6 +516,59 @@ footer {
 .po-count.po-grey  { background: var(--bg); color: var(--text-muted); }
 .po-hint { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem; }
 
+/* ─── QUICK CHECK ─── */
+.quick-check {
+  margin-top: 2.5rem;
+  border-top: 2px solid var(--border);
+  padding-top: 1.5rem;
+}
+.quick-check > h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--mh-navy);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.qc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.qc-block {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+}
+.qc-q {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+.qc-btn {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: var(--mh-navy);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+}
+.qc-btn:hover { background: var(--mh-navy-light); }
+.qc-answer {
+  margin-top: 0.65rem;
+  font-weight: 700;
+  color: var(--mh-navy);
+  border-left: 3px solid var(--mh-navy);
+  padding-left: 0.65rem;
+  line-height: 1.7;
+  background: rgba(0,83,76,0.05);
+  padding: 0.5rem 0.65rem;
+  border-radius: 0 4px 4px 0;
+}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 960px) {
   .level-grid {
