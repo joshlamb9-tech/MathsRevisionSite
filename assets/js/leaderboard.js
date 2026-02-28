@@ -30,8 +30,10 @@
   }
 
   function fetchLeaderboard() {
+    var since = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
     var url = SUPABASE_URL + '/rest/v1/ma_scores' +
       '?select=initials,score,total,time_seconds,percentage' +
+      '&created_at=gte.' + encodeURIComponent(since) +
       '&order=percentage.desc,time_seconds.asc' +
       '&limit=10';
     return fetch(url, { headers: apiHeaders() }).then(function (r) { return r.json(); });
