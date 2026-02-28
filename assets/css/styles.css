@@ -134,15 +134,23 @@ body {
 .main-content ol {
   padding-left: 1.6rem;
   margin: 0.5rem 0 1rem;
+  list-style-position: outside;
 }
 
 .main-content li {
-  margin-bottom: 0.6rem;
-  line-height: 1.75;
+  margin-bottom: 0;
+  padding: 0.55rem 0.6rem 0.55rem 0.4rem;
+  line-height: 2.1;
+  border-radius: 0 5px 5px 0;
+}
+
+/* SEN reader stripes — alternating tint on every other list item */
+.main-content li:nth-child(odd) {
+  background: rgba(0, 83, 76, 0.06);
 }
 
 .main-content ol > li {
-  margin-bottom: 0.85rem;
+  margin-bottom: 0;
 }
 
 /* ─── WIP BANNER ─── */
