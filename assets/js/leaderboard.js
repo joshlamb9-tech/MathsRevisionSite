@@ -5,6 +5,7 @@
   var SUPABASE_KEY = 'sb_publishable_q9qOX43dA9SoxZ3Bq2p2Pw_c-GUaYw_';
 
   var lastResult = null;
+  var activeTotal = 10;
 
   // ─── SUPABASE HELPERS ─────────────────────────────────────────────────────
 
@@ -29,10 +30,11 @@
     });
   }
 
-  function fetchLeaderboard() {
+  function fetchLeaderboard(total) {
     var since = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
     var url = SUPABASE_URL + '/rest/v1/ma_scores' +
       '?select=initials,score,total,time_seconds,percentage' +
+      '&total=eq.' + total +
       '&created_at=gte.' + encodeURIComponent(since) +
       '&order=percentage.desc,time_seconds.asc' +
       '&limit=10';
@@ -71,11 +73,19 @@
     });
   }
 
+  function setActiveTab(total) {
+    activeTotal = total;
+    document.querySelectorAll('.ma-lb-tab').forEach(function (btn) {
+      btn.classList.toggle('ma-lb-tab-active', parseInt(btn.dataset.total, 10) === total);
+    });
+  }
+
   function refreshLeaderboard() {
-    fetchLeaderboard()
+    var list = document.getElementById('ma-lb-list');
+    if (list) list.innerHTML = '<li class="ma-lb-loading">Loading\u2026</li>';
+    fetchLeaderboard(activeTotal)
       .then(renderLeaderboard)
       .catch(function () {
-        var list = document.getElementById('ma-lb-list');
         if (list) list.innerHTML = '<li class="ma-lb-empty">Could not load leaderboard.</li>';
       });
   }
@@ -84,11 +94,21 @@
 
   document.addEventListener('DOMContentLoaded', function () {
 
+    // Tab switching
+    document.querySelectorAll('.ma-lb-tab').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        setActiveTab(parseInt(this.dataset.total, 10));
+        refreshLeaderboard();
+      });
+    });
+
     refreshLeaderboard();
 
-    // When a test completes, show the submit form and refresh
+    // When a test completes, switch to that test's tab, show submit form and refresh
     document.addEventListener('ma:results', function (e) {
       lastResult = e.detail;
+      setActiveTab(lastResult.total);
+      refreshLeaderboard();
       var submitEl = document.getElementById('ma-leaderboard-submit');
       if (submitEl) {
         submitEl.hidden = false;

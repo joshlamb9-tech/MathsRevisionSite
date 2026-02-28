@@ -1317,6 +1317,37 @@ footer {
   text-align: center;
 }
 
+.ma-lb-tabs {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.ma-lb-tab {
+  font-family: 'Dosis', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.35rem 0.9rem;
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  background: var(--white);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.ma-lb-tab:hover {
+  border-color: var(--mh-navy);
+  color: var(--mh-navy);
+}
+
+.ma-lb-tab-active {
+  background: var(--mh-navy);
+  border-color: var(--mh-navy);
+  color: var(--white);
+}
+
 .ma-leaderboard h2 {
   font-size: 1.2rem;
   font-weight: 700;
