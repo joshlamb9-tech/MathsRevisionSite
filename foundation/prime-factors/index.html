@@ -112,15 +112,93 @@
     </ul>
 
     <h2>Worked Example 1: Prime Factor Decomposition (Factor Tree)</h2>
-    <p>Write <strong>360</strong> as a product of its prime factors.</p>
+    <p>Write <strong>360</strong> as a product of its prime factors. Split each number into two factors, circling any primes as you go. Keep splitting until every branch ends in a prime.</p>
+
+    <div class="calc-display" style="text-align:center;overflow-x:auto;">
+      <div style="display:inline-block;text-align:center;font-family:'Dosis',sans-serif;font-size:0.95rem;line-height:1.4;">
+
+        <!-- Row 1: 360 -->
+        <div style="margin-bottom:0;">
+          <span style="display:inline-block;width:44px;height:44px;line-height:44px;border-radius:50%;border:2px solid #71717a;font-weight:700;font-size:1rem;background:#fff;">360</span>
+        </div>
+
+        <!-- Connector lines for 360 → 2, 180 -->
+        <div style="display:flex;justify-content:center;gap:60px;margin:0;">
+          <div style="width:1px;height:24px;background:#71717a;margin:0 auto;transform:rotate(-20deg);transform-origin:top center;"></div>
+          <div style="width:1px;height:24px;background:#71717a;margin:0 auto;transform:rotate(20deg);transform-origin:top center;"></div>
+        </div>
+
+        <!-- Row 2: 2 (prime), 180 -->
+        <div style="display:flex;justify-content:center;gap:60px;margin-bottom:0;">
+          <span style="display:inline-block;width:38px;height:38px;line-height:38px;border-radius:50%;border:2px solid #6ee7b7;font-weight:700;background:#d1fae5;color:#065f46;">2</span>
+          <span style="display:inline-block;width:38px;height:38px;line-height:38px;border-radius:50%;border:2px solid #71717a;font-weight:700;background:#fff;">180</span>
+        </div>
+
+        <!-- Connector lines for 180 → 2, 90 -->
+        <div style="display:flex;justify-content:center;gap:60px;margin:0;">
+          <div style="width:1px;height:20px;background:transparent;"></div>
+          <div style="display:flex;gap:40px;">
+            <div style="width:1px;height:24px;background:#71717a;transform:rotate(-20deg);transform-origin:top center;"></div>
+            <div style="width:1px;height:24px;background:#71717a;transform:rotate(20deg);transform-origin:top center;"></div>
+          </div>
+        </div>
+
+        <!-- Row 3: 2 (prime), 90 -->
+        <div style="display:flex;justify-content:center;gap:38px;margin-bottom:0;padding-left:4rem;">
+          <span style="display:inline-block;width:38px;height:38px;line-height:38px;border-radius:50%;border:2px solid #6ee7b7;font-weight:700;background:#d1fae5;color:#065f46;">2</span>
+          <span style="display:inline-block;width:38px;height:38px;line-height:38px;border-radius:50%;border:2px solid #71717a;font-weight:700;background:#fff;">90</span>
+        </div>
+
+        <!-- Connector lines for 90 → 2, 45 -->
+        <div style="display:flex;justify-content:flex-end;padding-right:0.2rem;gap:40px;margin:0;margin-left:7rem;">
+          <div style="width:1px;height:24px;background:#71717a;transform:rotate(-20deg);transform-origin:top center;"></div>
+          <div style="width:1px;height:24px;background:#71717a;transform:rotate(20deg);transform-origin:top center;"></div>
+        </div>
+
+        <!-- Row 4: 2 (prime), 45 -->
+        <div style="display:flex;justify-content:center;gap:38px;margin-bottom:0;padding-left:8rem;">
+          <span style="display:inline-block;width:38px;height:38px;line-height:38px;border-radius:50%;border:2px solid #6ee7b7;font-weight:700;background:#d1fae5;color:#065f46;">2</span>
+          <span style="display:inline-block;width:38px;height:38px;line-height:38px;border-radius:50%;border:2px solid #71717a;font-weight:700;background:#fff;">45</span>
+        </div>
+
+        <!-- Connector lines for 45 → 3, 15 -->
+        <div style="display:flex;gap:40px;margin:0;margin-left:10.8rem;">
+          <div style="width:1px;height:24px;background:#71717a;transform:rotate(-20deg);transform-origin:top center;"></div>
+          <div style="width:1px;height:24px;background:#71717a;transform:rotate(20deg);transform-origin:top center;"></div>
+        </div>
+
+        <!-- Row 5: 3 (prime), 15 -->
+        <div style="display:flex;justify-content:center;gap:38px;margin-bottom:0;padding-left:11.8rem;">
+          <span style="display:inline-block;width:38px;height:38px;line-height:38px;border-radius:50%;border:2px solid #6ee7b7;font-weight:700;background:#d1fae5;color:#065f46;">3</span>
+          <span style="display:inline-block;width:38px;height:38px;line-height:38px;border-radius:50%;border:2px solid #71717a;font-weight:700;background:#fff;">15</span>
+        </div>
+
+        <!-- Connector lines for 15 → 3, 5 -->
+        <div style="display:flex;gap:40px;margin:0;margin-left:14.6rem;">
+          <div style="width:1px;height:24px;background:#71717a;transform:rotate(-20deg);transform-origin:top center;"></div>
+          <div style="width:1px;height:24px;background:#71717a;transform:rotate(20deg);transform-origin:top center;"></div>
+        </div>
+
+        <!-- Row 6: 3 (prime), 5 (prime) -->
+        <div style="display:flex;justify-content:center;gap:38px;padding-left:15.6rem;">
+          <span style="display:inline-block;width:38px;height:38px;line-height:38px;border-radius:50%;border:2px solid #6ee7b7;font-weight:700;background:#d1fae5;color:#065f46;">3</span>
+          <span style="display:inline-block;width:38px;height:38px;line-height:38px;border-radius:50%;border:2px solid #6ee7b7;font-weight:700;background:#d1fae5;color:#065f46;">5</span>
+        </div>
+
+        <div style="margin-top:12px;font-size:0.8rem;color:#71717a;">
+          <span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#d1fae5;border:2px solid #6ee7b7;vertical-align:middle;margin-right:4px;"></span>
+          Green circles = prime numbers (stop splitting here)
+        </div>
+      </div>
+    </div>
+
     <ol>
-      <li>Start with 360. Is it divisible by 2? Yes. $360 = 2 \times 180$.</li>
-      <li>Is 180 divisible by 2? Yes. $180 = 2 \times 90$.</li>
-      <li>Is 90 divisible by 2? Yes. $90 = 2 \times 45$.</li>
-      <li>Is 45 divisible by 2? No. Try 3. $45 = 3 \times 15$.</li>
-      <li>Is 15 divisible by 3? Yes. $15 = 3 \times 5$.</li>
-      <li>5 is prime. Stop.</li>
-      <li>Collect all the primes from the ends of the branches: $2, 2, 2, 3, 3, 5$.</li>
+      <li>Start with 360. Split: $360 = 2 \times 180$. Circle <strong>2</strong> (prime).</li>
+      <li>Split 180: $180 = 2 \times 90$. Circle <strong>2</strong> (prime).</li>
+      <li>Split 90: $90 = 2 \times 45$. Circle <strong>2</strong> (prime).</li>
+      <li>Split 45: $45 = 3 \times 15$. Circle <strong>3</strong> (prime).</li>
+      <li>Split 15: $15 = 3 \times 5$. Both are prime &mdash; circle both.</li>
+      <li>Collect all the circled primes: $2, 2, 2, 3, 3, 5$.</li>
       <li>Write in index notation:
         $$360 = 2^3 \times 3^2 \times 5$$
       </li>
@@ -145,7 +223,8 @@
 
   <footer>
     <p>Mowden Hall School · Year 8 CE Maths Revision</p>
-  </footer>
+    <p><a href="mailto:jlamb@mowdenhall.org.uk?subject=Maths%20Revision%20Site%20Feedback" style="color:var(--text-muted)">Send feedback</a></p>
+</footer>
 
 </body>
 </html>

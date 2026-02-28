@@ -112,31 +112,80 @@
 
     <h2>Worked Example 1: Short Division (Bus Stop)</h2>
     <p>Calculate $\mathbf{738 \div 6}$ using the bus stop method.</p>
+
+    <div class="calc-display" style="font-family:'Dosis',monospace;font-size:1.05rem;">
+      <div style="display:flex;align-items:stretch;gap:0;width:fit-content;margin:0 auto;">
+        <!-- Quotient row -->
+        <div style="display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end;padding-right:6px;border-right:2px solid var(--text);">
+          <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:4px;">divisor</div>
+          <div style="font-size:1.4rem;font-weight:700;padding:2px 8px;">6</div>
+        </div>
+        <div style="display:flex;flex-direction:column;">
+          <div style="display:flex;gap:0;border-bottom:2px solid var(--text);padding-bottom:4px;padding-left:8px;">
+            <div style="text-align:center;min-width:2rem;font-size:1.4rem;font-weight:700;color:#15803d;">1</div>
+            <div style="text-align:center;min-width:2rem;font-size:1.4rem;font-weight:700;color:#15803d;">2</div>
+            <div style="text-align:center;min-width:2rem;font-size:1.4rem;font-weight:700;color:#15803d;">3</div>
+          </div>
+          <div style="display:flex;gap:0;padding-top:4px;padding-left:8px;">
+            <div style="text-align:center;min-width:2rem;font-size:1.4rem;font-weight:700;">7</div>
+            <div style="text-align:center;min-width:2rem;font-size:1.4rem;font-weight:700;"><sup style="font-size:0.65rem;color:#dc2626;">1</sup>3</div>
+            <div style="text-align:center;min-width:2rem;font-size:1.4rem;font-weight:700;"><sup style="font-size:0.65rem;color:#dc2626;">1</sup>8</div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:10px;font-size:0.85rem;color:var(--text-muted);">
+        Answer written above the line &nbsp;|&nbsp; Carries shown in <span style="color:#dc2626;">red</span>
+      </div>
+    </div>
+
     <ol>
-      <li>How many times does 6 go into 7? <strong>Once</strong> (since $6 \times 1 = 6$). Write 1 above. Remainder: $7 - 6 = 1$.</li>
-      <li>Carry the 1 to make 13. How many times does 6 go into 13? <strong>Twice</strong> ($6 \times 2 = 12$). Write 2 above. Remainder: $13 - 12 = 1$.</li>
-      <li>Carry the 1 to make 18. How many times does 6 go into 18? <strong>Three times</strong> ($6 \times 3 = 18$). Write 3 above. No remainder.</li>
-      <li>Read off the answer from the top: $738 \div 6 = 123$</li>
+      <li>6 goes into 7 <strong>once</strong> (6 &times; 1 = 6). Write <strong>1</strong> above. Remainder 1 &mdash; carry it to the next digit.</li>
+      <li>Carried 1 makes 13. 6 goes into 13 <strong>twice</strong> (6 &times; 2 = 12). Write <strong>2</strong> above. Remainder 1 &mdash; carry again.</li>
+      <li>Carried 1 makes 18. 6 goes into 18 <strong>three times</strong> exactly. Write <strong>3</strong> above. No remainder.</li>
     </ol>
-    <p><strong>Answer: $123$</strong></p>
+    <p><strong>Answer: $738 \div 6 = 123$</strong></p>
 
     <h2>Worked Example 2: Long Division</h2>
-    <p>Calculate $\mathbf{952 \div 14}$.</p>
+    <p>Calculate $\mathbf{952 \div 14}$. Steps: <strong>D</strong>ivide &rarr; <strong>M</strong>ultiply &rarr; <strong>S</strong>ubtract &rarr; <strong>B</strong>ring down.</p>
+
+    <div class="calc-display" style="font-family:'Dosis',monospace;">
+      <div style="display:flex;align-items:stretch;gap:0;width:fit-content;margin:0 auto;">
+        <div style="display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end;padding-right:6px;border-right:2px solid var(--text);">
+          <div style="font-size:1.2rem;font-weight:700;padding:2px 8px;margin-top:28px;">14</div>
+        </div>
+        <div style="display:flex;flex-direction:column;min-width:10rem;">
+          <!-- Answer -->
+          <div style="display:flex;border-bottom:2px solid var(--text);padding-bottom:4px;padding-left:12px;">
+            <div style="min-width:1.5rem;text-align:right;font-size:1.2rem;font-weight:700;color:#15803d;padding-right:4px;">6</div>
+            <div style="min-width:1.5rem;text-align:right;font-size:1.2rem;font-weight:700;color:#15803d;padding-right:4px;">8</div>
+          </div>
+          <!-- Working -->
+          <div style="padding-left:12px;font-size:1.05rem;line-height:2;">
+            <div>9 5 2</div>
+            <div style="border-bottom:1px solid var(--text-muted);padding-bottom:2px;"><span style="color:var(--text-muted);">&minus;</span> 8 4 &darr;</div>
+            <div style="padding-left:1.2rem;">1 1 2</div>
+            <div style="border-bottom:1px solid var(--text-muted);padding-bottom:2px;padding-left:1.2rem;"><span style="color:var(--text-muted);">&minus;</span> 1 1 2</div>
+            <div style="padding-left:2.4rem;font-weight:700;">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <ol>
-      <li><strong>Divide:</strong> How many times does 14 go into 95? $14 \times 6 = 84$, $14 \times 7 = 98$ (too big). So <strong>6 times</strong>. Write 6 above.</li>
-      <li><strong>Multiply:</strong> $6 \times 14 = 84$. Write 84 below 95.</li>
+      <li><strong>Divide:</strong> 14 into 95? $14 \times 6 = 84$ (6 fits, $14 \times 7 = 98$ is too big). Write <strong>6</strong> above.</li>
+      <li><strong>Multiply:</strong> $6 \times 14 = 84$. Write below 95.</li>
       <li><strong>Subtract:</strong> $95 - 84 = 11$.</li>
-      <li><strong>Bring down:</strong> Bring down the 2 to make 112.</li>
-      <li><strong>Repeat:</strong> How many times does 14 go into 112? $14 \times 8 = 112$. Exactly <strong>8 times</strong>. Write 8 above.</li>
-      <li>Subtract: $112 - 112 = 0$. No remainder.</li>
+      <li><strong>Bring down:</strong> Bring down the 2 &rarr; making 112.</li>
+      <li><strong>Repeat:</strong> 14 into 112? $14 \times 8 = 112$ exactly. Write <strong>8</strong> above.</li>
+      <li>$112 - 112 = 0$. No remainder.</li>
     </ol>
-    $$952 \div 14 = 68$$
-    <p><strong>Answer: $68$</strong></p>
+    <p><strong>Answer: $952 \div 14 = 68$</strong></p>
   </main>
 
   <footer>
     <p>Mowden Hall School · Year 8 CE Maths Revision</p>
-  </footer>
+    <p><a href="mailto:jlamb@mowdenhall.org.uk?subject=Maths%20Revision%20Site%20Feedback" style="color:var(--text-muted)">Send feedback</a></p>
+</footer>
 
 </body>
 </html>

@@ -111,59 +111,75 @@
 
     <h2>Worked Example 1: 2-Digit &times; 2-Digit (Column Method)</h2>
     <p>Calculate $\mathbf{47 \times 36}$ using the column method.</p>
+    <p><strong>Estimate first:</strong> $50 \times 40 \approx 2000$ &mdash; so the answer should be near this.</p>
+
+    <div class="calc-display" style="font-family:'Dosis',monospace;max-width:280px;margin:1rem auto;">
+      <div style="text-align:right;font-size:1.2rem;line-height:2;letter-spacing:0.12em;">
+        <div style="color:var(--text-muted);font-size:0.8rem;letter-spacing:0;">Write one number on top of the other, digits aligned:</div>
+        <div style="margin-top:6px;">
+          <span style="color:var(--text-muted);font-size:0.85rem;margin-right:8px;">&times;</span>
+          <span style="font-weight:700;">4 7</span>
+        </div>
+        <div style="border-bottom:2px solid var(--text);padding-bottom:4px;">
+          <span style="color:var(--text-muted);font-size:0.85rem;margin-right:8px;">&times;</span>
+          <span style="font-weight:700;">3 6</span>
+        </div>
+        <div style="color:#2563eb;">
+          <span style="color:var(--text-muted);font-size:0.78rem;margin-right:8px;">row 1 (×6):</span>
+          <span style="font-weight:700;">2 8 2</span>
+          <span style="color:#dc2626;font-size:0.75rem;margin-left:4px;">(carry <sup>4</sup>)</span>
+        </div>
+        <div style="border-bottom:2px solid var(--text);padding-bottom:4px;color:#15803d;">
+          <span style="color:var(--text-muted);font-size:0.78rem;margin-right:8px;">row 2 (×30):</span>
+          <span style="font-weight:700;">1 4 1 0</span>
+          <span style="color:var(--text-muted);font-size:0.75rem;margin-left:4px;">(0 placeholder)</span>
+        </div>
+        <div style="font-weight:800;font-size:1.25rem;">1 6 9 2</div>
+      </div>
+    </div>
+
     <ol>
-      <li><strong>Estimate first:</strong> $50 \times 36 \approx 1800$ (so the answer should be near this)</li>
-      <li><strong>Multiply by the units digit (6):</strong>
-        <ul>
-          <li>$6 \times 7 = 42$ &mdash; write 2, carry 4</li>
-          <li>$6 \times 4 = 24$, plus carried 4 $= 28$ &mdash; write 28</li>
-          <li>First row: $\mathbf{282}$</li>
-        </ul>
-      </li>
-      <li><strong>Multiply by the tens digit (3), add a 0 placeholder:</strong>
-        <ul>
-          <li>$3 \times 7 = 21$ &mdash; write 1, carry 2</li>
-          <li>$3 \times 4 = 12$, plus carried 2 $= 14$ &mdash; write 14</li>
-          <li>Second row: $\mathbf{1410}$ (the 0 is the placeholder)</li>
-        </ul>
-      </li>
-      <li><strong>Add the two rows:</strong>
-        $$282 + 1410 = 1692$$
-      </li>
+      <li><strong>Multiply by 6 (units digit):</strong> $6 \times 7 = 42$ &mdash; write 2, carry 4. Then $6 \times 4 = 24 + 4 = 28$. First row: <strong>282</strong>.</li>
+      <li><strong>Multiply by 3 (tens digit):</strong> Write a <strong>0 placeholder</strong> in the units column first. Then $3 \times 7 = 21$ &mdash; write 1, carry 2. Then $3 \times 4 = 12 + 2 = 14$. Second row: <strong>1410</strong>.</li>
+      <li><strong>Add the rows:</strong> $282 + 1410 = 1692$.</li>
     </ol>
-    <p><strong>Answer: $47 \times 36 = 1692$</strong></p>
+    <p><strong>Answer: $47 \times 36 = 1692$</strong> &nbsp; Check: estimate was ~2000. &checkmark;</p>
 
     <h2>Worked Example 2: 3-Digit &times; 2-Digit (Column Method)</h2>
     <p>Calculate $\mathbf{324 \times 53}$.</p>
+    <p><strong>Estimate first:</strong> $300 \times 50 = 15\,000$.</p>
+
+    <div class="calc-display" style="font-family:'Dosis',monospace;max-width:340px;margin:1rem auto;">
+      <div style="text-align:right;font-size:1.15rem;line-height:2;letter-spacing:0.1em;">
+        <div><span style="font-weight:700;">3 2 4</span></div>
+        <div style="border-bottom:2px solid var(--text);padding-bottom:4px;">
+          <span style="color:var(--text-muted);font-size:0.85rem;margin-right:6px;">&times;</span>
+          <span style="font-weight:700;">5 3</span>
+        </div>
+        <div style="color:#2563eb;">
+          <span style="color:var(--text-muted);font-size:0.78rem;margin-right:6px;">row 1 (×3):</span>
+          <span style="font-weight:700;">9 7 2</span>
+        </div>
+        <div style="border-bottom:2px solid var(--text);padding-bottom:4px;color:#15803d;">
+          <span style="color:var(--text-muted);font-size:0.78rem;margin-right:6px;">row 2 (×50):</span>
+          <span style="font-weight:700;">1 6 2 0 0</span>
+        </div>
+        <div style="font-weight:800;font-size:1.25rem;">1 7 1 7 2</div>
+      </div>
+    </div>
+
     <ol>
-      <li><strong>Estimate:</strong> $300 \times 50 = 15\,000$</li>
-      <li><strong>Multiply by 3 (units):</strong>
-        <ul>
-          <li>$3 \times 4 = 12$ &mdash; write 2, carry 1</li>
-          <li>$3 \times 2 = 6$, plus 1 $= 7$</li>
-          <li>$3 \times 3 = 9$</li>
-          <li>First row: $\mathbf{972}$</li>
-        </ul>
-      </li>
-      <li><strong>Multiply by 5 (tens), add a 0 placeholder:</strong>
-        <ul>
-          <li>$5 \times 4 = 20$ &mdash; write 0, carry 2</li>
-          <li>$5 \times 2 = 10$, plus 2 $= 12$ &mdash; write 2, carry 1</li>
-          <li>$5 \times 3 = 15$, plus 1 $= 16$</li>
-          <li>Second row: $\mathbf{16200}$</li>
-        </ul>
-      </li>
-      <li><strong>Add:</strong>
-        $$972 + 16200 = 17172$$
-      </li>
+      <li><strong>Multiply by 3 (units):</strong> $3 \times 4 = 12$ &mdash; write 2, carry 1. $3 \times 2 = 6 + 1 = 7$. $3 \times 3 = 9$. Row 1: <strong>972</strong>.</li>
+      <li><strong>Multiply by 5 (tens):</strong> Write a <strong>0 placeholder</strong> first. $5 \times 4 = 20$ &mdash; write 0, carry 2. $5 \times 2 = 10 + 2 = 12$ &mdash; write 2, carry 1. $5 \times 3 = 15 + 1 = 16$. Row 2: <strong>16200</strong>.</li>
+      <li><strong>Add:</strong> $972 + 16200 = 17\,172$.</li>
     </ol>
-    <p><strong>Answer: $324 \times 53 = 17\,172$</strong></p>
-    <p>Check: estimate was 15,000 &mdash; answer is 17,172, which is close. &checkmark;</p>
+    <p><strong>Answer: $324 \times 53 = 17\,172$</strong> &nbsp; Check: estimate was 15,000 &mdash; close. &checkmark;</p>
   </main>
 
   <footer>
     <p>Mowden Hall School &middot; Year 8 CE Maths Revision</p>
-  </footer>
+    <p><a href="mailto:jlamb@mowdenhall.org.uk?subject=Maths%20Revision%20Site%20Feedback" style="color:var(--text-muted)">Send feedback</a></p>
+</footer>
 
 </body>
 </html>

@@ -110,6 +110,151 @@ body {
   padding: 1.5rem 1rem;
 }
 
+/* ─── TOPIC PAGE CONTENT SPACING ─── */
+.main-content h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--mh-navy);
+}
+
+.main-content h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.main-content p {
+  margin-bottom: 0.75rem;
+}
+
+.main-content ul,
+.main-content ol {
+  padding-left: 1.6rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.main-content li {
+  margin-bottom: 0.6rem;
+  line-height: 1.75;
+}
+
+.main-content ol > li {
+  margin-bottom: 0.85rem;
+}
+
+/* ─── WIP BANNER ─── */
+.wip-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #fffbeb;
+  border: 1.5px solid #fbbf24;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  margin: 1.25rem 0 1.75rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #78350f;
+}
+
+.wip-banner-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+
+/* ─── CALCULATION DISPLAY ─── */
+/* Used for bus-stop division, column multiplication, factor trees */
+.calc-display {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0;
+  font-family: 'Dosis', monospace;
+  font-size: 1rem;
+  line-height: 1.9;
+  overflow-x: auto;
+}
+
+.calc-display .cd-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  white-space: pre;
+}
+
+.calc-display .cd-line {
+  border-top: 2px solid var(--text);
+  margin: 0.15rem 0;
+}
+
+.calc-display .cd-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-left: 1rem;
+  letter-spacing: 0.04em;
+}
+
+/* Factor tree */
+.factor-tree {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.ft-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.ft-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.ft-num {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.95rem;
+  border: 2px solid var(--border);
+  background: var(--white);
+}
+
+.ft-num.prime {
+  background: #d1fae5;
+  border-color: #6ee7b7;
+  color: #065f46;
+}
+
+.ft-branch {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.ft-branch::before {
+  content: '';
+  position: absolute;
+  top: -12px; left: 50%; right: 50%;
+  border-top: 2px solid var(--text-muted);
+  width: 100%;
+  transform: translateX(-50%);
+}
+
 /* ─── HERO ─── */
 .hero {
   text-align: center;
