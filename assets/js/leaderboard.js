@@ -33,6 +33,28 @@
     });
   }
 
+  function deduplicateByInitials(scores) {
+    var best = {};
+    scores.forEach(function (s) {
+      var key = s.initials;
+      var existing = best[key];
+      if (!existing) { best[key] = s; return; }
+      var sPct = s.percentage != null ? parseFloat(s.percentage) : s.score / s.total * 100;
+      var ePct = existing.percentage != null ? parseFloat(existing.percentage) : existing.score / existing.total * 100;
+      if (sPct > ePct || (sPct === ePct && s.time_seconds < existing.time_seconds)) {
+        best[key] = s;
+      }
+    });
+    return Object.values(best)
+      .sort(function (a, b) {
+        var ap = a.percentage != null ? parseFloat(a.percentage) : a.score / a.total * 100;
+        var bp = b.percentage != null ? parseFloat(b.percentage) : b.score / b.total * 100;
+        if (bp !== ap) return bp - ap;
+        return a.time_seconds - b.time_seconds;
+      })
+      .slice(0, 10);
+  }
+
   function fetchBoard(total) {
     var since = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
     var url = SUPABASE_URL + '/rest/v1/ma_scores' +
@@ -40,8 +62,10 @@
       '&total=eq.' + total +
       '&created_at=gte.' + encodeURIComponent(since) +
       '&order=percentage.desc,time_seconds.asc' +
-      '&limit=10';
-    return fetch(url, { headers: apiHeaders() }).then(function (r) { return r.json(); });
+      '&limit=100';
+    return fetch(url, { headers: apiHeaders() }).then(function (r) {
+      return r.json().then(deduplicateByInitials);
+    });
   }
 
   // ─── RENDER ───────────────────────────────────────────────────────────────
