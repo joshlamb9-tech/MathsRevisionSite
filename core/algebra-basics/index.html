@@ -100,10 +100,30 @@
     });
     </script>
 
+    <style>
+      @keyframes pulse-alert {
+        0%, 100% { border-color: #f59e0b; background: #fff8e1; }
+        50%       { border-color: #ef4444; background: #fff0f0; }
+      }
+      .negatives-alert {
+        border: 2px solid #f59e0b;
+        border-radius: 8px;
+        padding: 0.9rem 1.2rem;
+        margin: 1.2rem 0;
+        font-size: 1rem;
+        animation: pulse-alert 2.5s ease-in-out infinite;
+      }
+    </style>
+
+    <div class="negatives-alert">
+      ⚠️ <strong>Watch out for negatives!</strong> Negative signs are the most common cause of mistakes in algebra — especially when expanding brackets or solving equations. Always check your signs carefully. <a href="/MathsRevisionSite/core/negatives/">Revise negatives →</a>
+    </div>
+
     <h2>Key Facts</h2>
     <ul>
       <li><strong>Collecting like terms:</strong> Only add or subtract terms with the same variable and power. Example: $3x + 5x = 8x$, but $3x + 5y$ cannot be simplified.</li>
       <li><strong>Expanding a bracket:</strong> Multiply the term outside the bracket by every term inside. Example: $3(2x - 4) = 6x - 12$.</li>
+      <li><strong>Factorising:</strong> The reverse of expanding — find the highest common factor and put it outside the bracket. Example: $8x + 12 = 4(2x + 3)$. Check by expanding back.</li>
       <li><strong>Solving linear equations:</strong> Do the same operation to both sides to keep the equation balanced. Aim to get the variable alone on one side.</li>
       <li><strong>Substitution:</strong> Replace the variable with a given number and evaluate. Example: if $x = 3$, then $2x^2 - 1 = 2(9) - 1 = 17$.</li>
       <li><strong>Forming expressions:</strong> Translate word problems into algebra. "Five more than three times a number $n$" becomes $3n + 5$.</li>
@@ -136,6 +156,17 @@
       </li>
     </ol>
     <p><strong>Answer: $10x + 9$</strong></p>
+
+    <h2>Worked Example 3: Factorising</h2>
+    <p>Factorise $8x + 12$.</p>
+    <ol>
+      <li>Find the highest common factor (HCF) of 8 and 12. Factors of 8: 1, 2, 4, 8. Factors of 12: 1, 2, 3, 4, 6, 12. HCF $= 4$.</li>
+      <li>Write the HCF outside the bracket: $4(\phantom{2x + 3})$</li>
+      <li>Divide each term by 4 to find what goes inside: $8x \div 4 = 2x$ and $12 \div 4 = 3$.</li>
+      <li>Write the answer: $4(2x + 3)$</li>
+      <li>Check by expanding: $4(2x + 3) = 8x + 12$ ✓</li>
+    </ol>
+    <p><strong>Answer: $8x + 12 = 4(2x + 3)$</strong></p>
   </main>
 
   <footer>

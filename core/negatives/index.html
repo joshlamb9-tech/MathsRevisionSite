@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Negative Numbers | Core | Mowden Hall Maths Revision</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/MathsRevisionSite/assets/css/styles.css">
+  <script defer src="/MathsRevisionSite/assets/js/tracker.js"></script>
+  <script defer src="/MathsRevisionSite/assets/js/reveal.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/MathsRevisionSite/" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none">
+        <div class="brand-name">Maths Revision</div>
+      </a>
+      <nav class="header-nav">
+        <a href="/MathsRevisionSite/" class="hn-link">Home</a>
+        <a href="/MathsRevisionSite/foundation/" class="hn-link">Foundation</a>
+        <a href="/MathsRevisionSite/core/" class="hn-link active">Core</a>
+        <a href="/MathsRevisionSite/additional/" class="hn-link">Additional</a>
+        <a href="/MathsRevisionSite/mental-arithmetic/" class="hn-link">Mental Arithmetic</a>
+        <a href="/MathsRevisionSite/past-papers/" class="hn-link">Past Papers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <p class="breadcrumb">
+      <a href="/MathsRevisionSite/">Home</a> &rsaquo;
+      <a href="/MathsRevisionSite/core/">Core</a> &rsaquo;
+      Negative Numbers
+    </p>
+
+    <span class="level-badge core">Core</span>
+    <h1 class="page-title">Negative Numbers</h1>
+
+    <!-- RAG Confidence Tracker -->
+    <div class="rag-selector" data-topic-slug="core/negatives">
+      <span class="rag-label">How confident are you?</span>
+      <button class="rag-btn rag-red"   data-rating="red">Not sure</button>
+      <button class="rag-btn rag-amber" data-rating="amber">Getting there</button>
+      <button class="rag-btn rag-green" data-rating="green">Got it</button>
+    </div>
+    <div class="rag-unavailable" style="display:none">
+      Confidence tracker not available in private browsing.
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var sel = document.querySelector('.rag-selector');
+      if (!sel) return;
+      var slug = sel.dataset.topicSlug;
+      if (!window.tracker || !window.tracker.available) {
+        var msg = document.querySelector('.rag-unavailable');
+        if (msg) msg.style.display = '';
+        sel.style.display = 'none';
+        return;
+      }
+      function applyRating(rating) {
+        sel.querySelectorAll('.rag-btn').forEach(function (btn) {
+          btn.classList.toggle('rag-active', btn.dataset.rating === rating);
+        });
+      }
+      applyRating(window.tracker.getRating(slug));
+      sel.addEventListener('click', function (e) {
+        var btn = e.target.closest('.rag-btn');
+        if (!btn) return;
+        window.tracker.setRating(slug, btn.dataset.rating);
+        applyRating(btn.dataset.rating);
+      });
+    });
+    </script>
+
+    <h2>Adding and Subtracting</h2>
+    <p>Think of a number line. <strong>Adding makes a number bigger</strong> (move right). <strong>Subtracting makes a number smaller</strong> (move left).</p>
+    <ul>
+      <li>$-2 + 5 = 3$ &nbsp; (start at &minus;2, move 5 right)</li>
+      <li>$-7 - 3 = -10$ &nbsp; (start at &minus;7, move 3 left)</li>
+      <li>$4 - 9 = -5$ &nbsp; (start at 4, move 9 left)</li>
+      <li>$-1 + 1 = 0$ &nbsp; (start at &minus;1, move 1 right)</li>
+    </ul>
+
+    <h2>Multiplying and Dividing</h2>
+    <p>The rule is simple: <strong>same signs give a positive answer; different signs give a negative answer.</strong></p>
+    <table style="border-collapse:collapse;margin:1rem 0;font-size:0.95rem;max-width:400px">
+      <thead>
+        <tr>
+          <th style="border:1px solid var(--border);padding:0.5rem 1rem;background:var(--core-bg);text-align:left">Calculation</th>
+          <th style="border:1px solid var(--border);padding:0.5rem 1rem;background:var(--core-bg);text-align:left">Signs</th>
+          <th style="border:1px solid var(--border);padding:0.5rem 1rem;background:var(--core-bg);text-align:left">Answer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="border:1px solid var(--border);padding:0.4rem 1rem">$3 \times 4$</td><td style="border:1px solid var(--border);padding:0.4rem 1rem">+ and +</td><td style="border:1px solid var(--border);padding:0.4rem 1rem;color:green;font-weight:700">$+12$</td></tr>
+        <tr><td style="border:1px solid var(--border);padding:0.4rem 1rem">$-3 \times -4$</td><td style="border:1px solid var(--border);padding:0.4rem 1rem">− and −</td><td style="border:1px solid var(--border);padding:0.4rem 1rem;color:green;font-weight:700">$+12$</td></tr>
+        <tr><td style="border:1px solid var(--border);padding:0.4rem 1rem">$3 \times -4$</td><td style="border:1px solid var(--border);padding:0.4rem 1rem">+ and −</td><td style="border:1px solid var(--border);padding:0.4rem 1rem;color:#c00;font-weight:700">$-12$</td></tr>
+        <tr><td style="border:1px solid var(--border);padding:0.4rem 1rem">$-3 \times 4$</td><td style="border:1px solid var(--border);padding:0.4rem 1rem">− and +</td><td style="border:1px solid var(--border);padding:0.4rem 1rem;color:#c00;font-weight:700">$-12$</td></tr>
+      </tbody>
+    </table>
+    <p>The same rules apply to division: $-20 \div 4 = -5$ and $-20 \div -4 = 5$.</p>
+
+    <h2>Worked Example 1: Adding and Subtracting</h2>
+    <p>Work out: &nbsp; (a) $-5 + 8$ &nbsp;&nbsp; (b) $-3 - 6$ &nbsp;&nbsp; (c) $2 - 10$</p>
+    <ol>
+      <li>(a) Start at $-5$, add 8 (move right): $-5 + 8 = \mathbf{3}$</li>
+      <li>(b) Start at $-3$, subtract 6 (move left): $-3 - 6 = \mathbf{-9}$</li>
+      <li>(c) Start at $2$, subtract 10 (move left): $2 - 10 = \mathbf{-8}$</li>
+    </ol>
+
+    <h2>Worked Example 2: Multiplying and Dividing</h2>
+    <p>Work out: &nbsp; (a) $-4 \times 5$ &nbsp;&nbsp; (b) $-6 \times -3$ &nbsp;&nbsp; (c) $-18 \div 3$</p>
+    <ol>
+      <li>(a) Different signs &rarr; negative: $-4 \times 5 = \mathbf{-20}$</li>
+      <li>(b) Same signs &rarr; positive: $-6 \times -3 = \mathbf{+18}$</li>
+      <li>(c) Different signs &rarr; negative: $-18 \div 3 = \mathbf{-6}$</li>
+    </ol>
+  </main>
+
+  <footer>
+    <p>Mowden Hall School &middot; Year 8 CE Maths Revision</p>
+    <p><a href="mailto:jlamb@mowdenhall.org.uk?subject=Maths%20Revision%20Site%20Feedback" style="color:var(--text-muted)">Send feedback</a></p>
+  </footer>
+
+</body>
+</html>
