@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#00534C" text-anchor="middle" dominant-baseline="central">
+
+    <!-- Large background symbols -->
+    <text x="45"  y="88"  font-size="46" opacity="0.055" transform="rotate(-18 45 88)">π</text>
+    <text x="455" y="95"  font-size="42" opacity="0.050" transform="rotate(10 455 95)">√</text>
+    <text x="240" y="160" font-size="38" opacity="0.048" transform="rotate(-12 240 160)">∞</text>
+    <text x="555" y="58"  font-size="34" opacity="0.060" transform="rotate(-8 555 58)">Σ</text>
+    <text x="370" y="385" font-size="44" opacity="0.048" transform="rotate(14 370 385)">π</text>
+    <text x="95"  y="375" font-size="36" opacity="0.055" transform="rotate(-10 95 375)">√</text>
+
+    <!-- Medium symbols -->
+    <text x="185" y="55"  font-size="28" opacity="0.075" transform="rotate(12 185 55)">+</text>
+    <text x="320" y="42"  font-size="24" opacity="0.080" transform="rotate(-6 320 42)">x²</text>
+    <text x="500" y="175" font-size="26" opacity="0.070" transform="rotate(-14 500 175)">θ</text>
+    <text x="88"  y="180" font-size="26" opacity="0.075" transform="rotate(8 88 180)">÷</text>
+    <text x="390" y="162" font-size="22" opacity="0.085" transform="rotate(6 390 162)">＝</text>
+    <text x="155" y="260" font-size="28" opacity="0.070" transform="rotate(-8 155 260)">×</text>
+    <text x="290" y="245" font-size="22" opacity="0.085" transform="rotate(10 290 245)">n²</text>
+    <text x="540" y="255" font-size="20" opacity="0.090" transform="rotate(12 540 255)">−</text>
+    <text x="485" y="360" font-size="26" opacity="0.070" transform="rotate(-12 485 360)">+</text>
+    <text x="240" y="400" font-size="22" opacity="0.080" transform="rotate(8 240 400)">y</text>
+
+    <!-- Small detail symbols -->
+    <text x="460" y="45"  font-size="17" opacity="0.090" transform="rotate(-10 460 45)">%</text>
+    <text x="570" y="390" font-size="16" opacity="0.095" transform="rotate(-6 570 390)">÷</text>
+    <text x="110" y="430" font-size="18" opacity="0.085" transform="rotate(10 110 430)">a²</text>
+    <text x="420" y="270" font-size="18" opacity="0.090" transform="rotate(-8 420 270)">Δ</text>
+    <text x="42"  y="310" font-size="16" opacity="0.095" transform="rotate(15 42 310)">∠</text>
+    <text x="560" y="310" font-size="17" opacity="0.085" transform="rotate(-10 560 310)">2</text>
+    <text x="330" y="310" font-size="15" opacity="0.090" transform="rotate(8 330 310)">b²</text>
+  </g>
+
+  <!-- Geometric shapes — stroked, no fill -->
+  <g fill="none" stroke="#00534C">
+    <circle cx="340" cy="205" r="32" stroke-width="1.5" opacity="0.055"/>
+    <circle cx="145" cy="335" r="22" stroke-width="1.2" opacity="0.060"/>
+    <polygon points="475,130 505,75 535,130" stroke-width="1.5" opacity="0.050"/>
+    <polygon points="200,355 225,310 250,355" stroke-width="1.2" opacity="0.055"/>
+    <rect x="555" y="195" width="34" height="34" stroke-width="1.2" opacity="0.050"
+          transform="rotate(18 572 212)"/>
+    <rect x="30"  y="220" width="28" height="28" stroke-width="1.2" opacity="0.055"
+          transform="rotate(-12 44 234)"/>
+  </g>
+</svg>

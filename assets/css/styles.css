@@ -46,7 +46,10 @@
 /* ─── BODY ─── */
 body {
   font-family: 'Dosis', sans-serif;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: url('/MathsRevisionSite/assets/img/maths-bg.svg');
+  background-size: 600px 450px;
+  background-repeat: repeat;
   color: var(--text);
   overflow-x: hidden;
   line-height: 1.65;
