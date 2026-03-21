@@ -12,20 +12,31 @@
 
   // ─── PUPIL IDENTITY ───────────────────────────────────────────────────────
 
+  function generateUUID() {
+    // Fallback for browsers without crypto.randomUUID
+    if (crypto && crypto.randomUUID) return crypto.randomUUID();
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      var r = Math.random() * 16 | 0;
+      return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+  }
+
   function getPupilUUID() {
-    var existing = localStorage.getItem(UUID_KEY);
-    if (existing) return existing;
-    var fresh = crypto.randomUUID();
-    localStorage.setItem(UUID_KEY, fresh);
-    return fresh;
+    try {
+      var existing = localStorage.getItem(UUID_KEY);
+      if (existing) return existing;
+      var fresh = generateUUID();
+      localStorage.setItem(UUID_KEY, fresh);
+      return fresh;
+    } catch (e) { return generateUUID(); }
   }
 
   function getPupilName() {
-    return localStorage.getItem(NAME_KEY) || null;
+    try { return localStorage.getItem(NAME_KEY) || null; } catch (e) { return null; }
   }
 
   function setPupilName(name) {
-    localStorage.setItem(NAME_KEY, name);
+    try { localStorage.setItem(NAME_KEY, name); } catch (e) {}
   }
 
   function registerPupil(uuid, name) {
@@ -144,39 +155,34 @@
     });
   }
 
-  // ─── NAME REGISTRATION MODAL ─────────────────────────────────────────────
+  // ─── NAME REGISTRATION PROMPT ────────────────────────────────────────────
 
-  function showNameModal(onSave) {
-    var overlay = document.getElementById('ma-name-modal');
-    if (!overlay) return;
-    overlay.hidden = false;
-    var input = document.getElementById('ma-name-input');
-    var btn   = document.getElementById('ma-name-save-btn');
-    if (input) input.focus();
+  function initNamePrompt() {
+    var prompt = document.getElementById('ma-name-prompt');
+    var input  = document.getElementById('ma-name-input');
+    var btn    = document.getElementById('ma-name-save-btn');
+    if (!prompt || !input || !btn) return;
+
+    if (getPupilName()) {
+      prompt.style.display = 'none';
+      return;
+    }
+
+    prompt.style.display = 'block';
+    input.focus();
 
     function save() {
-      var name = (input ? input.value : '').trim();
-      if (!name) { if (input) input.focus(); return; }
-      btn.disabled = true;
-      var uuid = getPupilUUID();
-      registerPupil(uuid, name).then(function () {
-        setPupilName(name);
-        overlay.hidden = true;
-        if (onSave) onSave(name);
-      }).catch(function () {
-        // Save locally even if network fails — will just lack server record
-        setPupilName(name);
-        overlay.hidden = true;
-        if (onSave) onSave(name);
-      });
+      var name = input.value.trim();
+      if (!name) { input.focus(); return; }
+      setPupilName(name);
+      prompt.style.display = 'none';
+      registerPupil(getPupilUUID(), name).catch(function () {});
     }
 
-    if (btn) btn.addEventListener('click', save);
-    if (input) {
-      input.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter') save();
-      });
-    }
+    btn.addEventListener('click', save);
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') save();
+    });
   }
 
   // ─── INIT ─────────────────────────────────────────────────────────────────
@@ -188,10 +194,7 @@
 
     refreshAll();
 
-    // If pupil has no name yet, show modal after a short delay
-    if (!getPupilName()) {
-      setTimeout(function () { showNameModal(null); }, 800);
-    }
+    initNamePrompt();
 
     // When a test completes, show the submit form and refresh all boards
     document.addEventListener('ma:results', function (e) {
