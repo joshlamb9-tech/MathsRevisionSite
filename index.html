@@ -68,74 +68,7 @@
       </a>
     </div>
 
-    <!-- RAG Progress Overview — populated by inline script below -->
-    <div class="progress-overview" id="progress-overview" style="display:none">
-      <h2>Your Progress</h2>
-      <div id="po-grid"></div>
-      <p class="po-hint">Go to any topic and click "Not sure", "Getting there", or "Got it" to track your confidence here.</p>
-    </div>
-
   </main>
-
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var grid = document.getElementById('po-grid');
-    var panel = document.getElementById('progress-overview');
-    if (!grid || !panel) return;
-
-    var data = {};
-    try {
-      var raw = localStorage.getItem('maths-revision:tracker');
-      if (raw) data = JSON.parse(raw) || {};
-    } catch (e) {}
-
-    var levels = [
-      { name: 'Foundation', href: '/MathsRevisionSite/foundation/', slugs: [
-        'foundation/fractions', 'foundation/division', 'foundation/prime-factors',
-        'foundation/estimation', 'foundation/long-multiplication', 'foundation/averages'
-      ]},
-      { name: 'Core', href: '/MathsRevisionSite/core/', slugs: [
-        'core/ratio', 'core/percentages', 'core/algebra-basics', 'core/shape',
-        'core/averages', 'core/angles', 'core/probability', 'core/coordinates-graphs',
-        'core/transformations', 'core/volume-surface-area', 'core/sequences-nth-term',
-        'core/straight-line-graphs', 'core/speed-distance-time', 'core/powers-roots',
-        'core/charts-data'
-      ]},
-      { name: 'Additional', href: '/MathsRevisionSite/additional/', slugs: [
-        'additional/index-laws', 'additional/expanding-factorising', 'additional/pythagoras'
-      ]}
-    ];
-
-    levels.forEach(function (level) {
-      var green = 0, amber = 0, red = 0;
-      var dots = level.slugs.map(function (slug) {
-        var r = data[slug];
-        if (r === 'green') { green++; return '<span class="po-dot po-green" title="Got it"></span>'; }
-        if (r === 'amber') { amber++; return '<span class="po-dot po-amber" title="Getting there"></span>'; }
-        if (r === 'red')   { red++;   return '<span class="po-dot po-red" title="Not sure"></span>'; }
-        return '<span class="po-dot po-grey" title="Not rated"></span>';
-      }).join('');
-
-      var total = level.slugs.length;
-      var done  = green + amber + red;
-
-      var row = document.createElement('div');
-      row.className = 'po-row';
-      row.innerHTML =
-        '<a href="' + level.href + '" class="po-level-name">' + level.name + '</a>' +
-        '<div class="po-dots">' + dots + '</div>' +
-        '<div class="po-summary">' +
-          (green ? '<span class="po-count po-green">' + green + '&nbsp;✓</span>' : '') +
-          (amber ? '<span class="po-count po-amber">' + amber + '</span>' : '') +
-          (red   ? '<span class="po-count po-red">'   + red   + '</span>' : '') +
-          '<span class="po-count po-grey">' + (total - done) + '&nbsp;to go</span>' +
-        '</div>';
-      grid.appendChild(row);
-    });
-
-    panel.style.display = '';
-  });
-  </script>
 
   <footer>
     Mowden Hall School &middot; Year 8 CE Maths Revision
