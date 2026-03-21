@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Dashboard | Mowden Hall Maths Revision</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --mh-navy:    #00534C;
+      --mh-gold:    #81001C;
+      --bg:         #f4f2ef;
+      --white:      #ffffff;
+      --text:       #18181b;
+      --text-mid:   #3f3f46;
+      --text-muted: #71717a;
+      --border:     #e4e4e7;
+      --green:      #16a34a;
+      --red:        #dc2626;
+      --amber:      #d97706;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Dosis', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    .t-header {
+      background: var(--mh-navy);
+      color: #fff;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .t-header h1 { font-size: 1.25rem; font-weight: 700; }
+    .t-header a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; }
+    .t-header a:hover { color: #fff; }
+
+    /* ── AUTH SCREEN ── */
+    #auth-screen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 60px);
+    }
+    .auth-box {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 2.5rem;
+      width: 360px;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .auth-box h2 { font-size: 1.3rem; color: var(--mh-navy); margin-bottom: 0.5rem; }
+    .auth-box p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem; }
+    .auth-box input {
+      width: 100%; padding: 0.65rem 0.9rem; font-size: 1rem;
+      font-family: 'Dosis', sans-serif; border: 2px solid var(--border);
+      border-radius: 8px; margin-bottom: 1rem;
+    }
+    .auth-box input:focus { outline: none; border-color: var(--mh-navy); }
+    .auth-error { color: var(--red); font-size: 0.9rem; margin-bottom: 0.75rem; display: none; }
+
+    /* ── DASHBOARD ── */
+    #dashboard { display: none; padding: 1.5rem; max-width: 1100px; margin: 0 auto; }
+
+    .dash-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .stat-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 1.25rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .stat-card .stat-val { font-size: 2rem; font-weight: 800; color: var(--mh-navy); }
+    .stat-card .stat-lbl { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+    .dash-controls {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .dash-controls input[type="search"] {
+      flex: 1; min-width: 200px; padding: 0.5rem 0.75rem;
+      font-family: 'Dosis', sans-serif; font-size: 0.95rem;
+      border: 2px solid var(--border); border-radius: 8px;
+    }
+    .dash-controls input[type="search"]:focus { outline: none; border-color: var(--mh-navy); }
+    .sort-btn {
+      padding: 0.5rem 1rem; font-family: 'Dosis', sans-serif; font-size: 0.9rem;
+      border: 2px solid var(--border); border-radius: 8px; cursor: pointer;
+      background: var(--white); color: var(--text-mid);
+    }
+    .sort-btn.active { border-color: var(--mh-navy); color: var(--mh-navy); font-weight: 600; }
+
+    /* ── TABLE ── */
+    .t-table-wrap { overflow-x: auto; }
+    table {
+      width: 100%; border-collapse: collapse;
+      background: var(--white); border-radius: 10px;
+      overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    th {
+      background: var(--mh-navy); color: #fff; padding: 0.75rem 1rem;
+      text-align: left; font-size: 0.85rem; font-weight: 600; white-space: nowrap;
+    }
+    td {
+      padding: 0.75rem 1rem; border-bottom: 1px solid var(--border);
+      font-size: 0.95rem; vertical-align: middle;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #f9f9f8; }
+
+    .badge {
+      display: inline-block; padding: 0.2rem 0.55rem;
+      border-radius: 20px; font-size: 0.8rem; font-weight: 600;
+    }
+    .badge-green  { background: #dcfce7; color: var(--green); }
+    .badge-amber  { background: #fef3c7; color: var(--amber); }
+    .badge-red    { background: #fee2e2; color: var(--red); }
+    .badge-grey   { background: #f4f4f5; color: var(--text-muted); }
+
+    .trend { display: flex; gap: 2px; align-items: flex-end; height: 24px; }
+    .trend-bar {
+      width: 8px; border-radius: 2px 2px 0 0;
+      background: var(--mh-navy); opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    /* ── INLINE EDIT ── */
+    .name-cell { display: flex; align-items: center; gap: 0.5rem; }
+    .name-text { font-weight: 600; }
+    .edit-btn {
+      background: none; border: none; cursor: pointer;
+      color: var(--text-muted); font-size: 0.8rem; padding: 2px 6px;
+      border-radius: 4px; opacity: 0;
+      transition: opacity 0.15s;
+    }
+    tr:hover .edit-btn { opacity: 1; }
+    .name-edit-wrap { display: flex; gap: 0.4rem; align-items: center; }
+    .name-edit-inp {
+      padding: 0.3rem 0.5rem; font-family: 'Dosis', sans-serif;
+      font-size: 0.95rem; border: 2px solid var(--mh-navy); border-radius: 6px;
+      width: 180px;
+    }
+    .save-name-btn, .cancel-name-btn {
+      padding: 0.3rem 0.6rem; font-family: 'Dosis', sans-serif;
+      font-size: 0.85rem; border: none; border-radius: 6px; cursor: pointer;
+    }
+    .save-name-btn   { background: var(--mh-navy); color: #fff; }
+    .cancel-name-btn { background: var(--border); color: var(--text-mid); }
+
+    /* ── WEAK TOPICS ── */
+    .topics-cell { font-size: 0.82rem; color: var(--text-muted); }
+    .topic-tag {
+      display: inline-block; background: #fee2e2; color: var(--red);
+      border-radius: 4px; padding: 1px 6px; margin: 1px;
+      font-size: 0.78rem;
+    }
+
+    /* ── EMPTY / LOADING ── */
+    .t-loading, .t-empty {
+      text-align: center; padding: 3rem; color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* ── BUTTON ── */
+    .btn-primary {
+      background: var(--mh-navy); color: #fff;
+      border: none; border-radius: 8px; padding: 0.65rem 1.5rem;
+      font-family: 'Dosis', sans-serif; font-size: 1rem; font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-primary:disabled { opacity: 0.6; cursor: default; }
+  </style>
+</head>
+<body>
+
+  <header class="t-header">
+    <h1>&#128202; Mental Arithmetic &mdash; Teacher Dashboard</h1>
+    <a href="/MathsRevisionSite/">&#8592; Back to site</a>
+  </header>
+
+  <!-- ── AUTH ── -->
+  <div id="auth-screen">
+    <div class="auth-box">
+      <h2>Teacher Login</h2>
+      <p>Enter the teacher password to view pupil progress data.</p>
+      <div class="auth-error" id="auth-error">Incorrect password. Try again.</div>
+      <input type="password" id="auth-password" placeholder="Password" autocomplete="current-password">
+      <button class="btn-primary" id="auth-btn" style="width:100%">Sign in</button>
+    </div>
+  </div>
+
+  <!-- ── DASHBOARD ── -->
+  <div id="dashboard">
+
+    <div class="dash-summary">
+      <div class="stat-card">
+        <div class="stat-val" id="stat-pupils">—</div>
+        <div class="stat-lbl">Registered pupils</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" id="stat-attempts">—</div>
+        <div class="stat-lbl">Total attempts</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" id="stat-avg">—</div>
+        <div class="stat-lbl">Class average %</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" id="stat-active">—</div>
+        <div class="stat-lbl">Active this week</div>
+      </div>
+    </div>
+
+    <div class="dash-controls">
+      <input type="search" id="search-input" placeholder="Search by name&hellip;">
+      <button class="sort-btn active" data-sort="name">Name</button>
+      <button class="sort-btn" data-sort="attempts">Attempts</button>
+      <button class="sort-btn" data-sort="avg">Avg %</button>
+      <button class="sort-btn" data-sort="last_seen">Last active</button>
+      <button class="btn-primary" id="refresh-btn" style="margin-left:auto">&#8635; Refresh</button>
+    </div>
+
+    <div class="t-table-wrap">
+      <table id="pupils-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Attempts</th>
+            <th>Avg %</th>
+            <th>Best %</th>
+            <th>Trend (last 5)</th>
+            <th>Last active</th>
+            <th>Weak topics</th>
+          </tr>
+        </thead>
+        <tbody id="pupils-tbody">
+          <tr><td colspan="7" class="t-loading">Loading&hellip;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="/MathsRevisionSite/assets/js/teacher.js"></script>
+</body>
+</html>

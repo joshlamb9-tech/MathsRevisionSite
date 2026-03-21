@@ -4,8 +4,37 @@
   var SUPABASE_URL = 'https://jkbfvfoepmhwyzhleifh.supabase.co';
   var SUPABASE_KEY = 'sb_publishable_q9qOX43dA9SoxZ3Bq2p2Pw_c-GUaYw_';
 
+  var UUID_KEY  = 'maths-revision:pupil-uuid';
+  var NAME_KEY  = 'maths-revision:pupil-name';
+
   var lastResult = null;
   var TEST_SIZES = [10, 15, 30, 40];
+
+  // ─── PUPIL IDENTITY ───────────────────────────────────────────────────────
+
+  function getPupilUUID() {
+    var existing = localStorage.getItem(UUID_KEY);
+    if (existing) return existing;
+    var fresh = crypto.randomUUID();
+    localStorage.setItem(UUID_KEY, fresh);
+    return fresh;
+  }
+
+  function getPupilName() {
+    return localStorage.getItem(NAME_KEY) || null;
+  }
+
+  function setPupilName(name) {
+    localStorage.setItem(NAME_KEY, name);
+  }
+
+  function registerPupil(uuid, name) {
+    return fetch(SUPABASE_URL + '/functions/v1/register-pupil', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ uuid: uuid, name: name })
+    });
+  }
 
   // ─── SUPABASE HELPERS ─────────────────────────────────────────────────────
 
@@ -17,7 +46,8 @@
     }, extra || {});
   }
 
-  function submitScore(initials, score, total, timeSeconds) {
+  function submitScore(initials, score, total, timeSeconds, topicStats) {
+    var uuid = getPupilUUID();
     return fetch(SUPABASE_URL + '/functions/v1/submit-score', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -25,7 +55,9 @@
         initials: initials.toUpperCase().slice(0, 3),
         score: score,
         total: total,
-        time_seconds: timeSeconds
+        time_seconds: timeSeconds,
+        pupil_uuid: uuid,
+        topic_breakdown: topicStats || null
       })
     }).then(function (r) {
       if (!r.ok) return r.json().then(function (d) { throw new Error(d.error || 'Error'); });
@@ -112,15 +144,60 @@
     });
   }
 
+  // ─── NAME REGISTRATION MODAL ─────────────────────────────────────────────
+
+  function showNameModal(onSave) {
+    var overlay = document.getElementById('ma-name-modal');
+    if (!overlay) return;
+    overlay.hidden = false;
+    var input = document.getElementById('ma-name-input');
+    var btn   = document.getElementById('ma-name-save-btn');
+    if (input) input.focus();
+
+    function save() {
+      var name = (input ? input.value : '').trim();
+      if (!name) { if (input) input.focus(); return; }
+      btn.disabled = true;
+      var uuid = getPupilUUID();
+      registerPupil(uuid, name).then(function () {
+        setPupilName(name);
+        overlay.hidden = true;
+        if (onSave) onSave(name);
+      }).catch(function () {
+        // Save locally even if network fails — will just lack server record
+        setPupilName(name);
+        overlay.hidden = true;
+        if (onSave) onSave(name);
+      });
+    }
+
+    if (btn) btn.addEventListener('click', save);
+    if (input) {
+      input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') save();
+      });
+    }
+  }
+
   // ─── INIT ─────────────────────────────────────────────────────────────────
 
   document.addEventListener('DOMContentLoaded', function () {
 
+    // Ensure UUID exists on page load
+    getPupilUUID();
+
     refreshAll();
+
+    // If pupil has no name yet, show modal after a short delay
+    if (!getPupilName()) {
+      setTimeout(function () { showNameModal(null); }, 800);
+    }
 
     // When a test completes, show the submit form and refresh all boards
     document.addEventListener('ma:results', function (e) {
       lastResult = e.detail;
+
+      // Show leaderboard submit box
       var submitEl = document.getElementById('ma-leaderboard-submit');
       if (submitEl) {
         submitEl.hidden = false;
@@ -132,7 +209,7 @@
       refreshAll();
     });
 
-    // Submit initials
+    // Submit initials to leaderboard
     document.getElementById('ma-lb-submit-btn').addEventListener('click', function () {
       var inp = document.getElementById('ma-initials');
       var initials = (inp.value || '').trim().toUpperCase().replace(/[^A-Z]/g, '').slice(0, 3);
@@ -143,9 +220,8 @@
       btn.disabled = true;
       btn.textContent = 'Saving\u2026';
 
-      submitScore(initials, lastResult.correct, lastResult.total, lastResult.timeSeconds)
-        .then(function (r) {
-          if (!r.ok) throw new Error('Server error ' + r.status);
+      submitScore(initials, lastResult.correct, lastResult.total, lastResult.timeSeconds, lastResult.topicStats)
+        .then(function () {
           document.getElementById('ma-leaderboard-submit').hidden = true;
           refreshAll();
         })

@@ -506,7 +506,7 @@
 
     // Notify leaderboard module
     document.dispatchEvent(new CustomEvent('ma:results', {
-      detail: { correct: data.correct, total: data.total, timeSeconds: elapsedSeconds }
+      detail: { correct: data.correct, total: data.total, timeSeconds: elapsedSeconds, topicStats: data.topicStats }
     }));
   }
 

@@ -128,6 +128,22 @@
     <p><a href="mailto:jlamb@mowdenhall.org.uk?subject=Maths%20Revision%20Site%20Feedback" style="color:var(--text-muted)">Send feedback</a></p>
 </footer>
 
+  <!-- ── NAME REGISTRATION MODAL ── -->
+  <div id="ma-name-modal" hidden aria-modal="true" role="dialog" aria-labelledby="ma-name-title"
+       style="position:fixed;inset:0;background:rgba(0,0,0,0.55);display:flex;align-items:center;justify-content:center;z-index:1000;">
+    <div style="background:#fff;border-radius:12px;padding:2rem 2.5rem;max-width:420px;width:90%;text-align:center;font-family:'Dosis',sans-serif;">
+      <h2 id="ma-name-title" style="font-size:1.4rem;font-weight:700;color:#00534C;margin-bottom:0.5rem;">Welcome to Mental Arithmetic</h2>
+      <p style="color:#3f3f46;margin-bottom:1.25rem;font-size:1rem;">Enter your full name so your progress can be tracked over time.</p>
+      <input type="text" id="ma-name-input" maxlength="100" placeholder="Your full name"
+             autocomplete="off" spellcheck="false"
+             style="width:100%;padding:0.6rem 0.9rem;font-size:1rem;font-family:'Dosis',sans-serif;border:2px solid #e4e4e7;border-radius:8px;margin-bottom:1rem;box-sizing:border-box;">
+      <button id="ma-name-save-btn"
+              style="background:#00534C;color:#fff;border:none;border-radius:8px;padding:0.65rem 2rem;font-size:1rem;font-family:'Dosis',sans-serif;font-weight:600;cursor:pointer;width:100%;">
+        Start tracking my progress
+      </button>
+    </div>
+  </div>
+
   <script src="/MathsRevisionSite/assets/js/mental-arithmetic.js"></script>
   <script src="/MathsRevisionSite/assets/js/leaderboard.js"></script>
 
