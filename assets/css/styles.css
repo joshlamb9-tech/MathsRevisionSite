@@ -1281,6 +1281,232 @@ footer {
   border-radius: 6px;
 }
 
+/* ─── ANIMATIONS ─── */
+
+@keyframes revealIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pq-shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-6px); }
+  40%       { transform: translateX(6px); }
+  60%       { transform: translateX(-4px); }
+  80%       { transform: translateX(4px); }
+}
+
+@keyframes pq-flash-green {
+  0%   { background: var(--white); }
+  35%  { background: #bbf7d0; }
+  100% { background: #f0fdf4; }
+}
+
+.reveal-animate-in {
+  animation: revealIn 0.25s ease-out both;
+}
+
+/* ─── WORKED EXAMPLE CARDS ─── */
+
+.worked-example-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.75rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Override .main-content h2 inside cards */
+.worked-example-card h2 {
+  background: var(--mh-navy);
+  color: var(--white);
+  margin: 0 0 1rem;
+  margin-top: 0;
+  padding: 0.65rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0;
+}
+
+/* Indent all direct children except the h2 header */
+.worked-example-card > *:not(h2) {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.worked-example-card > *:last-child {
+  margin-bottom: 1rem;
+}
+
+/* ─── PRACTICE SECTION ─── */
+
+.practice-section {
+  margin-top: 2.75rem;
+  padding-top: 1.75rem;
+  border-top: 2px solid var(--border);
+}
+
+.practice-heading {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: var(--mh-navy) !important;
+  margin: 0 0 0.4rem !important;
+  margin-top: 0 !important;
+}
+
+.practice-intro {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.practice-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.1rem;
+}
+
+.pq-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  transition: border-color 0.2s;
+}
+
+.pq-card.pq-correct {
+  border-color: #16a34a;
+  animation: pq-flash-green 0.5s ease forwards;
+}
+
+.pq-card.pq-wrong {
+  border-color: #dc2626;
+  background: #fff5f5;
+}
+
+.pq-card.pq-skipped {
+  opacity: 0.65;
+}
+
+.pq-question {
+  font-weight: 600;
+  margin: 0 0 0.65rem;
+  line-height: 1.5;
+}
+
+.pq-num {
+  color: var(--mh-navy);
+  font-weight: 800;
+  margin-right: 0.3rem;
+}
+
+.pq-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.pq-input {
+  width: 130px;
+  min-height: 44px;
+  padding: 0.35rem 0.6rem;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.pq-input:focus {
+  outline: none;
+  border-color: var(--mh-navy);
+  box-shadow: 0 0 0 3px rgba(0, 83, 76, 0.18);
+}
+
+.pq-input:disabled {
+  background: #f9fafb;
+  cursor: not-allowed;
+}
+
+/* Hide browser number spinners */
+.pq-input::-webkit-outer-spin-button,
+.pq-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.pq-input[type=number]               { -moz-appearance: textfield; }
+
+.pq-feedback {
+  font-size: 0.9rem;
+  font-weight: 600;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.pq-fb-correct { color: #16a34a; }
+.pq-fb-wrong   { color: #dc2626; font-weight: 400; }
+.pq-fb-skip    { color: var(--text-muted); font-weight: 400; }
+
+.pq-hint {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0.4rem 0 0;
+  font-style: italic;
+}
+
+.practice-submit-btn {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.6rem 1.5rem;
+  min-height: 44px;
+  background: var(--mh-navy);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-bottom: 0.85rem;
+  display: block;
+}
+
+.practice-submit-btn:hover {
+  background: var(--mh-navy-light);
+}
+
+.practice-results {
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 0;
+}
+
+.practice-results:empty {
+  display: none;
+}
+
+.practice-results.pr-passed {
+  background: #f0fdf4;
+  border: 1.5px solid #16a34a;
+  color: #15803d;
+}
+
+.practice-results.pr-notyet {
+  background: #fef3c7;
+  border: 1.5px solid #d97706;
+  color: #92400e;
+}
+
+.pr-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
 /* ─── REDUCED MOTION ─── */
 /* Disable all decorative animations for users who prefer it.
    Functional transitions (focus rings, input highlights) are kept. */
@@ -1294,8 +1520,16 @@ footer {
   .ma-stop-btn,
   .ma-retry-btn,
   .pp-year-btn,
-  .pp-card {
+  .pp-card,
+  .pq-card,
+  .pq-input,
+  .practice-submit-btn {
     transition: none;
+    animation: none !important;
+  }
+
+  .reveal-animate-in {
+    animation: none !important;
   }
 
   .level-card:hover {
