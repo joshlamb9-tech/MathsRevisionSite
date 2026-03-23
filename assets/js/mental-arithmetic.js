@@ -408,7 +408,9 @@
 
   // ─── MARKING ────────────────────────────────────────────────────────────────
   function normalise(str) {
-    return str.trim().replace(/[^0-9.\-]/g, '');
+    var stripped = str.trim().replace(/[^0-9.\-]/g, '');
+    var n = parseFloat(stripped);
+    return isNaN(n) ? stripped : String(n);
   }
 
   function markTest() {
