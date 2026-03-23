@@ -61,7 +61,7 @@
     var uuid = getPupilUUID();
     return fetch(SUPABASE_URL + '/functions/v1/submit-score', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: apiHeaders(),
       body: JSON.stringify({
         initials: initials.toUpperCase().slice(0, 3),
         score: score,
@@ -71,7 +71,7 @@
         topic_breakdown: topicStats || null
       })
     }).then(function (r) {
-      if (!r.ok) return r.json().then(function (d) { throw new Error(d.error || 'Error'); });
+      if (!r.ok) return r.json().then(function (d) { throw new Error(d.error || 'HTTP ' + r.status); });
       return r;
     });
   }
@@ -233,7 +233,7 @@
           btn.textContent = 'Submit';
           var msg = (err && err.message === 'Time too fast')
             ? 'Score not accepted \u2014 time looks too fast.'
-            : 'Could not save score \u2014 check your connection and try again.';
+            : 'Could not save score \u2014 please try again. (' + (err && err.message ? err.message : 'unknown error') + ')';
           alert(msg);
         });
     });
