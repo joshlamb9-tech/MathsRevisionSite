@@ -78,6 +78,7 @@
       '<td><div class="name-cell">' +
         '<span class="name-text">' + escHtml(p.name) + '</span>' +
         '<button class="edit-btn" data-id="' + p.id + '" data-name="' + escHtml(p.name) + '" title="Edit name">&#9998;</button>' +
+        '<button class="delete-btn" data-id="' + p.id + '" data-name="' + escHtml(p.name) + '" title="Delete pupil">&#128465;</button>' +
       '</div></td>' +
       '<td>' + (p.attempts || 0) + '</td>' +
       '<td>' + pctBadge(p.avg_pct) + '</td>' +
@@ -153,6 +154,24 @@
   // ─── INLINE NAME EDIT ─────────────────────────────────────────────────────
 
   document.getElementById('pupils-tbody').addEventListener('click', function (e) {
+    // ── DELETE ──────────────────────────────────────────────────────────────
+    var deleteBtn = e.target.closest('.delete-btn');
+    if (deleteBtn) {
+      var delId   = deleteBtn.dataset.id;
+      var delName = deleteBtn.dataset.name;
+      if (!confirm('Delete ' + delName + '?\n\nThis will permanently remove their account and all scores.')) return;
+      deleteBtn.disabled = true;
+      teacherPost('delete_pupil', { uuid: delId }).then(function () {
+        allPupils = allPupils.filter(function (x) { return x.id !== delId; });
+        updateSummary();
+        applyFiltersAndSort();
+      }).catch(function () {
+        deleteBtn.disabled = false;
+        alert('Could not delete pupil. Check your connection.');
+      });
+      return;
+    }
+
     var editBtn = e.target.closest('.edit-btn');
     if (!editBtn) return;
 

@@ -14,7 +14,7 @@ Deno.serve(async (req) => {
     return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405, headers: cors });
   }
 
-  let body: { password?: unknown; action?: unknown; uuid?: unknown; name?: unknown };
+  let body: { password?: unknown; action?: unknown; uuid?: unknown; name?: unknown; confirm?: unknown };
   try {
     body = await req.json();
   } catch {
@@ -123,6 +123,36 @@ Deno.serve(async (req) => {
       .eq('id', uuid);
 
     if (error) {
+      return new Response(JSON.stringify({ error: 'Database error' }), { status: 500, headers: cors });
+    }
+
+    return new Response(JSON.stringify({ success: true }), { headers: cors });
+  }
+
+  // ── DELETE PUPIL ──────────────────────────────────────────────────────────
+  if (body.action === 'delete_pupil') {
+    const { uuid } = body;
+
+    if (typeof uuid !== 'string' || !UUID_RE.test(uuid)) {
+      return new Response(JSON.stringify({ error: 'Invalid uuid' }), { status: 400, headers: cors });
+    }
+
+    // Delete scores first (no ON DELETE CASCADE on the FK)
+    const { error: se } = await supabase
+      .from('ma_scores')
+      .delete()
+      .eq('pupil_uuid', uuid);
+
+    if (se) {
+      return new Response(JSON.stringify({ error: 'Database error' }), { status: 500, headers: cors });
+    }
+
+    const { error: pe } = await supabase
+      .from('pupils')
+      .delete()
+      .eq('id', uuid);
+
+    if (pe) {
       return new Response(JSON.stringify({ error: 'Database error' }), { status: 500, headers: cors });
     }
 
