@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standard Form | Additional | Mowden Hall Maths Revision</title>
+
+  <!-- Dosis font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- KaTeX 0.16.33 -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex-swap.min.css"
+        crossorigin="anonymous">
+  <script defer
+          src="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex.min.js"
+          integrity="sha384-YPHNAPyrxGS8BNnA7Q4ommqra8WQPEjooVSLzFgwgs8OXJBvadbyvx4QpfiFurGr"
+          crossorigin="anonymous"></script>
+  <script defer
+          src="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/contrib/auto-render.min.js"
+          integrity="sha384-JKXHIJf8PKPyDFptuKZoUyMRQJAmQKj4B4xyOca62ebJhciMYGiDdq/9twUUWyZH"
+          crossorigin="anonymous"
+          onload="renderMathInElement(document.body, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+            ]
+          });"></script>
+
+  <link rel="stylesheet" href="/MathsRevisionSite/assets/css/styles.css">
+  <script defer src="/MathsRevisionSite/assets/js/tracker.js"></script>
+  <script defer src="/MathsRevisionSite/assets/js/reveal.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/MathsRevisionSite/" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none">
+        <div class="brand-name">Maths Revision</div>
+      </a>
+      <nav class="header-nav">
+        <a href="/MathsRevisionSite/" class="hn-link">Home</a>
+        <a href="/MathsRevisionSite/foundation/" class="hn-link">Foundation</a>
+        <a href="/MathsRevisionSite/core/" class="hn-link">Core</a>
+        <a href="/MathsRevisionSite/additional/" class="hn-link active">Additional</a>
+        <a href="/MathsRevisionSite/past-papers/" class="hn-link">Past Papers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <p class="breadcrumb">
+      <a href="/MathsRevisionSite/">Home</a> &rsaquo;
+      <a href="/MathsRevisionSite/additional/">Additional</a> &rsaquo;
+      Standard Form
+    </p>
+
+    <span class="level-badge additional">Additional</span>
+    <h1 class="page-title">Standard Form</h1>
+
+    <!-- RAG Confidence Tracker -->
+    <div class="rag-selector" data-topic-slug="additional/standard-form">
+      <span class="rag-label">How confident are you?</span>
+      <button class="rag-btn rag-red"   data-rating="red">Not sure</button>
+      <button class="rag-btn rag-amber" data-rating="amber">Getting there</button>
+      <button class="rag-btn rag-green" data-rating="green">Got it</button>
+    </div>
+    <div class="rag-unavailable" style="display:none">
+      Confidence tracker not available in private browsing.
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var sel = document.querySelector('.rag-selector');
+      if (!sel) return;
+      var slug = sel.dataset.topicSlug;
+      if (!window.tracker || !window.tracker.available) {
+        var msg = document.querySelector('.rag-unavailable');
+        if (msg) msg.style.display = '';
+        sel.style.display = 'none';
+        return;
+      }
+      function applyRating(rating) {
+        sel.querySelectorAll('.rag-btn').forEach(function (btn) {
+          btn.classList.toggle('rag-active', btn.dataset.rating === rating);
+        });
+      }
+      applyRating(window.tracker.getRating(slug));
+      sel.addEventListener('click', function (e) {
+        var btn = e.target.closest('.rag-btn');
+        if (!btn) return;
+        window.tracker.setRating(slug, btn.dataset.rating);
+        applyRating(btn.dataset.rating);
+      });
+    });
+    </script>
+
+    <h2>Key Facts</h2>
+    <ul>
+      <li>
+        <strong>What is standard form?</strong> A way of writing very large or very small numbers as:
+        $$a \times 10^n$$
+        where $1 \leq a &lt; 10$ and $n$ is an integer.
+      </li>
+      <li>
+        <strong>Large numbers:</strong> The power of 10 is <em>positive</em>. Count how many places the decimal point moves to the left.
+        Example: $45\,000 = 4.5 \times 10^4$
+      </li>
+      <li>
+        <strong>Small numbers:</strong> The power of 10 is <em>negative</em>. Count how many places the decimal point moves to the right.
+        Example: $0.0032 = 3.2 \times 10^{-3}$
+      </li>
+      <li>
+        <strong>Calculating in standard form:</strong> To multiply, multiply the $a$ values and add the powers. To divide, divide the $a$ values and subtract the powers. Adjust the answer so $a$ is between 1 and 10.
+      </li>
+    </ul>
+
+    <h2>Worked Example 1: Converting to Standard Form</h2>
+    <p>Write 3 750 000 and 0.00048 in standard form.</p>
+    <ol>
+      <li>
+        <strong>3 750 000:</strong> Move the decimal 6 places left to get 3.75:
+        $$3\,750\,000 = 3.75 \times 10^6$$
+      </li>
+      <li>
+        <strong>0.00048:</strong> Move the decimal 4 places right to get 4.8:
+        $$0.00048 = 4.8 \times 10^{-4}$$
+      </li>
+    </ol>
+    <p><strong>Answers: $3.75 \times 10^6$ and $4.8 \times 10^{-4}$</strong></p>
+
+    <h2>Worked Example 2: Multiplying in Standard Form</h2>
+    <p>Calculate $(3 \times 10^4) \times (5 \times 10^3)$. Give your answer in standard form.</p>
+    <ol>
+      <li>
+        <strong>Multiply the $a$ values:</strong> $3 \times 5 = 15$
+      </li>
+      <li>
+        <strong>Add the powers:</strong> $10^4 \times 10^3 = 10^7$
+      </li>
+      <li>
+        <strong>Combine:</strong> $15 \times 10^7$
+      </li>
+      <li>
+        <strong>Adjust</strong> (since 15 is not between 1 and 10):
+        $$15 \times 10^7 = 1.5 \times 10^8$$
+      </li>
+    </ol>
+    <p><strong>Answer: $1.5 \times 10^8$</strong></p>
+  </main>
+
+  <footer>
+    <p>Mowden Hall School · Year 8 CE Maths Revision</p>
+    <p><a href="mailto:jlamb@mowdenhall.org.uk?subject=Maths%20Revision%20Site%20Feedback" style="color:var(--text-muted)">Send feedback</a></p>
+</footer>
+
+</body>
+</html>

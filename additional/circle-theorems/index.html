@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle Theorems | Additional | Mowden Hall Maths Revision</title>
+
+  <!-- Dosis font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- KaTeX 0.16.33 -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex-swap.min.css"
+        crossorigin="anonymous">
+  <script defer
+          src="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex.min.js"
+          integrity="sha384-YPHNAPyrxGS8BNnA7Q4ommqra8WQPEjooVSLzFgwgs8OXJBvadbyvx4QpfiFurGr"
+          crossorigin="anonymous"></script>
+  <script defer
+          src="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/contrib/auto-render.min.js"
+          integrity="sha384-JKXHIJf8PKPyDFptuKZoUyMRQJAmQKj4B4xyOca62ebJhciMYGiDdq/9twUUWyZH"
+          crossorigin="anonymous"
+          onload="renderMathInElement(document.body, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+            ]
+          });"></script>
+
+  <link rel="stylesheet" href="/MathsRevisionSite/assets/css/styles.css">
+  <script defer src="/MathsRevisionSite/assets/js/tracker.js"></script>
+  <script defer src="/MathsRevisionSite/assets/js/reveal.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/MathsRevisionSite/" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none">
+        <div class="brand-name">Maths Revision</div>
+      </a>
+      <nav class="header-nav">
+        <a href="/MathsRevisionSite/" class="hn-link">Home</a>
+        <a href="/MathsRevisionSite/foundation/" class="hn-link">Foundation</a>
+        <a href="/MathsRevisionSite/core/" class="hn-link">Core</a>
+        <a href="/MathsRevisionSite/additional/" class="hn-link active">Additional</a>
+        <a href="/MathsRevisionSite/past-papers/" class="hn-link">Past Papers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <p class="breadcrumb">
+      <a href="/MathsRevisionSite/">Home</a> &rsaquo;
+      <a href="/MathsRevisionSite/additional/">Additional</a> &rsaquo;
+      Circle Theorems
+    </p>
+
+    <span class="level-badge additional">Additional</span>
+    <h1 class="page-title">Circle Theorems</h1>
+
+    <!-- RAG Confidence Tracker -->
+    <div class="rag-selector" data-topic-slug="additional/circle-theorems">
+      <span class="rag-label">How confident are you?</span>
+      <button class="rag-btn rag-red"   data-rating="red">Not sure</button>
+      <button class="rag-btn rag-amber" data-rating="amber">Getting there</button>
+      <button class="rag-btn rag-green" data-rating="green">Got it</button>
+    </div>
+    <div class="rag-unavailable" style="display:none">
+      Confidence tracker not available in private browsing.
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var sel = document.querySelector('.rag-selector');
+      if (!sel) return;
+      var slug = sel.dataset.topicSlug;
+      if (!window.tracker || !window.tracker.available) {
+        var msg = document.querySelector('.rag-unavailable');
+        if (msg) msg.style.display = '';
+        sel.style.display = 'none';
+        return;
+      }
+      function applyRating(rating) {
+        sel.querySelectorAll('.rag-btn').forEach(function (btn) {
+          btn.classList.toggle('rag-active', btn.dataset.rating === rating);
+        });
+      }
+      applyRating(window.tracker.getRating(slug));
+      sel.addEventListener('click', function (e) {
+        var btn = e.target.closest('.rag-btn');
+        if (!btn) return;
+        window.tracker.setRating(slug, btn.dataset.rating);
+        applyRating(btn.dataset.rating);
+      });
+    });
+    </script>
+
+    <h2>Key Facts</h2>
+    <ul>
+      <li>
+        <strong>Angle at the centre</strong> is twice the angle at the circumference when both are subtended by the same arc.
+      </li>
+      <li>
+        <strong>Angle in a semicircle</strong> is always $90°$. Any angle subtended by a diameter at the circumference is a right angle.
+      </li>
+      <li>
+        <strong>Angles in the same segment</strong> are equal. If two angles at the circumference are subtended by the same arc, they are the same size.
+      </li>
+      <li>
+        <strong>Opposite angles in a cyclic quadrilateral</strong> add up to $180°$.
+      </li>
+      <li>
+        <strong>Tangent and radius:</strong> A tangent to a circle is perpendicular to the radius at the point of contact (they meet at $90°$).
+      </li>
+      <li>
+        <strong>Two tangents from an external point</strong> are equal in length.
+      </li>
+    </ul>
+
+    <h2>Worked Example 1: Angle at the Centre</h2>
+    <p>The angle at the centre of a circle is $140°$. Find the angle at the circumference subtended by the same arc.</p>
+    <ol>
+      <li>
+        <strong>Apply the theorem:</strong> The angle at the centre is twice the angle at the circumference.
+        $$\text{Angle at circumference} = \frac{140°}{2} = 70°$$
+      </li>
+    </ol>
+    <p><strong>Answer: $70°$</strong></p>
+
+    <h2>Worked Example 2: Cyclic Quadrilateral</h2>
+    <p>In a cyclic quadrilateral ABCD, angle A = $105°$ and angle B = $72°$. Find angles C and D.</p>
+    <ol>
+      <li>
+        <strong>Opposite angles sum to $180°$:</strong>
+        $$\angle C = 180° - \angle A = 180° - 105° = 75°$$
+        $$\angle D = 180° - \angle B = 180° - 72° = 108°$$
+      </li>
+      <li>
+        <strong>Check:</strong> $105° + 72° + 75° + 108° = 360°$ ✓
+      </li>
+    </ol>
+    <p><strong>Answer: $\angle C = 75°$, $\angle D = 108°$</strong></p>
+  </main>
+
+  <footer>
+    <p>Mowden Hall School · Year 8 CE Maths Revision</p>
+    <p><a href="mailto:jlamb@mowdenhall.org.uk?subject=Maths%20Revision%20Site%20Feedback" style="color:var(--text-muted)">Send feedback</a></p>
+</footer>
+
+</body>
+</html>

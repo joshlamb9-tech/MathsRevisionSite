@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compound Interest and Growth/Decay | Additional | Mowden Hall Maths Revision</title>
+
+  <!-- Dosis font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- KaTeX 0.16.33 -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex-swap.min.css"
+        crossorigin="anonymous">
+  <script defer
+          src="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex.min.js"
+          integrity="sha384-YPHNAPyrxGS8BNnA7Q4ommqra8WQPEjooVSLzFgwgs8OXJBvadbyvx4QpfiFurGr"
+          crossorigin="anonymous"></script>
+  <script defer
+          src="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/contrib/auto-render.min.js"
+          integrity="sha384-JKXHIJf8PKPyDFptuKZoUyMRQJAmQKj4B4xyOca62ebJhciMYGiDdq/9twUUWyZH"
+          crossorigin="anonymous"
+          onload="renderMathInElement(document.body, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+            ]
+          });"></script>
+
+  <link rel="stylesheet" href="/MathsRevisionSite/assets/css/styles.css">
+  <script defer src="/MathsRevisionSite/assets/js/tracker.js"></script>
+  <script defer src="/MathsRevisionSite/assets/js/reveal.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/MathsRevisionSite/" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none">
+        <div class="brand-name">Maths Revision</div>
+      </a>
+      <nav class="header-nav">
+        <a href="/MathsRevisionSite/" class="hn-link">Home</a>
+        <a href="/MathsRevisionSite/foundation/" class="hn-link">Foundation</a>
+        <a href="/MathsRevisionSite/core/" class="hn-link">Core</a>
+        <a href="/MathsRevisionSite/additional/" class="hn-link active">Additional</a>
+        <a href="/MathsRevisionSite/past-papers/" class="hn-link">Past Papers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <p class="breadcrumb">
+      <a href="/MathsRevisionSite/">Home</a> &rsaquo;
+      <a href="/MathsRevisionSite/additional/">Additional</a> &rsaquo;
+      Compound Interest and Growth/Decay
+    </p>
+
+    <span class="level-badge additional">Additional</span>
+    <h1 class="page-title">Compound Interest and Growth/Decay</h1>
+
+    <!-- RAG Confidence Tracker -->
+    <div class="rag-selector" data-topic-slug="additional/compound-interest">
+      <span class="rag-label">How confident are you?</span>
+      <button class="rag-btn rag-red"   data-rating="red">Not sure</button>
+      <button class="rag-btn rag-amber" data-rating="amber">Getting there</button>
+      <button class="rag-btn rag-green" data-rating="green">Got it</button>
+    </div>
+    <div class="rag-unavailable" style="display:none">
+      Confidence tracker not available in private browsing.
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var sel = document.querySelector('.rag-selector');
+      if (!sel) return;
+      var slug = sel.dataset.topicSlug;
+      if (!window.tracker || !window.tracker.available) {
+        var msg = document.querySelector('.rag-unavailable');
+        if (msg) msg.style.display = '';
+        sel.style.display = 'none';
+        return;
+      }
+      function applyRating(rating) {
+        sel.querySelectorAll('.rag-btn').forEach(function (btn) {
+          btn.classList.toggle('rag-active', btn.dataset.rating === rating);
+        });
+      }
+      applyRating(window.tracker.getRating(slug));
+      sel.addEventListener('click', function (e) {
+        var btn = e.target.closest('.rag-btn');
+        if (!btn) return;
+        window.tracker.setRating(slug, btn.dataset.rating);
+        applyRating(btn.dataset.rating);
+      });
+    });
+    </script>
+
+    <h2>Key Facts</h2>
+    <ul>
+      <li>
+        <strong>Compound interest formula:</strong>
+        $$\text{Amount} = P \times \left(1 + \frac{r}{100}\right)^n$$
+        where $P$ = original amount, $r$ = percentage rate, $n$ = number of time periods.
+      </li>
+      <li>
+        <strong>Growth:</strong> Use a <em>multiplier greater than 1</em>. A 5% increase per year means multiply by $1.05$ each year.
+      </li>
+      <li>
+        <strong>Decay (depreciation):</strong> Use a <em>multiplier less than 1</em>. A 15% decrease per year means multiply by $0.85$ each year.
+      </li>
+      <li>
+        <strong>Key difference from simple interest:</strong> Compound interest earns "interest on interest" — each year the interest is calculated on the new total, not the original.
+      </li>
+    </ul>
+
+    <h2>Worked Example 1: Compound Interest</h2>
+    <p>£2000 is invested at 3% compound interest per year. Find the value after 4 years.</p>
+    <ol>
+      <li>
+        <strong>Identify the multiplier:</strong> 3% increase → $1 + 0.03 = 1.03$
+      </li>
+      <li>
+        <strong>Apply the formula:</strong>
+        $$\text{Amount} = 2000 \times 1.03^4$$
+      </li>
+      <li>
+        <strong>Calculate:</strong> $1.03^4 = 1.12550881$
+        $$\text{Amount} = 2000 \times 1.12550881 = £2251.02 \text{ (to the nearest penny)}$$
+      </li>
+    </ol>
+    <p><strong>Answer: £2251.02</strong></p>
+
+    <h2>Worked Example 2: Depreciation</h2>
+    <p>A car is worth £12 000. It depreciates by 20% each year. Find its value after 3 years.</p>
+    <ol>
+      <li>
+        <strong>Identify the multiplier:</strong> 20% decrease → $1 - 0.20 = 0.80$
+      </li>
+      <li>
+        <strong>Apply the formula:</strong>
+        $$\text{Value} = 12\,000 \times 0.80^3$$
+      </li>
+      <li>
+        <strong>Calculate:</strong> $0.80^3 = 0.512$
+        $$\text{Value} = 12\,000 \times 0.512 = £6144$$
+      </li>
+    </ol>
+    <p><strong>Answer: £6144</strong></p>
+  </main>
+
+  <footer>
+    <p>Mowden Hall School · Year 8 CE Maths Revision</p>
+    <p><a href="mailto:jlamb@mowdenhall.org.uk?subject=Maths%20Revision%20Site%20Feedback" style="color:var(--text-muted)">Send feedback</a></p>
+</footer>
+
+</body>
+</html>

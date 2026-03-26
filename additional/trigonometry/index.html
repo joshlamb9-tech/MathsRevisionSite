@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trigonometry | Additional | Mowden Hall Maths Revision</title>
+
+  <!-- Dosis font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- KaTeX 0.16.33 -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex-swap.min.css"
+        crossorigin="anonymous">
+  <script defer
+          src="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex.min.js"
+          integrity="sha384-YPHNAPyrxGS8BNnA7Q4ommqra8WQPEjooVSLzFgwgs8OXJBvadbyvx4QpfiFurGr"
+          crossorigin="anonymous"></script>
+  <script defer
+          src="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/contrib/auto-render.min.js"
+          integrity="sha384-JKXHIJf8PKPyDFptuKZoUyMRQJAmQKj4B4xyOca62ebJhciMYGiDdq/9twUUWyZH"
+          crossorigin="anonymous"
+          onload="renderMathInElement(document.body, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+            ]
+          });"></script>
+
+  <link rel="stylesheet" href="/MathsRevisionSite/assets/css/styles.css">
+  <script defer src="/MathsRevisionSite/assets/js/tracker.js"></script>
+  <script defer src="/MathsRevisionSite/assets/js/reveal.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/MathsRevisionSite/" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none">
+        <div class="brand-name">Maths Revision</div>
+      </a>
+      <nav class="header-nav">
+        <a href="/MathsRevisionSite/" class="hn-link">Home</a>
+        <a href="/MathsRevisionSite/foundation/" class="hn-link">Foundation</a>
+        <a href="/MathsRevisionSite/core/" class="hn-link">Core</a>
+        <a href="/MathsRevisionSite/additional/" class="hn-link active">Additional</a>
+        <a href="/MathsRevisionSite/past-papers/" class="hn-link">Past Papers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <p class="breadcrumb">
+      <a href="/MathsRevisionSite/">Home</a> &rsaquo;
+      <a href="/MathsRevisionSite/additional/">Additional</a> &rsaquo;
+      Trigonometry
+    </p>
+
+    <span class="level-badge additional">Additional</span>
+    <h1 class="page-title">Trigonometry</h1>
+
+    <!-- RAG Confidence Tracker -->
+    <div class="rag-selector" data-topic-slug="additional/trigonometry">
+      <span class="rag-label">How confident are you?</span>
+      <button class="rag-btn rag-red"   data-rating="red">Not sure</button>
+      <button class="rag-btn rag-amber" data-rating="amber">Getting there</button>
+      <button class="rag-btn rag-green" data-rating="green">Got it</button>
+    </div>
+    <div class="rag-unavailable" style="display:none">
+      Confidence tracker not available in private browsing.
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var sel = document.querySelector('.rag-selector');
+      if (!sel) return;
+      var slug = sel.dataset.topicSlug;
+      if (!window.tracker || !window.tracker.available) {
+        var msg = document.querySelector('.rag-unavailable');
+        if (msg) msg.style.display = '';
+        sel.style.display = 'none';
+        return;
+      }
+      function applyRating(rating) {
+        sel.querySelectorAll('.rag-btn').forEach(function (btn) {
+          btn.classList.toggle('rag-active', btn.dataset.rating === rating);
+        });
+      }
+      applyRating(window.tracker.getRating(slug));
+      sel.addEventListener('click', function (e) {
+        var btn = e.target.closest('.rag-btn');
+        if (!btn) return;
+        window.tracker.setRating(slug, btn.dataset.rating);
+        applyRating(btn.dataset.rating);
+      });
+    });
+    </script>
+
+    <h2>Key Facts</h2>
+    <ul>
+      <li>
+        <strong>SOHCAHTOA</strong> — the three trigonometric ratios for a right-angled triangle:
+        $$\sin\theta = \frac{\text{Opposite}}{\text{Hypotenuse}} \qquad \cos\theta = \frac{\text{Adjacent}}{\text{Hypotenuse}} \qquad \tan\theta = \frac{\text{Opposite}}{\text{Adjacent}}$$
+      </li>
+      <li>
+        <strong>Labelling the sides:</strong> The <em>hypotenuse</em> is always opposite the right angle (the longest side). The <em>opposite</em> is across from the angle you are using. The <em>adjacent</em> is next to the angle you are using (not the hypotenuse).
+      </li>
+      <li>
+        <strong>Finding a side:</strong> Identify which two sides are involved, choose the correct ratio, substitute and solve.
+      </li>
+      <li>
+        <strong>Finding an angle:</strong> Use the inverse function: $\theta = \sin^{-1}(\ldots)$, $\cos^{-1}(\ldots)$, or $\tan^{-1}(\ldots)$.
+      </li>
+    </ul>
+
+    <h2>Worked Example 1: Finding a Side</h2>
+    <p>In a right-angled triangle, the angle is $35°$ and the hypotenuse is 10 cm. Find the opposite side.</p>
+    <ol>
+      <li>
+        <strong>Identify the ratio:</strong> We have the angle, the hypotenuse, and want the opposite. That's <strong>sin</strong>:
+        $$\sin 35° = \frac{\text{Opposite}}{10}$$
+      </li>
+      <li>
+        <strong>Rearrange:</strong>
+        $$\text{Opposite} = 10 \times \sin 35°$$
+      </li>
+      <li>
+        <strong>Calculate:</strong> $\sin 35° = 0.5736\ldots$
+        $$\text{Opposite} = 10 \times 0.5736 = 5.74 \text{ cm (3 s.f.)}$$
+      </li>
+    </ol>
+    <p><strong>Answer: 5.74 cm</strong></p>
+
+    <h2>Worked Example 2: Finding an Angle</h2>
+    <p>In a right-angled triangle, the opposite side is 7 cm and the adjacent side is 4 cm. Find the angle.</p>
+    <ol>
+      <li>
+        <strong>Identify the ratio:</strong> We have opposite and adjacent. That's <strong>tan</strong>:
+        $$\tan\theta = \frac{7}{4} = 1.75$$
+      </li>
+      <li>
+        <strong>Use inverse tan:</strong>
+        $$\theta = \tan^{-1}(1.75)$$
+      </li>
+      <li>
+        <strong>Calculate:</strong>
+        $$\theta = 60.3° \text{ (1 d.p.)}$$
+      </li>
+    </ol>
+    <p><strong>Answer: $60.3°$</strong></p>
+  </main>
+
+  <footer>
+    <p>Mowden Hall School · Year 8 CE Maths Revision</p>
+    <p><a href="mailto:jlamb@mowdenhall.org.uk?subject=Maths%20Revision%20Site%20Feedback" style="color:var(--text-muted)">Send feedback</a></p>
+</footer>
+
+</body>
+</html>

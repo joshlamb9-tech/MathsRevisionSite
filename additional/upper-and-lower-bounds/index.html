@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upper and Lower Bounds | Additional | Mowden Hall Maths Revision</title>
+
+  <!-- Dosis font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- KaTeX 0.16.33 -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex-swap.min.css"
+        crossorigin="anonymous">
+  <script defer
+          src="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/katex.min.js"
+          integrity="sha384-YPHNAPyrxGS8BNnA7Q4ommqra8WQPEjooVSLzFgwgs8OXJBvadbyvx4QpfiFurGr"
+          crossorigin="anonymous"></script>
+  <script defer
+          src="https://cdn.jsdelivr.net/npm/katex@0.16.33/dist/contrib/auto-render.min.js"
+          integrity="sha384-JKXHIJf8PKPyDFptuKZoUyMRQJAmQKj4B4xyOca62ebJhciMYGiDdq/9twUUWyZH"
+          crossorigin="anonymous"
+          onload="renderMathInElement(document.body, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+            ]
+          });"></script>
+
+  <link rel="stylesheet" href="/MathsRevisionSite/assets/css/styles.css">
+  <script defer src="/MathsRevisionSite/assets/js/tracker.js"></script>
+  <script defer src="/MathsRevisionSite/assets/js/reveal.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/MathsRevisionSite/" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none">
+        <div class="brand-name">Maths Revision</div>
+      </a>
+      <nav class="header-nav">
+        <a href="/MathsRevisionSite/" class="hn-link">Home</a>
+        <a href="/MathsRevisionSite/foundation/" class="hn-link">Foundation</a>
+        <a href="/MathsRevisionSite/core/" class="hn-link">Core</a>
+        <a href="/MathsRevisionSite/additional/" class="hn-link active">Additional</a>
+        <a href="/MathsRevisionSite/past-papers/" class="hn-link">Past Papers</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <p class="breadcrumb">
+      <a href="/MathsRevisionSite/">Home</a> &rsaquo;
+      <a href="/MathsRevisionSite/additional/">Additional</a> &rsaquo;
+      Upper and Lower Bounds
+    </p>
+
+    <span class="level-badge additional">Additional</span>
+    <h1 class="page-title">Upper and Lower Bounds</h1>
+
+    <!-- RAG Confidence Tracker -->
+    <div class="rag-selector" data-topic-slug="additional/upper-and-lower-bounds">
+      <span class="rag-label">How confident are you?</span>
+      <button class="rag-btn rag-red"   data-rating="red">Not sure</button>
+      <button class="rag-btn rag-amber" data-rating="amber">Getting there</button>
+      <button class="rag-btn rag-green" data-rating="green">Got it</button>
+    </div>
+    <div class="rag-unavailable" style="display:none">
+      Confidence tracker not available in private browsing.
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var sel = document.querySelector('.rag-selector');
+      if (!sel) return;
+      var slug = sel.dataset.topicSlug;
+      if (!window.tracker || !window.tracker.available) {
+        var msg = document.querySelector('.rag-unavailable');
+        if (msg) msg.style.display = '';
+        sel.style.display = 'none';
+        return;
+      }
+      function applyRating(rating) {
+        sel.querySelectorAll('.rag-btn').forEach(function (btn) {
+          btn.classList.toggle('rag-active', btn.dataset.rating === rating);
+        });
+      }
+      applyRating(window.tracker.getRating(slug));
+      sel.addEventListener('click', function (e) {
+        var btn = e.target.closest('.rag-btn');
+        if (!btn) return;
+        window.tracker.setRating(slug, btn.dataset.rating);
+        applyRating(btn.dataset.rating);
+      });
+    });
+    </script>
+
+    <h2>Key Facts</h2>
+    <ul>
+      <li>
+        <strong>What are bounds?</strong> When a measurement is rounded, the <em>lower bound</em> is the smallest value that rounds up to the given number, and the <em>upper bound</em> is the smallest value that would round up to the <em>next</em> number.
+      </li>
+      <li>
+        <strong>Finding bounds:</strong> Add and subtract half the degree of accuracy:
+        $$\text{Lower bound} = \text{value} - \tfrac{1}{2} \times \text{accuracy}$$
+        $$\text{Upper bound} = \text{value} + \tfrac{1}{2} \times \text{accuracy}$$
+      </li>
+      <li>
+        <strong>Example:</strong> A length is 5.3 cm to 1 decimal place. The accuracy is 0.1, so half is 0.05:
+        Lower bound = $5.25$ cm, Upper bound = $5.35$ cm.
+      </li>
+      <li>
+        <strong>Calculations with bounds:</strong>
+        <ul>
+          <li>Maximum of $a + b$: use upper bound of $a$ + upper bound of $b$</li>
+          <li>Minimum of $a - b$: use lower bound of $a$ - upper bound of $b$</li>
+          <li>Maximum of $a \times b$: use upper bound of $a$ × upper bound of $b$</li>
+          <li>Minimum of $\frac{a}{b}$: use lower bound of $a$ ÷ upper bound of $b$</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Worked Example 1: Finding Bounds</h2>
+    <p>A field is measured as 120 m to the nearest 10 m. Find the upper and lower bounds.</p>
+    <ol>
+      <li>
+        <strong>Degree of accuracy:</strong> 10 m. Half of this is 5 m.
+      </li>
+      <li>
+        <strong>Lower bound:</strong> $120 - 5 = 115$ m
+      </li>
+      <li>
+        <strong>Upper bound:</strong> $120 + 5 = 125$ m
+      </li>
+    </ol>
+    <p><strong>Answer: $115 \leq \text{length} &lt; 125$ m</strong></p>
+
+    <h2>Worked Example 2: Bounds in Calculations</h2>
+    <p>$a = 3.5$ (1 d.p.) and $b = 1.2$ (1 d.p.). Find the maximum value of $\dfrac{a}{b}$.</p>
+    <ol>
+      <li>
+        <strong>Bounds of $a$:</strong> $3.45 \leq a &lt; 3.55$
+      </li>
+      <li>
+        <strong>Bounds of $b$:</strong> $1.15 \leq b &lt; 1.25$
+      </li>
+      <li>
+        <strong>For maximum $\frac{a}{b}$:</strong> use the upper bound of $a$ and the lower bound of $b$:
+        $$\frac{a}{b} \leq \frac{3.55}{1.15} = 3.087\ldots$$
+      </li>
+    </ol>
+    <p><strong>Answer: $3.09$ (3 s.f.)</strong></p>
+  </main>
+
+  <footer>
+    <p>Mowden Hall School · Year 8 CE Maths Revision</p>
+    <p><a href="mailto:jlamb@mowdenhall.org.uk?subject=Maths%20Revision%20Site%20Feedback" style="color:var(--text-muted)">Send feedback</a></p>
+</footer>
+
+</body>
+</html>
